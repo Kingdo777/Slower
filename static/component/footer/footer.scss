@@ -1,0 +1,48 @@
+
+footer {
+    background-color: white;
+    border-top: solid 1px #aaaaaa;
+    box-shadow: 0 -2px 1px -1px #cccccc;
+    padding: 0;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    .nav {
+        list-style: none;
+        overflow: auto;
+        padding: 0;
+        margin: 0;
+
+        li {
+            text-align: center;
+            width: 20%;
+            height: 50px;
+            float: left;
+
+            a {
+                display: flex;
+                flex-flow: column;
+                text-decoration: none;
+                color: #000;
+
+                .icon {
+                    flex: 0 0 30px;
+                    height: 30px;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                .title {
+                    flex: 0 0 20px;
+                    height: 20px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

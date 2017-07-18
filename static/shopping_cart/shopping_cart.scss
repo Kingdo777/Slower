@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.header {
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 15px;
+
+    border-bottom: solid 1px #cccccc;
+}
+
+.cart-empty {
+    background-color: #dddddd;
+    padding: 15px 0;
+    .body {
+        display: flex;
+        flex-flow: row;
+        width: 200px;
+        margin: auto;
+
+        .icon {
+            flex: 0 0 50px;
+            width: 50px;
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .title {
+            text-align: center;
+            flex: 1 1 150px;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+        }
+    }
+}

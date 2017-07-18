@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #dddddd; }
+
+.user-info {
+  background-color: #dddddd; }
+  .user-info .operations {
+    height: 30px;
+    padding: 10px;
+    list-style: none;
+    overflow: auto; }
+    .user-info .operations li {
+      float: right;
+      margin: 0 10px; }
+      .user-info .operations li img {
+        width: 30px;
+        height: 30px; }
+  .user-info .details {
+    margin: auto auto 5px; }
+    .user-info .details .avatar {
+      margin: auto;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      background-color: white; }
+      .user-info .details .avatar img {
+        margin: 5px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%; }
+    .user-info .details .username {
+      text-align: center; }
+
+.order {
+  background-color: white; }
+  .order .title {
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    border-bottom: solid 1px #cccccc; }
+    .order .title .all-orders {
+      float: right; }
+  .order .status ul {
+    overflow: auto;
+    list-style: none;
+    padding: 15px 0;
+    margin: 0; }
+    .order .status ul li {
+      float: left;
+      width: 25%;
+      text-align: center; }
+      .order .status ul li a {
+        text-decoration: none;
+        color: #888888;
+        font-size: 13px; }
+        .order .status ul li a img {
+          width: 30px;
+          height: 30px; }
+
+.tools {
+  background-color: white;
+  margin-top: 10px; }
+  .tools .title {
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding: 0 10px;
+    border-bottom: solid 1px #cccccc; }
+  .tools ul {
+    overflow: auto;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0; }
+    .tools ul li {
+      width: 25%;
+      text-align: center;
+      float: left; }
+      .tools ul li a {
+        text-decoration: none;
+        font-size: 13px;
+        color: #888888; }
+        .tools ul li a img {
+          width: 30px;
+          height: 30px; }
+
+/*# sourceMappingURL=home.css.map */

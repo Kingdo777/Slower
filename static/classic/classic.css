@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.search {
+  height: 30px;
+  padding: 10px; }
+  .search .box {
+    height: 30px;
+    display: flex;
+    flex-flow: row;
+    background-color: #dddddd;
+    border-radius: 15px; }
+    .search .box .icon {
+      width: 35px;
+      flex: 0 0 35px; }
+      .search .box .icon img {
+        width: 24px;
+        height: 24px;
+        margin: 3px; }
+    .search .box input {
+      flex: 1 1 auto;
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
+      outline: none; }
+
+/*# sourceMappingURL=classic.css.map */
