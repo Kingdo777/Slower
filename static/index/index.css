@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: #dddddd; }
 
 .search-section {
   width: 100%;
@@ -59,7 +60,8 @@ body {
   background-color: black; }
 
 .menu {
-  background-color: yellow; }
+  background-color: white;
+  border-bottom: solid 1px #cccccc; }
   .menu ul {
     list-style: none;
     margin: 0;
@@ -69,13 +71,51 @@ body {
       text-align: center;
       width: 20%;
       float: left;
-      height: 50px; }
+      height: 50px;
+      padding: 5px 0; }
+      .menu ul li a {
+        text-decoration: none; }
+        .menu ul li a .icon {
+          height: 30px; }
+          .menu ul li a .icon img {
+            margin: 3px;
+            width: 24px;
+            height: 24px; }
+        .menu ul li a .title {
+          font-size: 12px;
+          color: #666666;
+          height: 20px;
+          line-height: 20px; }
 
 .menu-2 {
-  display: flex; }
+  display: flex;
+  background-color: white;
+  margin-bottom: 10px; }
   .menu-2 > div {
     flex: 1 1 auto;
     height: 175px;
-    border: solid 1px #888888; }
+    border-right: solid 1px #cccccc; }
+
+#book-list .book {
+  background-color: white;
+  margin-top: 1px;
+  padding: 10px; }
+  #book-list .book a {
+    display: flex;
+    flex-flow: row;
+    text-decoration: none; }
+    #book-list .book a .cover {
+      flex: 0 0 100px;
+      width: 100px; }
+      #book-list .book a .cover img {
+        width: 100px; }
+    #book-list .book a .details {
+      padding: 10px;
+      flex: 1 1 auto; }
+      #book-list .book a .details .title {
+        font-size: 15px; }
+      #book-list .book a .details .summary {
+        font-size: 14px;
+        color: #888888; }
 
 /*# sourceMappingURL=index.css.map */

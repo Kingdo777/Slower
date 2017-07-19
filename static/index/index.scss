@@ -3,6 +3,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #dddddd;
 }
 
 
@@ -90,7 +91,8 @@ body {
 
 
 .menu {
-    background-color: yellow;
+    background-color: white;
+    border-bottom: solid 1px #cccccc;
     ul {
         list-style: none;
         margin: 0;
@@ -102,19 +104,76 @@ body {
             width: 20%;
             float: left;
             height: 50px;
+            padding: 5px 0;
+
+            a {
+                text-decoration: none;
+                .icon {
+                    height: 30px;
+                    img {
+                        margin: 3px;
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+
+                .title {
+                    font-size: 12px;
+                    color: #666666;
+                    height: 20px;
+                    line-height: 20px;
+                }
+            }
         }
     }
 }
 
 .menu-2 {
     display: flex;
+    background-color: white;
+    margin-bottom: 10px;
+
     > div {
         flex: 1 1 auto;
         height: 175px;
-        border: solid 1px #888888;
+        border-right: solid 1px #cccccc;
     }
 }
 
-.book-list {
+#book-list {
 
+    .book {
+        background-color: white;
+        margin-top: 1px;
+        padding: 10px;
+
+       a {
+           display: flex;
+           flex-flow: row;
+           text-decoration: none;
+
+           .cover{
+               flex: 0 0 100px;
+               width: 100px;
+
+               img {
+                   width: 100px;
+               }
+           }
+
+           .details {
+               padding: 10px;
+               flex: 1 1 auto;
+
+               .title {
+                   font-size: 15px;
+               }
+               .summary {
+                   font-size: 14px;
+                   color: #888888;
+               }
+
+           }
+       }
+    }
 }

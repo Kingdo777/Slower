@@ -14,6 +14,7 @@
     <link type="text/css" rel="stylesheet" href="<c:url value="/static/plugins/font-awesome/css/font-awesome.css"/>">
     <link type="text/css" rel="stylesheet" href="<c:url value="/static/bookrack/bookrack.css"/>">
     <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/jquery-3.2.1.min.js"/>"></script>
+    <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/template.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/bookrack/bookrack.js"/>"></script>
 </head>
 <body>
@@ -26,7 +27,19 @@
     </div>
 
     <div class="main">
-
+        <div id="bookrack">
+            <div id="bookrack-item-template">
+                <div class="bookrack-book">
+                    <a href="#">
+                        <div class="cover">
+                            <img src="{{cover}}">
+                        </div>
+                        <div class="title">{{title}}</div>
+                        <div class="read-percent">已读 {{ percent }}%</div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>

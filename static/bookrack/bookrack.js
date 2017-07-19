@@ -17,7 +17,13 @@ SLOWER.bookrack = (function () {
 
                 if(data.status === "success") {
                     data.books.forEach(function (item, index, array){
+                        let data = {
+                            cover: item.cover,
+                            title: item.title,
+                            percent: "0"
+                        };
 
+                        $("#bookrack-item-template").tmpl(data).appendTo("#bookrack");
                     });
                 }
             });

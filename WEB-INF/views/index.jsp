@@ -14,6 +14,7 @@
     <link type="text/css" rel="stylesheet" href="<c:url value="/static/plugins/font-awesome/css/font-awesome.css"/>">
     <link type="text/css" rel="stylesheet" href="<c:url value="/static/index/index.css"/>">
     <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/jquery-3.2.1.min.js"/>"></script>
+    <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/template.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/index/index.js"/>"></script>
 </head>
 <body>
@@ -42,20 +43,48 @@
 
     </section>
 
+    <%-- 滚动区 --%>
     <section class="roll-section">
 
     </section>
 
+    <%-- 大类导航 --%>
     <section class="menu">
         <ul>
-            <li>a</li>
-            <li>b</li>
-            <li>c</li>
-            <li>d</li>
-            <li>e</li>
+            <li>
+                <a href="#">
+                    <div class="icon"><img src="<c:url value="/static/image/icons/hot.png"/>"> </div>
+                    <div class="title">榜单</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon"><img src="<c:url value="/static/image/icons/special.png"/>"> </div>
+                    <div class="title">专题</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon"><img src="<c:url value="/static/image/icons/boy_avatar.png"/>"> </div>
+                    <div class="title">男生</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon"><img src="<c:url value="/static/image/icons/girl_avatar.png"/>"> </div>
+                    <div class="title">女生</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon"><img src="<c:url value="/static/image/icons/book_list.png"/>"> </div>
+                    <div class="title">书单</div>
+                </a>
+            </li>
         </ul>
     </section>
 
+    <%-- 大类推荐 --%>
     <section class="menu-2">
         <div class="">
 
@@ -70,8 +99,28 @@
         </div>
     </section>
 
-    <section class="book-list">
+    <section id="book-list">
+        <div id="book-template">
+            <div class="book">
+                <a href="<c:url value="/book/details/{{id}}"/>">
+                    <div class="cover">
+                        <img src="{{cover}}">
+                    </div>
+                    <div class="details">
+                        <div class="title">
+                            {{title}}
+                        </div>
+                        <div class="summary">
+                            {{summary}}
+                        </div>
 
+                        <div class="author">
+                            {{author}}
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </section>
 </div>
 
