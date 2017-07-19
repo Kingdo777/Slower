@@ -15,7 +15,7 @@
     <link type="text/css" rel="stylesheet" href="<c:url value="/static/book_details/book_details.css"/>">
     <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/jquery-3.2.1.min.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/template.js"/>"></script>
-    <script type="text/javascript" rel="script" src="<c:url value="/static/book_details/book_details.css"/>"></script>
+    <script type="text/javascript" rel="script" src="<c:url value="/static/book_details/book_details.js"/>"></script>
 </head>
 <body>
 <div class="page">
@@ -26,9 +26,9 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="#">商品</a> </li>
-                <li><a href="#">详情</a> </li>
-                <li><a href="#">评论</a> </li>
+                <li class="main selected">商品</li>
+                <li class="details">详情</li>
+                <li class="review">评论</li>
             </ul>
         </div>
         <div class="others">
@@ -38,7 +38,7 @@
     </div>
 
     <%-- 商品界面 --%>
-    <div id="book">
+    <div id="book" class="show">
         <div class="main">
             <div class="images">
                 <img src="${book.cover}">
@@ -49,19 +49,33 @@
             <div class="pubdate">出版时间: ${book.pubdate}</div>
             <div class="price">${book.price}</div>
         </div>
-    </div>
-    <%-- 详情 --%>
-    <div id="summary">
-        <div class="content">
-            ${book.summary}
+
+        <%-- 详情 --%>
+        <div class="summary">
+            <div class="content">
+                ${book.summary}
+            </div>
+            <div class="more"><img src="<c:url value="/static/image/icons/down.png"/>"></div>
         </div>
-        <div class="more"><img src="<c:url value="/static/image/icons/down.png"/>"></div>
+
+        <%-- 评论 --%>
+        <div class="review">
+            <div class="title">
+                商品评论
+            </div>
+
+        </div>
     </div>
 
-    <%-- 评论 --%>
-    <div id="review">
 
+    <div id = "details" style="display: none">
+        详情
     </div>
+
+    <div id="review" style="display: none">
+    评论
+    </div>
+
 </div>
 </body>
 <footer>

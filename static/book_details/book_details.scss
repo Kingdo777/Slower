@@ -1,4 +1,4 @@
-body{
+body {
     padding: 0;
     margin: 0;
 }
@@ -43,10 +43,11 @@ body{
                     float: left;
                     width: 40px;
                     line-height: 35px;
-                    a {
-                        text-decoration: none;
-                        color: #666666;
-                    }
+                    color: #666666;
+                }
+
+                .selected {
+                    border-bottom : #e0620d 3px solid
                 }
             }
         }
@@ -67,8 +68,6 @@ body{
     margin-top: 35px;
 
     .main {
-
-        background-color: white;
         .images {
             text-align: center;
             background-color: #dddddd;
@@ -79,11 +78,13 @@ body{
         }
 
         .title {
+            background-color: white;
             font-size: 19px;
             padding: 10px;
         }
 
         .author, .pubdate, .publisher {
+            background-color: white;
             padding: 0 10px;
             font-size: 13px;
             color: #888888;
@@ -91,32 +92,50 @@ body{
 
 
         .price {
+            background-color: white;
             color: red;
             font-size: 14px;
             padding: 0 10px;
         }
     }
-}
 
-#summary {
-    margin-top: 5px;
-    padding: 10px;
-    background-color: white;
 
-    .content {
-        height: 50px;
-        overflow: hidden;
-    }
+    .summary {
+        margin-top: 5px;
+        background-color: white;
 
-    .more {
-        text-align: center;
-        img {
-            width: 24px;
-            height: 24px;
+        .content {
+            padding: 10px;
+            height: 50px;
+            overflow: hidden;
+        }
+
+        .more {
+            border-bottom: solid 1px #dddddd;
+            text-align: center;
+            img {
+                width: 24px;
+                height: 24px;
+            }
         }
     }
+
+
+    .review {
+        background-color: white;
+        margin-top: 5px;
+
+    }
+
 }
 
+#details {
+    margin-top: 35px;
+}
+
+#review {
+    margin-top: 35px;
+}
 
 
 footer {

@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    // 搜索框背景渐变
+    $(window).scroll(function () {
+        $('.search-section').css({"background-color":"rgba(224, 98, 13, " + $(this).scrollTop()/50 + ")"});
+    });
+
     // 更改导航栏菜单
     $("footer .nav .home img").attr("src", "/static/image/icons/home_fill.png");
     $("footer .nav .home a").css({"color": "#e0620d"});

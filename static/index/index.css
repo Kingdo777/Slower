@@ -35,10 +35,10 @@ body {
       .search-section .search .body .search-icon {
         flex: 0 0 30px;
         width: 30px;
-        margin: 3px; }
+        margin: 5px; }
         .search-section .search .body .search-icon img {
-          width: 24px;
-          height: 24px; }
+          width: 20px;
+          height: 20px; }
       .search-section .search .body .search-input {
         flex: 1 1 auto; }
         .search-section .search .body .search-input input {
@@ -50,10 +50,10 @@ body {
       .search-section .search .body .scan-icon {
         flex: 0 0 30px;
         width: 30px;
-        margin: 3px; }
+        margin: 5px; }
         .search-section .search .body .scan-icon img {
-          width: 24px;
-          height: 24px; }
+          width: 20px;
+          height: 20px; }
 
 .roll-section {
   height: 200px;
