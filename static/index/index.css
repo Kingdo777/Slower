@@ -1,7 +1,7 @@
 body {
-  margin: 0;
   padding: 0;
-  background-color: #dddddd; }
+  background-color: #dddddd;
+  margin: 0 0 50px; }
 
 .search-section {
   width: 100%;

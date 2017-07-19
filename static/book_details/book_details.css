@@ -1,0 +1,185 @@
+body {
+  padding: 0;
+  margin: 0 0 50px; }
+
+.page {
+  background-color: #dddddd; }
+  .page .nav {
+    border-bottom: #dddddd 1px solid;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 35px;
+    background-color: white;
+    display: flex;
+    flex-flow: row; }
+    .page .nav img {
+      margin: 4px;
+      width: 27px;
+      height: 27px; }
+    .page .nav .back {
+      flex: 0 0 100px;
+      line-height: 35px; }
+    .page .nav .menu {
+      flex: 1 1 auto;
+      text-align: center; }
+      .page .nav .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: auto;
+        overflow: auto;
+        width: 120px; }
+        .page .nav .menu ul li {
+          float: left;
+          width: 40px;
+          line-height: 35px;
+          color: #666666; }
+        .page .nav .menu ul .selected {
+          border-bottom: #e0620d 3px solid; }
+    .page .nav .others {
+      flex: 0 0 100px; }
+      .page .nav .others > div {
+        float: right;
+        padding: 0 5px;
+        height: 35px;
+        width: 35px; }
+        .page .nav .others > div a {
+          display: block; }
+        .page .nav .others > div .second-menu {
+          margin-top: -5px;
+          position: relative;
+          left: -90px;
+          width: 125px; }
+          .page .nav .others > div .second-menu > div {
+            position: relative;
+            left: 100px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent rgba(0, 0, 0, 0.5) transparent; }
+          .page .nav .others > div .second-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 125px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px; }
+            .page .nav .others > div .second-menu ul li {
+              padding: 5px; }
+              .page .nav .others > div .second-menu ul li a {
+                display: flex;
+                flex-flow: row;
+                height: 30px;
+                line-height: 30px;
+                text-decoration: none;
+                color: white;
+                font-size: 14px; }
+                .page .nav .others > div .second-menu ul li a span:first-child {
+                  flex: 0 0 40px;
+                  text-align: center; }
+                  .page .nav .others > div .second-menu ul li a span:first-child img {
+                    width: 20px;
+                    height: 20px;
+                    margin: 5px; }
+                .page .nav .others > div .second-menu ul li a span:last-child {
+                  flex: 1 1 auto; }
+
+#book {
+  margin-top: 35px; }
+  #book .main .images {
+    text-align: center;
+    background-color: #dddddd;
+    padding: 10px 0; }
+    #book .main .images img {
+      height: 200px; }
+  #book .main .title {
+    background-color: white;
+    font-size: 19px;
+    padding: 10px; }
+  #book .main .author, #book .main .pubdate, #book .main .publisher {
+    background-color: white;
+    padding: 0 10px;
+    font-size: 13px;
+    color: #888888; }
+  #book .main .price {
+    background-color: white;
+    color: red;
+    font-size: 14px;
+    padding: 0 10px; }
+  #book .summary {
+    margin-top: 5px;
+    background-color: white; }
+    #book .summary .content {
+      padding: 10px;
+      height: 50px;
+      overflow: hidden; }
+    #book .summary .more {
+      border-bottom: solid 1px #dddddd;
+      text-align: center; }
+      #book .summary .more img {
+        width: 24px;
+        height: 24px; }
+  #book .review {
+    background-color: white;
+    margin-top: 5px; }
+
+#details {
+  margin-top: 35px;
+  background-color: white;
+  padding: 20px 25px; }
+  #details > div {
+    display: flex;
+    flex-flow: row;
+    height: 35px; }
+    #details > div span:first-child {
+      flex: 0 0 100px;
+      color: #888888; }
+    #details > div span:last-child {
+      flex: 1 1 auto; }
+
+#review {
+  margin-top: 35px; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  overflow: hidden; }
+  footer .box {
+    display: flex;
+    flex-flow: row; }
+    footer .box .collect, footer .box .cart {
+      flex: 0 0 50px;
+      width: 50px;
+      text-align: center;
+      background-color: white; }
+      footer .box .collect a, footer .box .cart a {
+        text-decoration: none;
+        color: #666666; }
+        footer .box .collect a .icon, footer .box .cart a .icon {
+          height: 30px; }
+          footer .box .collect a .icon img, footer .box .cart a .icon img {
+            width: 30px;
+            height: 30px; }
+        footer .box .collect a .title, footer .box .cart a .title {
+          height: 20px;
+          line-height: 20px;
+          font-size: 12px; }
+    footer .box .add_to_bookrack, footer .box .add_to_cart {
+      flex: 1 1 auto; }
+      footer .box .add_to_bookrack a, footer .box .add_to_cart a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        height: 50px;
+        line-height: 50px;
+        text-align: center; }
+    footer .box .add_to_bookrack {
+      background-color: yellow; }
+    footer .box .add_to_cart {
+      background-color: red; }
+
+/*# sourceMappingURL=book_details.css.map */
