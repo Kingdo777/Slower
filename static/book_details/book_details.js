@@ -7,6 +7,19 @@ $(document).ready(function () {
         $(this).hide();
     });
 
+    let isShow = false;
+    $('.others .more').click(function () {
+
+        if(!isShow) {
+            $('.others .second-menu').show();
+            isShow = true;
+        }
+        else {
+            $('.others .second-menu').hide();
+            isShow = false;
+        }
+    });
+
     //
     SLOWER.book_details.init({
         back: $('.nav .back'),
@@ -58,8 +71,6 @@ SLOWER.book_details = (function () {
             menu.book.click(() => __hash__("book"));
             menu.details.click(() => __hash__("details"));
             menu.review.click(() => __hash__("review"));
-
-
 
             // 刷新或者初始化
             __page__(__hash__());

@@ -56,9 +56,73 @@ body {
         .others {
             flex:  0 0 100px;
 
-            span {
+            > div {
                 float: right;
                 padding: 0 5px;
+                height: 35px;
+                width: 35px;
+
+                a {
+                    display: block;
+                }
+
+                .second-menu {
+                    margin-top: -5px;
+                    position: relative;
+                    left: -90px;
+                    width: 125px;
+
+                    > div{
+                        position: relative;
+                        left: 100px;
+
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 0 10px 10px 10px;
+                        border-color: transparent transparent rgba(0, 0, 0, 0.5) transparent;
+                    }
+
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+
+                        width: 125px;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        border-radius: 5px;
+
+                        li {
+                            padding: 5px;
+
+                            a {
+                                display: flex;
+                                flex-flow: row;
+                                height: 30px;
+                                line-height: 30px;
+                                text-decoration: none;
+                                color: white;
+                                font-size: 14px;
+
+                                span:first-child {
+                                    flex: 0 0 40px;
+                                    text-align: center;
+
+                                    img {
+                                        width: 20px;
+                                        height: 20px;
+                                        margin: 5px;
+                                    }
+                                }
+                                span:last-child {
+                                    flex: 1 1 auto;
+                                }
+                            }
+
+
+                        }
+                    }
+                }
             }
         }
     }
@@ -131,6 +195,23 @@ body {
 
 #details {
     margin-top: 35px;
+    background-color: white;
+
+    padding: 20px 25px;
+    > div{
+        display: flex;
+        flex-flow: row;
+        height: 35px;
+
+        span:first-child {
+            flex: 0 0 100px;
+            color: #888888;
+        }
+
+        span:last-child {
+            flex: 1 1 auto;
+        }
+    }
 }
 
 #review {

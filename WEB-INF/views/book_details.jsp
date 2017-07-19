@@ -32,8 +32,21 @@
             </ul>
         </div>
         <div class="others">
-            <span><a href="#"><img src="<c:url value="/static/image/icons/others.png"/>"></a></span>
-            <span><a href="#"><img src="<c:url value="/static/image/icons/share.png"/>"></a></span>
+            <div class="more">
+                <a href="#"><img src="<c:url value="/static/image/icons/others.png"/>"></a>
+                <div class="second-menu" style="display: none">
+                    <div class=""></div>
+                    <ul>
+                        <li><a href="/messages"><span><img src="<c:url value="/static/image/icons/messages.png"/>"></span><span>消息</span></a> </li>
+                        <li><a href="/home"><span><img src="<c:url value="/static/image/icons/home.png"/>"></span><span>首页</span></a></li>
+                        <li><a href="/"><span><img src="<c:url value="/static/image/icons/like.png"/>"></span><span>我的关注</span></a></li>
+                        <li><a href="/"><span><img src="<c:url value="/static/image/icons/messages.png"/>"></span><span>浏览记录</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="share">
+                <a href="#"><img src="<c:url value="/static/image/icons/share.png"/>"></a>
+            </div>
         </div>
     </div>
 
@@ -69,7 +82,11 @@
 
 
     <div id = "details" style="display: none">
-        详情
+        <div><span>书名</span><span>${book.title}</span></div>
+        <div><span>ISBN</span><span>${book.ISBN}</span></div>
+        <div><span>作者</span><span>${book.author}</span></div>
+        <div><span>出版社</span><span>${book.publisher}</span></div>
+        <div><span>出版日期</span><span>${book.pubdate}</span></div>
     </div>
 
     <div id="review" style="display: none">
