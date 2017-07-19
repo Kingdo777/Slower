@@ -10,6 +10,12 @@ $(document).ready(function () {
 
     // 渲染数据
     SLOWER.index.render();
+
+    //扫一扫按钮
+    $(".scan-icon").on("click",function () {
+        const result=scanQRCode();
+        alert(result);
+    });
 });
 
 
