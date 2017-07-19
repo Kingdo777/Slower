@@ -4,10 +4,10 @@
  */
 $(function () {
     let nonceStr=randomWord();
-    let timestamp=new Date().getTime();
+    let timestamp=Math.round(new Date().getTime()/1000) ;
     $.ajax({
         type: 'get',
-        url: "/wechat/getSignature?nonceStr="+nonceStr+"&timestamp="+timestamp,
+        url: "/wechat/getSignature?nonceStr="+nonceStr+"&timestamp="+timestamp+"&url="+window.location.href,
         dataType: 'text',
         success: function (signature) {
             wx.config({
