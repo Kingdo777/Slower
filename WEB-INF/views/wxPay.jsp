@@ -31,8 +31,8 @@
     </div>
 </div>
 <div style="margin: 10px 10px 0 10px;border-bottom: solid #EEEEEE 1px">
-    <h4 style="text-align: center">书捞儿，你身边的图书馆</h4>
-    <h1 style="text-align: center">￥${money}</h1>
+    <h4 style="text-align: center;margin: 15">书捞儿，你身边的图书馆</h4>
+    <h1 style="text-align: center;margin: 15px">￥${money}</h1>
 </div>
 <div class="info" style="margin: 0 10px;border-bottom: solid #EEEEEE 1px">
     <h4 style="color: #cccccc;float: left">交易方式</h4>
@@ -55,7 +55,6 @@
     <h4 style="color: #cccccc;float: right" id="oddNumber">${oddNumber}</h4>
     <div style="clear: both"></div>
 </div>
-<br>
 <br>
 <div class="pay">
     <button id="pay" class="payBtn" onclick="wxpay(${money},'${oddNumber}');">微信支付</button>
