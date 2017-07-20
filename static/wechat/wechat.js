@@ -38,10 +38,9 @@ function scanQRCode() {
         scanType: ["qrCode", "barCode"],
         success: function (res) {
             alert(res.resultStr);
-            return res.resultStr;
         },
         error:function () {
-            return "error";
+            alert("error");
         }
     })
 }
