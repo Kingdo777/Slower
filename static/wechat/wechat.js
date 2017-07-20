@@ -22,7 +22,7 @@ $(function () {
 
                 signature: signature,// 必填，签名，见附录1
 
-                jsApiList: ['scanQRCode','chooseWXPay','chooseWXPay'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                jsApiList: ['scanQRCode','chooseWXPay'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
 
             });
         },
@@ -64,7 +64,7 @@ function wxpay(money,oddNumber) {
                 signType: 'MD5', // 签名方式，默认为'SHA1'，使用新版支付需传入'MD5'
                 paySign: data['sign'], // 支付签名
                 success: function (res) {
-                    // location.assign('return_url');
+                    location.assign('/index');
                 }
             });
         },
