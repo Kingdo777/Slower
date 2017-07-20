@@ -31,7 +31,6 @@ $(function () {
         }
     });
 });
-
 function scanQRCode() {
     wx.scanQRCode({
         needResult: 1,

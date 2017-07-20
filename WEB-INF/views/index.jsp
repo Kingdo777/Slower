@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="scan-icon">
-                    <img src="<c:url value="/static/image/icons/scan.png"/>">
+                    <img src="<c:url value="/static/image/icons/scan.png"/>" onclick="scanQRCode()">
                 </div>
             </div>
         </div>
