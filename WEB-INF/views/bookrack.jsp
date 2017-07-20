@@ -28,7 +28,7 @@
 
     <div class="main">
         <div id="bookrack">
-            <div id="bookrack-item-template">
+            <div id="bookrack-item-template" style="display: none;">
                 <div class="bookrack-book">
                     <a href="#">
                         <div class="cover">

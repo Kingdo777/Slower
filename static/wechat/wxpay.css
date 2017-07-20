@@ -1,0 +1,29 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.top_tip{
+    width: 100%;
+    /*padding: 0 auto 10px auto;*/
+    position:fixed ;
+    top: 0;
+    border-bottom: 2px solid #EEEEEE;
+    background-color: white;
+}
+.top_tip h4{
+    margin-left: 15px;
+}
+.pay{
+    width: 100%;
+    text-align: center;
+}
+.payBtn{
+    border-radius: 5px;
+    width: 80%;
+    padding: 7px 10px;
+    font-size: 18px;
+    color: white;
+    background-color: dodgerblue;
+    outline: none;
+    border: none;
+}
