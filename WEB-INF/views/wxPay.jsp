@@ -1,3 +1,4 @@
+<%--suppress JSAnnotator --%>
 <%--
   Created by IntelliJ IDEA.
   User: kingdo
@@ -20,12 +21,6 @@
     <script type="text/javascript" rel="script" src="<c:url value="/static/until/random.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/wechat/wechat.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/wechat/wxpay.js"/>"></script>
-    <script>
-        const oddNumber="slower-"+randomWord(false,10);
-        $(function () {
-            $("#oddNumber").innerHTML=oddNumber;
-        });
-    </script>
 </head>
 <body>
 <div class="top_tip text-info row">
@@ -37,7 +32,7 @@
 </div>
 <div style="margin: 10px 10px 0 10px;border-bottom: solid #EEEEEE 1px">
     <h4 style="text-align: center">书捞儿，你身边的图书馆</h4>
-    <h1 style="text-align: center">￥100</h1>
+    <h1 style="text-align: center">￥${money}</h1>
 </div>
 <div style="margin: 0 10px;border-bottom: solid #EEEEEE 1px">
     <h4 style="color: #cccccc;float: left">交易方式</h4>
@@ -57,13 +52,13 @@
     <div style="clear: both"></div>
 
     <h4 style="color: #cccccc;float: left">交易单号</h4>
-    <h4 style="color: #cccccc;float: right" id="oddNumber"></h4>
+    <h4 style="color: #cccccc;float: right" id="oddNumber">${oddNumber}</h4>
     <div style="clear: both"></div>
 </div>
 <br>
 <br>
 <div class="pay">
-    <button id="pay" class="payBtn" onclick="wxpay(${money},oddNumber);">微信支付</button>
+    <button id="pay" class="payBtn" onclick="wxpay(${money},'${oddNumber}');">微信支付</button>
 </div>
 </body>
 <%--<%@include file="component/footer.jsp"%>--%>
