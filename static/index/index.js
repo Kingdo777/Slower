@@ -14,7 +14,6 @@ $(document).ready(function () {
     //扫一扫按钮
     $(".scan-icon").on("click",function () {
         const result=scanQRCode();
-        alert(result);
     });
 });
 

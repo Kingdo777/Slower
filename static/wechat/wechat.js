@@ -37,6 +37,7 @@ function scanQRCode() {
         needResult: 1,
         scanType: ["qrCode", "barCode"],
         success: function (res) {
+            alert(res.resultStr);
             return res.resultStr;
         },
         error:function () {
