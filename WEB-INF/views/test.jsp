@@ -19,6 +19,8 @@
     <script type="text/javascript" rel="script" src="<c:url value="/static/wechat/wechat.js"/>"></script>
 </head>
 <body>
-<button onclick="scanQRCode()">嫂嫂</button>
+<div class="scan-icon">
+    <img src="<c:url value="/static/image/icons/scan.png"/>" onclick="scanQRCode()">
+</div>
 </body>
 </html>
