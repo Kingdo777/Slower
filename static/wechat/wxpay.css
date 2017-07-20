@@ -5,7 +5,7 @@ body{
 .top_tip{
     width: 100%;
     /*padding: 0 auto 10px auto;*/
-    position:fixed ;
+    /*position:fixed ;*/
     top: 0;
     border-bottom: 2px solid #EEEEEE;
     background-color: white;

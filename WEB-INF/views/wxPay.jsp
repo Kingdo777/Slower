@@ -29,13 +29,13 @@
 </head>
 <body>
 <div class="top_tip text-info row">
-    <div class="col-xs-11" style="padding: 0">
-        <h4 style="text-align: center" >
+    <div style="padding: 0">
+        <h3 style="text-align: center;line-height: 50px;margin: 0">
             支付信息
-        </h4>
+        </h3>
     </div>
 </div>
-<div style="margin: 50px 10px 0 10px;padding: 20px;border-bottom: solid #EEEEEE 1px">
+<div style="margin: 10px 10px 0 10px;border-bottom: solid #EEEEEE 1px">
     <h4 style="text-align: center">书捞儿，你身边的图书馆</h4>
     <h1 style="text-align: center">￥100</h1>
 </div>
