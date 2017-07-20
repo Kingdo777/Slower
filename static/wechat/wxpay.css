@@ -10,12 +10,16 @@ body{
     border-bottom: 2px solid #EEEEEE;
     background-color: white;
 }
+.info h4{
+    margin: 17px;
+}
 .top_tip h4{
     margin-left: 15px;
 }
 .pay{
     width: 100%;
     text-align: center;
+    margin-bottom: 20px;
 }
 .payBtn{
     border-radius: 5px;

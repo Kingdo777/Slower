@@ -34,7 +34,7 @@
     <h4 style="text-align: center">书捞儿，你身边的图书馆</h4>
     <h1 style="text-align: center">￥${money}</h1>
 </div>
-<div style="margin: 0 10px;border-bottom: solid #EEEEEE 1px">
+<div class="info" style="margin: 0 10px;border-bottom: solid #EEEEEE 1px">
     <h4 style="color: #cccccc;float: left">交易方式</h4>
     <h4 style="color: #cccccc;float: right">微信支付</h4>
     <div style="clear: both"></div>
