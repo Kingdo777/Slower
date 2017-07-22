@@ -32,6 +32,7 @@ SLOWER.cart = (function () {
 
                     data.books.forEach(function (item) {
                         let data = {
+                            id: item.id,
                             cover: item.cover,
                             title: item.title,
                             price: item.price,

@@ -22,7 +22,7 @@ $(document).ready(function () {
         }
     });
 
-    // 初始化
+    // 初始化 菜单
     SLOWER.book_details.init({
         back: $('.nav .back'),
         back_url: document.referrer,
@@ -31,13 +31,20 @@ $(document).ready(function () {
         review:$('.menu .review'),
     });
 
+    // 添加到书架 点击事件
     $('footer .add_to_bookrack').click(function () {
         SLOWER.book_details.addBookrack();
     });
 
+    // 添加到购物车 点击事件
     $('footer .add_to_cart').click(function () {
         SLOWER.book_details.addCart();
-    })
+    });
+
+    // 添加到关注 点击事件
+    $('footer .collect').click(function () {
+        SLOWER.book_details.addCollection();
+    });
 });
 
 if(typeof SLOWER==="undefined") SLOWER={};
@@ -70,6 +77,10 @@ SLOWER.book_details = (function () {
 
     return {
 
+        /**
+         * 初始化菜单
+         * @param config
+         */
         init: function (config) {
             menu.back = config.back;
             menu.back_url = config.back_url;
@@ -89,6 +100,9 @@ SLOWER.book_details = (function () {
             window.onhashchange = () =>__page__(__hash__());
         },
 
+        /**
+         * 添加到书架
+         */
         addBookrack: function () {
             let bookId = $('#bookId').text();
 
@@ -99,6 +113,9 @@ SLOWER.book_details = (function () {
             }
         },
 
+        /**
+         * 添加到购物车
+         */
         addCart:function () {
             let bookId = $('#bookId').text();
 
@@ -108,6 +125,14 @@ SLOWER.book_details = (function () {
                     console.log(data);
                 })
             }
+        },
+
+        addCollection: function () {
+            let bookId = $('#bookId').text();
+
+            $.post('/collect/add', {bookId: bookId}, function (data) {
+                console.log(data);
+            });
         }
     }
 })();

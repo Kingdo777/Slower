@@ -91,7 +91,7 @@
         </div>
         <ul>
             <li>
-                <a href="#">
+                <a href="<c:url value="/collect/"/>">
                     <div><img src="<c:url value="/static/image/icons/favor_fill.png"/>"></div>
                     <div>收藏</div>
                 </a>

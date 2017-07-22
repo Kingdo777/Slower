@@ -9,9 +9,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>购物车</title>
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maxinum-scale=1,width=device-width">
     <link type="text/css" rel="stylesheet" href="<c:url value="/static/plugins/font-awesome/css/font-awesome.css"/>">
+    <link type="text/css" rel="stylesheet" href="<c:url value="/static/component/default.css"/>">
     <link type="text/css" rel="stylesheet" href="<c:url value="/static/shopping_cart/shopping_cart.css"/>">
     <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/jquery-3.2.1.min.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/template.js"/>"></script>
@@ -34,13 +35,15 @@
         <div id="order-template" style="display: none;">
             <div class="order">
                 <div class="select">
-                    <img src="/static/image/icons/round_check_fill.png">
+                    <img src="<c:url value="/static/image/icons/round_check_fill.png"/>">
                 </div>
                 <div class="cover">
-                    <img src="{{cover}}">
+                    <a href="/book/details/{{id}}">
+                        <img src="{{cover}}">
+                    </a>
                 </div>
                 <div class="details">
-                    <div class="title">{{title}}</div>
+                    <div class="title"><a href="/book/details/{{id}}">{{title}}</a></div>
                     <div class="others">
                         <div class="price">{{price}}</div>
                         <div class="number">
@@ -81,13 +84,14 @@
 <div class="clearing" style="display: none">
     <div class="select-all">
         <div class="icon">
-            <img src="/static/image/icons/round.png">
+            <img src="<c:url value="/static/image/icons/round.png"/>">
         </div> <div>全选</div>
     </div>
     <div class="price">
         合计: 123元
     </div>
-    <div class="to-clearing">去结算
+    <div class="to-clearing">
+        <a href="/shopping_cart/order">去结算</a>
     </div>
 </div>
 </body>

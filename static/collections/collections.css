@@ -1,0 +1,51 @@
+.collection {
+  display: flex;
+  flex-flow: row; }
+  .collection .cover {
+    flex: 0 0 100px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px; }
+    .collection .cover img {
+      max-width: 100px;
+      max-height: 100px; }
+  .collection .details {
+    flex: 1 1 auto;
+    padding: 10px;
+    border-bottom: solid 1px #cccccc;
+    display: flex;
+    flex-flow: column; }
+    .collection .details .title {
+      flex: 1 1 auto; }
+      .collection .details .title a {
+        text-decoration-line: none;
+        color: black; }
+    .collection .details .price {
+      flex: 0 0 20px;
+      color: red;
+      font-size: 13px; }
+    .collection .details .others {
+      flex: 0 0 20px; }
+      .collection .details .others .similar {
+        display: inline-block;
+        padding: 0 5px;
+        border: #cccccc solid 1px;
+        border-radius: 3px;
+        font-size: 12px;
+        height: 20px;
+        line-height: 20px; }
+        .collection .details .others .similar a {
+          text-decoration-line: none;
+          color: #888888; }
+      .collection .details .others .add-cart {
+        display: inline-block;
+        float: right;
+        border: red solid 1px;
+        border-radius: 3px; }
+        .collection .details .others .add-cart img {
+          width: 20px;
+          height: 20px; }
+
+/*# sourceMappingURL=collections.css.map */

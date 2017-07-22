@@ -151,23 +151,23 @@ footer {
   footer .box {
     display: flex;
     flex-flow: row; }
+    footer .box .cart a {
+      text-decoration: none;
+      color: #666666; }
     footer .box .collect, footer .box .cart {
       flex: 0 0 50px;
       width: 50px;
       text-align: center;
       background-color: white; }
-      footer .box .collect a, footer .box .cart a {
-        text-decoration: none;
-        color: #666666; }
-        footer .box .collect a .icon, footer .box .cart a .icon {
+      footer .box .collect .icon, footer .box .cart .icon {
+        height: 30px; }
+        footer .box .collect .icon img, footer .box .cart .icon img {
+          width: 30px;
           height: 30px; }
-          footer .box .collect a .icon img, footer .box .cart a .icon img {
-            width: 30px;
-            height: 30px; }
-        footer .box .collect a .title, footer .box .cart a .title {
-          height: 20px;
-          line-height: 20px;
-          font-size: 12px; }
+      footer .box .collect .title, footer .box .cart .title {
+        height: 20px;
+        line-height: 20px;
+        font-size: 12px; }
     footer .box .add_to_bookrack, footer .box .add_to_cart {
       flex: 1 1 auto; }
       footer .box .add_to_bookrack a, footer .box .add_to_cart a {

@@ -79,6 +79,9 @@ body {
     flex-flow: column; }
     .orders .order .details .title {
       flex: 1 1 auto; }
+      .orders .order .details .title a {
+        text-decoration-line: none;
+        color: black; }
     .orders .order .details .others {
       flex: 0 0 20px; }
       .orders .order .details .others .price {
@@ -178,8 +181,11 @@ body {
   .clearing .to-clearing {
     flex: 0 0 100px;
     background-color: red;
-    color: white;
     text-align: center;
     line-height: 50px; }
+    .clearing .to-clearing a {
+      display: block;
+      text-decoration-line: none;
+      color: white; }
 
 /*# sourceMappingURL=shopping_cart.css.map */

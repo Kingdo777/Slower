@@ -231,28 +231,30 @@ footer {
         display: flex;
         flex-flow: row;
 
+        .cart {
+            a {
+                text-decoration: none;
+                color: #666666;
+            }
+        }
+
         .collect, .cart {
             flex: 0 0 50px;
             width: 50px;
             text-align: center;
             background-color: white;
 
-            a {
-                text-decoration: none;
-                color: #666666;
-
-                .icon {
+            .icon {
+                height: 30px;
+                img {
+                    width: 30px;
                     height: 30px;
-                    img {
-                        width: 30px;
-                        height: 30px;
-                    }
                 }
-                .title {
-                    height: 20px;
-                    line-height: 20px;
-                    font-size: 12px;
-                }
+            }
+            .title {
+                height: 20px;
+                line-height: 20px;
+                font-size: 12px;
             }
         }
 
