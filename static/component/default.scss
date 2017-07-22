@@ -1,0 +1,32 @@
+@charset "utf-8";
+/**
+ * 本文件中为默认样式
+ */
+@import "../plugins/widget.scss";
+
+// body, padding 和 margin 均为 0
+@include body('.body');
+
+// 默认的按钮，#00AAAA->#00b0e8
+@include button('.button');
+
+
+// 默认列表
+@include ul('.menu');
+@include ul('.float-ul');
+@include ul('.float-ul-left', left);
+@include ul('.float-ul-right', right);
+
+
+// a 标签
+@include a('.a', rgb(224, 98, 13));
+
+// 输入框
+@include input('.input');
+
+
+// 文本
+@include textarea('.textarea');
+
+
+@include scrollbar('.scrollbar');

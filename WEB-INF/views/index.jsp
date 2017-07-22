@@ -12,6 +12,7 @@
     <title>home</title>
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maxinum-scale=1,width=device-width">
     <link type="text/css" rel="stylesheet" href="<c:url value="/static/plugins/font-awesome/css/font-awesome.css"/>">
+    <link type="text/css" rel="stylesheet" href="<c:url value="/static/component/default.css"/>">
     <link type="text/css" rel="stylesheet" href="<c:url value="/static/index/index.css"/>">
     <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/jquery-3.2.1.min.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/template.js"/>"></script>
@@ -104,7 +105,7 @@
     </section>
 
     <section id="book-list">
-        <div id="book-template">
+        <div id="book-template" style="display: none;">
             <div class="book">
                 <a href="<c:url value="/book/details/{{id}}"/>">
                     <div class="cover">

@@ -1,0 +1,205 @@
+@charset "utf-8";
+@import "../plugins/widget.scss";
+.head{
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  border-bottom: #cccccc 1px solid;
+  padding-bottom: 5px;
+}
+
+.search-section {
+  width: 100%;
+  position: fixed;
+  display: flex;
+
+  margin: 0;
+  padding: 10px 0;
+  height: 30px;
+
+  .messages, .classic {
+    flex: 0 0 50px;
+    width: 50px;
+    height: 30px;
+    color: white;
+    text-align: center;
+
+    margin: 3px;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .search {
+    text-align: center;
+    flex: 1 1 auto;
+    height: 30px;
+
+    .body {
+      padding: 0;
+
+      margin: auto;
+      width: 100%;
+      height: 30px;
+      border-radius: 15px;
+      background-color: white;
+
+      display: flex;
+
+      .search-icon {
+        flex: 0 0 30px;
+        width: 30px;
+
+        margin: 5px;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .search-input {
+
+        flex: 1 1 auto;
+
+        input {
+          height: 30px;
+          width: 100%;
+          display: block;
+          outline: none;
+          border: none;
+        }
+      }
+
+
+      .scan-icon {
+        flex: 0 0 30px;
+        width: 30px;
+        margin: 5px;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.roll-section {
+  height: 200px;
+  background-color: black;
+}
+
+.search {
+  height: 30px;
+  padding: 10px;
+
+  .box {
+    height: 30px;
+    display: flex;
+    flex-flow: row;
+
+    background-color: #dddddd;
+    border-radius: 15px;
+
+    .icon {
+      width: 35px;
+      flex: 0 0 35px;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+      }
+    }
+
+    input {
+      flex: 1 1 auto;
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
+      outline: none;
+    }
+  }
+}
+.menu {
+  background-color: white;
+  border-bottom: solid 1px #cccccc;
+
+  @include ul('ul', left, auto);
+  ul {
+    li {
+      width: 20%;
+      height: 50px;
+      padding: 5px 0;
+
+      @include a('a', #666666, 12px);
+      a {
+        .icon {
+          height: 30px;
+          img {
+            margin: 3px;
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        .title {
+          height: 20px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.menu-2 {
+  display: flex;
+  background-color: white;
+  margin-bottom: 10px;
+
+  > div {
+    flex: 1 1 auto;
+    height: 175px;
+    border-right: solid 1px #cccccc;
+  }
+}
+
+#book-list {
+  margin-top: 50px;
+  .book {
+    background-color: white;
+    margin-top: 1px;
+    padding: 10px;
+
+    a {
+      display: flex;
+      flex-flow: row;
+      text-decoration: none;
+
+      .cover{
+        flex: 0 0 100px;
+        width: 100px;
+
+        img {
+          width: 100px;
+        }
+      }
+
+      .details {
+        padding: 10px;
+        flex: 1 1 auto;
+
+        .title {
+          font-size: 15px;
+        }
+        .summary {
+          word-break: break-all;
+          font-size: 14px;
+          color: #888888;
+        }
+
+      }
+    }
+  }
+}

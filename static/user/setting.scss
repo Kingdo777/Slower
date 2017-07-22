@@ -1,0 +1,207 @@
+@charset "utf-8";
+
+@import "../plugins/widget.scss";
+
+#main {
+    background-color: #eeeeee;
+    height: 100%;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    height: 35px;
+    line-height: 35px;
+    font-size: 17px;
+    text-align: center;
+    top: 0;
+
+    border-bottom: solid 1px #cccccc;
+}
+
+.basic {
+    margin-top: 35px;
+}
+
+.basic, .others {
+    .title {
+        height: 25px;
+        line-height: 25px;
+        font-size: 13px;
+        padding: 0 15px;
+    }
+
+    .content {
+        background-color: white;
+        border-top: solid 1px #cccccc;
+        border-bottom: solid 1px #cccccc;
+        padding: 0 15px;
+
+        >div {
+            margin: 0;
+            height: 40px;
+            line-height: 40px;
+            border-bottom: solid 1px #cccccc;
+
+            @include a('a', #000);
+            font-size: 14px;
+
+            a {
+                overflow: auto;
+                display: block;
+                span:first-child {
+                    float: left;
+                }
+
+                span:last-child {
+                    display: block;
+                    height: 40px;
+                    line-height: 40px;
+
+                    float: right;
+                }
+            }
+        }
+        > div:last-child{
+            border-bottom: none;
+        }
+    }
+}
+
+
+.logout {
+    margin: 100px auto auto;
+    width: 90%;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+
+    color: white;
+    border-radius: 5px;
+    background-color: red;
+}
+
+// 用户设置界面
+#user_details {
+    background-color: #eeeeee;
+    height: 100%;
+    .avatar {
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 25px;
+
+        img {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+        }
+    }
+
+    .details {
+        border-top: solid 1px #cccccc;
+        border-bottom: solid 1px #cccccc;
+
+        padding: 0 15px;
+
+        background-color: white;
+
+        > div{
+            height: 40px;
+            line-height: 40px;
+            border-bottom: solid 1px #cccccc;
+
+            @include a('a', #000);
+
+            a {
+                display: flex;
+                flex-flow: row;
+                font-size: 14px;
+
+                .title {
+                    flex: 0 0 75px;
+                }
+
+                .content {
+                    flex: 1 1 auto;
+
+                    color: #666666;
+                }
+
+                .fa {
+                    flex: 0 0 20px;
+                    display: block;
+                    line-height: 40px;
+                }
+            }
+
+        }
+        > div:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .password {
+        margin-top: 20px;
+        border-top: solid 1px #cccccc;
+        border-bottom: solid 1px #cccccc;
+
+        padding: 0 15px;
+
+        background-color: white;
+
+        @include a('a', #000);
+        a {
+            display: flex;
+            flex-flow: row;
+            height: 40px;
+            line-height: 40px;
+
+            .title {
+                flex: 1 1 auto;
+            }
+
+            .fa {
+                flex: 0 0 20px;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+
+// 收货地址设置界面
+#address {
+    .add-address-button {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+        background-color: red;
+        color: white;
+        text-align: center;
+    }
+}
+
+// 关于界面
+#about {
+    .logo {
+        margin-top: 100px;
+        text-align: center;
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .copyright {
+        width: 100%;
+        position: absolute;
+        bottom: 100px;
+        text-align: center;
+        font-size: 11px;
+        color: #aaaaaa;
+    }
+}

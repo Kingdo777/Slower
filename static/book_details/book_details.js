@@ -1,5 +1,6 @@
 /**
  * Created by ice_q on 2017/7/19.
+ *
  */
 $(document).ready(function () {
     $('.summary .more').click(function () {
@@ -7,6 +8,7 @@ $(document).ready(function () {
         $(this).hide();
     });
 
+    // 显示 隐藏菜单
     let isShow = false;
     $('.others .more').click(function () {
 
@@ -20,13 +22,21 @@ $(document).ready(function () {
         }
     });
 
-    //
+    // 初始化
     SLOWER.book_details.init({
         back: $('.nav .back'),
         back_url: document.referrer,
         main: $('.menu .main'),
         details:$('.menu .details'),
         review:$('.menu .review'),
+    });
+
+    $('footer .add_to_bookrack').click(function () {
+        SLOWER.book_details.addBookrack();
+    });
+
+    $('footer .add_to_cart').click(function () {
+        SLOWER.book_details.addCart();
     })
 });
 
@@ -77,6 +87,27 @@ SLOWER.book_details = (function () {
 
             // hash 变化事件
             window.onhashchange = () =>__page__(__hash__());
+        },
+
+        addBookrack: function () {
+            let bookId = $('#bookId').text();
+
+            if(bookId !== ""){
+                $.post('/bookrack/add', {bookId: bookId}, function (data) {
+                    console.log(data);
+                })
+            }
+        },
+
+        addCart:function () {
+            let bookId = $('#bookId').text();
+
+            if(bookId !== ""){
+                $.post("/shopping_cart/add", {bookId: bookId}, function (data) {
+
+                    console.log(data);
+                })
+            }
         }
     }
 })();

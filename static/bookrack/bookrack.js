@@ -13,6 +13,10 @@ SLOWER.bookrack = (function () {
 
     return {
         render:function () {
+
+            /**
+             * 获取当前用户的书架上的所有图书
+             */
             $.post("/bookrack/all", null, function (data) {
 
                 if(data.status === "success") {
@@ -20,7 +24,7 @@ SLOWER.bookrack = (function () {
                         let data = {
                             cover: item.cover,
                             title: item.title,
-                            percent: "0"
+                            percent: item.percent
                         };
 
                         $("#bookrack-item-template").tmpl(data).appendTo("#bookrack");

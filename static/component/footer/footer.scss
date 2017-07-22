@@ -1,3 +1,6 @@
+@charset "utf-8";
+@import "../../plugins/widget.scss";
+
 
 footer {
     background-color: white;
@@ -9,23 +12,17 @@ footer {
     bottom: 0;
     width: 100%;
 
+    @include ul('.nav', left, auto);
     .nav {
-        list-style: none;
-        overflow: auto;
-        padding: 0;
-        margin: 0;
-
         li {
-            text-align: center;
             width: 20%;
             height: 50px;
-            float: left;
+
+            @include a('a', #000);
 
             a {
                 display: flex;
                 flex-flow: column;
-                text-decoration: none;
-                color: #000;
 
                 .icon {
                     flex: 0 0 30px;

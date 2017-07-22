@@ -57,7 +57,7 @@
 </div>
 <br>
 <div class="pay">
-    <button id="pay" class="payBtn" onclick="wxpay(${money},'${oddNumber}');">微信支付</button>
+    <button id="pay" class="payBtn" onclick="wxpay(${money},'${oddNumber}','${callBackUrl}');">微信支付</button>
 </div>
 </body>
 <%--<%@include file="component/footer.jsp"%>--%>

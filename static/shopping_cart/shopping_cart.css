@@ -1,16 +1,29 @@
+/*///////////////////////// -- body -- ///////////////////////*/
+/*///////////////////////// -- button -- ///////////////////////*/
+/*///////////////////////// -- ul -- ///////////////////////*/
+/*///////////////////////// -- hr -- ///////////////////////*/
+.hr {
+  border: none;
+  border-top: #cccccc 1px solid; }
+
+/*///////////////////////// -- a -- ///////////////////////*/
+/*///////////////////////// -- input -- ///////////////////////*/
+/*///////////////////////// -- textarea -- ///////////////////////*/
+/*///////////////////////// -- scrollbar -- ///////////////////////*/
 body {
   padding: 0;
-  margin: 0 0 50px; }
+  margin: 0 0 50px;
+  background-color: #eeeeee; }
 
 .header {
   height: 35px;
   line-height: 35px;
   text-align: center;
   font-size: 15px;
-  border-bottom: solid 1px #cccccc; }
+  border-bottom: solid 1px #cccccc;
+  background-color: white; }
 
 .cart-empty {
-  background-color: #dddddd;
   padding: 15px 0; }
   .cart-empty .body {
     display: flex;
@@ -29,5 +42,144 @@ body {
       width: 150px;
       height: 50px;
       line-height: 50px; }
+
+.orders .order {
+  display: flex;
+  flex-flow: row;
+  border-bottom: #dddddd solid 1px;
+  border-top: solid 1px #dddddd;
+  background-color: #f6eeee;
+  margin: 10px 0;
+  height: 100px;
+  padding: 5px 10px;
+  overflow: hidden; }
+  .orders .order .select {
+    flex: 0 0 30px;
+    line-height: 100px; }
+    .orders .order .select img {
+      width: 24px;
+      height: 24px;
+      position: relative;
+      top: 38px; }
+  .orders .order .cover {
+    border: solid 1px #dddddd;
+    border-radius: 3px;
+    flex: 0 0 100px;
+    height: 90px;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    padding: 5px 0; }
+    .orders .order .cover img {
+      width: 60px; }
+  .orders .order .details {
+    flex: 1 1 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-flow: column; }
+    .orders .order .details .title {
+      flex: 1 1 auto; }
+    .orders .order .details .others {
+      flex: 0 0 20px; }
+      .orders .order .details .others .price {
+        float: left;
+        color: red;
+        font-size: 13px;
+        line-height: 20px; }
+      .orders .order .details .others .number {
+        float: right;
+        border: solid 1px #cccccc;
+        border-radius: 3px;
+        display: flex;
+        flex-flow: row;
+        width: 110px;
+        height: 20px;
+        line-height: 20px; }
+        .orders .order .details .others .number .sub {
+          flex: 0 0 30px;
+          text-align: center;
+          border-right: solid 1px #cccccc; }
+        .orders .order .details .others .number .amount {
+          flex: 0 0 50px;
+          text-align: center;
+          border-right: solid 1px #cccccc;
+          font-size: 13px; }
+        .orders .order .details .others .number .add {
+          flex: 0 0 30px;
+          text-align: center; }
+
+.recommend hr {
+  margin: 15px 0 0; }
+.recommend .r-title {
+  height: 20px;
+  line-height: 20px;
+  position: relative;
+  top: -12px;
+  text-align: center;
+  width: 100px;
+  margin: auto;
+  background-color: #eeeeee; }
+.recommend .list {
+  display: flex;
+  flex-flow: row wrap; }
+  .recommend .list .book {
+    flex: 0 0 49%;
+    background-color: white;
+    margin-top: 5px; }
+    .recommend .list .book a {
+      text-decoration-line: none;
+      color: #000;
+      font-size: inherit; }
+    .recommend .list .book .cover {
+      height: 180px;
+      line-height: 180px;
+      overflow: hidden;
+      text-align: center; }
+      .recommend .list .book .cover img {
+        margin: 5px;
+        width: 115px; }
+  .recommend .list .book:nth-child(odd) {
+    margin-left: 2%; }
+  .recommend .list .title {
+    padding-left: 20px;
+    font-size: 14px; }
+  .recommend .list .price {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 13px;
+    color: red; }
+
+.clearing {
+  position: fixed;
+  bottom: 50px;
+  height: 50px;
+  background-color: white;
+  border-top: solid 1px #dddddd;
+  display: flex;
+  width: 100%; }
+  .clearing .select-all {
+    flex: 0 0 75px;
+    line-height: 50px;
+    display: flex;
+    flex-flow: row; }
+    .clearing .select-all .icon {
+      flex: 0 0 30px;
+      margin-top: 10px; }
+      .clearing .select-all .icon img {
+        width: 24px;
+        height: 24px;
+        margin: 3px; }
+    .clearing .select-all div {
+      flex: 1 1 auto; }
+  .clearing .price {
+    flex: 1 1 auto;
+    line-height: 50px; }
+  .clearing .to-clearing {
+    flex: 0 0 100px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    line-height: 50px; }
 
 /*# sourceMappingURL=shopping_cart.css.map */

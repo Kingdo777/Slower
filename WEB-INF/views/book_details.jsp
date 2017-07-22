@@ -20,6 +20,7 @@
 <body>
 <div class="page">
 
+    <div id="bookId" style="display: none;">${book.id}</div>
     <div class="nav">
         <div class="back">
             <img src="<c:url value="/static/image/icons/back.png"/>">

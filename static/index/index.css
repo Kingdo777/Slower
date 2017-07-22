@@ -1,3 +1,15 @@
+/*///////////////////////// -- body -- ///////////////////////*/
+/*///////////////////////// -- button -- ///////////////////////*/
+/*///////////////////////// -- ul -- ///////////////////////*/
+/*///////////////////////// -- hr -- ///////////////////////*/
+.hr {
+  border: none;
+  border-top: #cccccc 1px solid; }
+
+/*///////////////////////// -- a -- ///////////////////////*/
+/*///////////////////////// -- input -- ///////////////////////*/
+/*///////////////////////// -- textarea -- ///////////////////////*/
+/*///////////////////////// -- scrollbar -- ///////////////////////*/
 body {
   padding: 0;
   background-color: #dddddd;
@@ -63,29 +75,34 @@ body {
   background-color: white;
   border-bottom: solid 1px #cccccc; }
   .menu ul {
-    list-style: none;
     margin: 0;
     padding: 0;
-    overflow: auto; }
-    .menu ul li {
-      text-align: center;
-      width: 20%;
-      float: left;
-      height: 50px;
-      padding: 5px 0; }
-      .menu ul li a {
-        text-decoration: none; }
-        .menu ul li a .icon {
-          height: 30px; }
-          .menu ul li a .icon img {
-            margin: 3px;
-            width: 24px;
-            height: 24px; }
-        .menu ul li a .title {
-          font-size: 12px;
-          color: #666666;
-          height: 20px;
-          line-height: 20px; }
+    list-style: none;
+    overflow: auto;
+    height: auto; }
+  .menu ul li {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    float: left; }
+  .menu ul li {
+    width: 20%;
+    height: 50px;
+    padding: 5px 0; }
+    .menu ul li a {
+      text-decoration-line: none;
+      color: #666666;
+      font-size: 12px; }
+    .menu ul li a .icon {
+      height: 30px; }
+      .menu ul li a .icon img {
+        margin: 3px;
+        width: 24px;
+        height: 24px; }
+    .menu ul li a .title {
+      height: 20px;
+      line-height: 20px; }
 
 .menu-2 {
   display: flex;

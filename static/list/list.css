@@ -1,0 +1,166 @@
+/*///////////////////////// -- body -- ///////////////////////*/
+/*///////////////////////// -- button -- ///////////////////////*/
+/*///////////////////////// -- ul -- ///////////////////////*/
+/*///////////////////////// -- hr -- ///////////////////////*/
+.hr {
+  border: none;
+  border-top: #cccccc 1px solid; }
+
+/*///////////////////////// -- a -- ///////////////////////*/
+/*///////////////////////// -- input -- ///////////////////////*/
+/*///////////////////////// -- textarea -- ///////////////////////*/
+/*///////////////////////// -- scrollbar -- ///////////////////////*/
+.head {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  border-bottom: #cccccc 1px solid;
+  padding-bottom: 5px; }
+
+.search-section {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  margin: 0;
+  padding: 10px 0;
+  height: 30px; }
+  .search-section .messages, .search-section .classic {
+    flex: 0 0 50px;
+    width: 50px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    margin: 3px; }
+    .search-section .messages img, .search-section .classic img {
+      width: 24px;
+      height: 24px; }
+  .search-section .search {
+    text-align: center;
+    flex: 1 1 auto;
+    height: 30px; }
+    .search-section .search .body {
+      padding: 0;
+      margin: auto;
+      width: 100%;
+      height: 30px;
+      border-radius: 15px;
+      background-color: white;
+      display: flex; }
+      .search-section .search .body .search-icon {
+        flex: 0 0 30px;
+        width: 30px;
+        margin: 5px; }
+        .search-section .search .body .search-icon img {
+          width: 20px;
+          height: 20px; }
+      .search-section .search .body .search-input {
+        flex: 1 1 auto; }
+        .search-section .search .body .search-input input {
+          height: 30px;
+          width: 100%;
+          display: block;
+          outline: none;
+          border: none; }
+      .search-section .search .body .scan-icon {
+        flex: 0 0 30px;
+        width: 30px;
+        margin: 5px; }
+        .search-section .search .body .scan-icon img {
+          width: 20px;
+          height: 20px; }
+
+.roll-section {
+  height: 200px;
+  background-color: black; }
+
+.search {
+  height: 30px;
+  padding: 10px; }
+  .search .box {
+    height: 30px;
+    display: flex;
+    flex-flow: row;
+    background-color: #dddddd;
+    border-radius: 15px; }
+    .search .box .icon {
+      width: 35px;
+      flex: 0 0 35px; }
+      .search .box .icon img {
+        width: 20px;
+        height: 20px;
+        margin: 5px; }
+    .search .box input {
+      flex: 1 1 auto;
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
+      outline: none; }
+
+.menu {
+  background-color: white;
+  border-bottom: solid 1px #cccccc; }
+  .menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+    height: auto; }
+  .menu ul li {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    float: left; }
+  .menu ul li {
+    width: 20%;
+    height: 50px;
+    padding: 5px 0; }
+    .menu ul li a {
+      text-decoration-line: none;
+      color: #666666;
+      font-size: 12px; }
+    .menu ul li a .icon {
+      height: 30px; }
+      .menu ul li a .icon img {
+        margin: 3px;
+        width: 24px;
+        height: 24px; }
+    .menu ul li a .title {
+      height: 20px;
+      line-height: 20px; }
+
+.menu-2 {
+  display: flex;
+  background-color: white;
+  margin-bottom: 10px; }
+  .menu-2 > div {
+    flex: 1 1 auto;
+    height: 175px;
+    border-right: solid 1px #cccccc; }
+
+#book-list {
+  margin-top: 50px; }
+  #book-list .book {
+    background-color: white;
+    margin-top: 1px;
+    padding: 10px; }
+    #book-list .book a {
+      display: flex;
+      flex-flow: row;
+      text-decoration: none; }
+      #book-list .book a .cover {
+        flex: 0 0 100px;
+        width: 100px; }
+        #book-list .book a .cover img {
+          width: 100px; }
+      #book-list .book a .details {
+        padding: 10px;
+        flex: 1 1 auto; }
+        #book-list .book a .details .title {
+          font-size: 15px; }
+        #book-list .book a .details .summary {
+          word-break: break-all;
+          font-size: 14px;
+          color: #888888; }
+
+/*# sourceMappingURL=list.css.map */
