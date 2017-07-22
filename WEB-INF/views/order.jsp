@@ -20,32 +20,38 @@
 </head>
 <body class="body">
 <div class="page">
-    <section class="address">
+    <section id="address">
+        <div class="details">
+            <div class="info"><span class="username">张量奇</span> <span class="tel">15524439489</span></div>
+            <div class="address">dafasd激发我微积分文件访问飞机</div>
+        </div>
+        <div class="fa fa-angle-right">
+
+        </div>
+    </section>
+
+    <section id="books">
 
     </section>
 
-    <section class="books">
+    <section id="invoice">
 
     </section>
 
-    <section class="invoice">
+    <section id="event">
 
     </section>
 
-    <section class="event">
-
-    </section>
-
-    <section class="money">
+    <section id="money">
 
     </section>
 </div>
 </body>
 <footer>
     <div>
-        实付款: <div id="price">100</div>
+        实付款: <span id="price">100</span>
     </div>
-    <div>
+    <div id="pay">
         立即下单
     </div>
 </footer>

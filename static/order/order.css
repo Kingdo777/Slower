@@ -1,3 +1,64 @@
+body {
+  background-color: #eeeeee; }
 
+#address {
+  border-bottom: solid 3px #e0620d;
+  background-color: white;
+  display: flex;
+  flex-flow: row; }
+  #address .details {
+    flex: 1 1 auto;
+    padding: 5px 15px; }
+  #address .fa {
+    flex: 0 0 20px;
+    font-size: 25px; }
+
+#books {
+  height: 150px;
+  background-color: white;
+  border-bottom: solid 1px #cccccc;
+  border-top: solid 1px #cccccc;
+  margin-top: 15px; }
+
+#invoice {
+  height: 100px;
+  background-color: white;
+  border-bottom: solid 1px #cccccc;
+  border-top: solid 1px #cccccc;
+  margin-top: 15px; }
+
+#event {
+  height: 50px;
+  background-color: white;
+  border-bottom: solid 1px #cccccc;
+  border-top: solid 1px #cccccc;
+  margin-top: 15px; }
+
+#money {
+  height: 50px;
+  background-color: white;
+  border-bottom: solid 1px #cccccc;
+  border-top: solid 1px #cccccc;
+  margin-top: 15px; }
+
+footer {
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  line-height: 50px;
+  display: flex; }
+  footer > div:first-child {
+    flex: 1 1 auto;
+    color: red;
+    font-size: 14px;
+    text-align: right;
+    padding: 0 15px; }
+  footer > div:last-child {
+    flex: 0 0 125px;
+    background-color: red;
+    color: white;
+    text-align: center; }
 
 /*# sourceMappingURL=order.css.map */
