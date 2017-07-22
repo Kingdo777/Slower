@@ -57,10 +57,10 @@ body {
   background-color: white; }
   .order .title {
     padding: 0 10px;
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
     font-size: 14px;
-    border-bottom: solid 1px #cccccc; }
+    border-bottom: solid 1px #dddddd; }
     .order .title .all-orders {
       float: right;
       font-size: 13px; }
@@ -77,27 +77,27 @@ body {
     height: auto;
     float: left; }
   .order .status ul {
-    padding: 15px 0; }
+    padding: 20px 0 15px 0; }
     .order .status ul li {
       width: 25%; }
       .order .status ul li a {
         text-decoration: none;
-        color: #888888;
+        color: #666666;
         font-size: 11px; }
       .order .status ul li img {
-        width: 25px;
-        height: 25px; }
+        width: 24px;
+        height: 24px; }
 
 .tools {
   background-color: white;
   margin-top: 10px; }
   .tools .title {
     margin: 0;
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
     font-size: 14px;
     padding: 0 10px;
-    border-bottom: solid 1px #cccccc; }
+    border-bottom: solid 1px #dddddd; }
   .tools ul {
     margin: 0;
     padding: 0;
@@ -111,16 +111,16 @@ body {
     height: auto;
     float: left; }
   .tools ul {
-    padding: 10px 0; }
+    padding: 20px 0 15px 0; }
     .tools ul li {
       width: 25%; }
       .tools ul li a {
         text-decoration: none;
-        color: #888888;
+        color: #666666;
         font-size: 11px; }
       .tools ul li img {
-        width: 25px;
-        height: 25px; }
+        width: 24px;
+        height: 24px; }
 
 .recommend hr {
   margin: 25px 0 0; }

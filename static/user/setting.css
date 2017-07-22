@@ -21,14 +21,14 @@
   padding: 0 15px; }
 .basic .content, .others .content {
   background-color: white;
-  border-top: solid 1px #cccccc;
-  border-bottom: solid 1px #cccccc;
+  border-top: solid 1px #dddddd;
+  border-bottom: solid 1px #dddddd;
   padding: 0 15px; }
   .basic .content > div, .others .content > div {
     margin: 0;
     height: 45px;
     line-height: 45px;
-    border-bottom: solid 1px #cccccc;
+    border-bottom: solid 1px #dddddd;
     font-size: 14px; }
     .basic .content > div a, .others .content > div a {
       text-decoration: none;
@@ -69,14 +69,14 @@
       height: 75px;
       border-radius: 50%; }
   #user_details .details {
-    border-top: solid 1px #cccccc;
-    border-bottom: solid 1px #cccccc;
+    border-top: solid 1px #dddddd;
+    border-bottom: solid 1px #dddddd;
     padding: 0 15px;
     background-color: white; }
     #user_details .details > div {
       height: 45px;
       line-height: 45px;
-      border-bottom: solid 1px #cccccc; }
+      border-bottom: solid 1px #dddddd; }
       #user_details .details > div a {
         text-decoration: none;
         color: #000;
@@ -98,8 +98,8 @@
       border-bottom: none; }
   #user_details .password {
     margin-top: 20px;
-    border-top: solid 1px #cccccc;
-    border-bottom: solid 1px #cccccc;
+    border-top: solid 1px #dddddd;
+    border-bottom: solid 1px #dddddd;
     padding: 0 15px;
     background-color: white; }
     #user_details .password a {
@@ -109,8 +109,8 @@
     #user_details .password a {
       display: flex;
       flex-flow: row;
-      height: 40px;
-      line-height: 40px; }
+      height: 45px;
+      line-height: 45px; }
       #user_details .password a .title {
         flex: 1 1 auto; }
       #user_details .password a .fa {

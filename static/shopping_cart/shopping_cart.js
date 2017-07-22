@@ -29,6 +29,10 @@ SLOWER.cart = (function () {
                         $('.cart-empty').hide();
                         $('.clearing').show();
                     }
+                    else {
+                        $('.cart-empty').show();
+                        $('.clearing').hide();
+                    }
 
                     data.books.forEach(function (item) {
                         let data = {
@@ -36,10 +40,65 @@ SLOWER.cart = (function () {
                             cover: item.cover,
                             title: item.title,
                             price: item.price,
-                            number: 0
+                            number: item.number
                         };
 
-                        $('#order-template').tmpl(data).appendTo('.orders');
+                        let $temp = $('#order-template').tmpl(data);
+
+                        if(item.selected === 0){
+                            $temp.find('.selected').hide();
+                            $temp.find('.non-selected').show();
+                        }
+
+                        // 注册选择取消按钮
+                        $temp.find('.select').click(function () {
+
+                            if(item.selected === 0){
+
+                                $.post('/shopping_cart/selected', {bookId: item.id}, function (data) {
+                                    if(data.status === "success"){
+                                        item.selected = 1;
+                                        $temp.find('.selected').show();
+                                        $temp.find('.non-selected').hide();
+                                    }
+                                });
+                            }
+                            else {
+                                $.post('/shopping_cart/non_selected', {bookId: item.id}, function (data) {
+                                    if(data.status === "success"){
+                                        item.selected = 0;
+                                        $temp.find('.selected').hide();
+                                        $temp.find('.non-selected').show();
+                                    }
+                                });
+                            }
+                        });
+
+                        // 注册 增加减少
+                        $temp.find('.sub').click(function () {
+
+                            if(item.number > 1){
+
+                                $.post('/shopping_cart/decrease', {bookId: item.id}, function (data) {
+                                    if(data.status === "success") {
+                                        item.number -= 1;
+                                        $temp.find('.amount').text(item.number);
+                                    }
+                                });
+                            }
+                        });
+
+                        $temp.find('.add').click(function () {
+
+                            $.post('/shopping_cart/increase', {bookId: item.id}, function (data) {
+                                if(data.status === "success") {
+                                    item.number += 1;
+                                    $temp.find('.amount').text(item.number);
+                                }
+                            });
+                        });
+
+                        $temp.appendTo('.orders');
                     })
                 }
             })

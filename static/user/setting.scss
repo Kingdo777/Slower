@@ -17,15 +17,15 @@
 
     .content {
         background-color: white;
-        border-top: solid 1px #cccccc;
-        border-bottom: solid 1px #cccccc;
+        border-top: solid 1px #dddddd;
+        border-bottom: solid 1px #dddddd;
         padding: 0 15px;
 
         >div {
             margin: 0;
             height: 45px;
             line-height: 45px;
-            border-bottom: solid 1px #cccccc;
+            border-bottom: solid 1px #dddddd;
 
             @include a('a', #000);
             font-size: 14px;
@@ -82,8 +82,8 @@
     }
 
     .details {
-        border-top: solid 1px #cccccc;
-        border-bottom: solid 1px #cccccc;
+        border-top: solid 1px #dddddd;
+        border-bottom: solid 1px #dddddd;
 
         padding: 0 15px;
 
@@ -92,7 +92,7 @@
         > div{
             height: 45px;
             line-height: 45px;
-            border-bottom: solid 1px #cccccc;
+            border-bottom: solid 1px #dddddd;
 
             @include a('a', #000);
 
@@ -126,8 +126,8 @@
 
     .password {
         margin-top: 20px;
-        border-top: solid 1px #cccccc;
-        border-bottom: solid 1px #cccccc;
+        border-top: solid 1px #dddddd;
+        border-bottom: solid 1px #dddddd;
 
         padding: 0 15px;
 
@@ -137,8 +137,8 @@
         a {
             display: flex;
             flex-flow: row;
-            height: 40px;
-            line-height: 40px;
+            height: 45px;
+            line-height: 45px;
 
             .title {
                 flex: 1 1 auto;

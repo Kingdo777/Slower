@@ -20,8 +20,6 @@
 </head>
 <body>
 <div class="page">
-    <div class="header">购物车</div>
-
     <%-- 如果购物车是空的 --%>
     <div class="cart-empty">
         <span class="body">
@@ -35,7 +33,8 @@
         <div id="order-template" style="display: none;">
             <div class="order">
                 <div class="select">
-                    <img src="<c:url value="/static/image/icons/round_check_fill.png"/>">
+                    <img class="selected" src="<c:url value="/static/image/icons/round_check_fill.png"/>">
+                    <img class="non-selected" style="display: none;" src="<c:url value="/static/image/icons/round.png"/>">
                 </div>
                 <div class="cover">
                     <a href="/book/details/{{id}}">
@@ -88,7 +87,7 @@
         </div> <div>全选</div>
     </div>
     <div class="price">
-        合计: 123元
+        <span>合计:</span> <span>123元</span>
     </div>
     <div class="to-clearing">
         <a href="/shopping_cart/order">去结算</a>

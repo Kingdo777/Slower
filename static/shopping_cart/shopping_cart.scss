@@ -8,18 +8,7 @@ body {
 }
 
 
-.header {
-    height: 35px;
-    line-height: 35px;
-    text-align: center;
-    font-size: 15px;
-
-    border-bottom: solid 1px #cccccc;
-    background-color: white;
-}
-
 .cart-empty {
-
     padding: 15px 0;
     .body {
         display: flex;
@@ -47,6 +36,7 @@ body {
 }
 
 .orders {
+    margin-bottom: 25px;
     .order {
         display: flex;
         flex-flow: row;
@@ -54,7 +44,7 @@ body {
         border-top: solid 1px #dddddd;
 
         background-color: #f6eeee;
-        margin: 10px 0;
+        margin-bottom: 10px;
         height: 100px;
         padding: 5px 10px;
         overflow: hidden;
@@ -207,27 +197,28 @@ body {
 .clearing {
     position: fixed;
     bottom: 50px;
-    height: 50px;
-    background-color: white;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.8);
     border-top: solid 1px #dddddd;
 
+    font-size: 14px;
     display: flex;
     width: 100%;
 
     .select-all {
-        flex: 0 0 75px;
-        line-height: 50px;
+        flex: 0 0 100px;
+        line-height: 45px;
         display: flex;
         flex-flow: row;
 
         .icon {
-            flex: 0 0 30px;
-            margin-top: 10px;
+            flex: 0 0 50px;
+            margin-top: 7px;
 
             img {
                 width: 24px;
                 height: 24px;
-                margin: 3px;
+                margin: 3px 8px;
             }
         }
 
@@ -238,14 +229,25 @@ body {
 
     .price {
         flex:  1 1 auto;
-        line-height: 50px;
+        line-height: 45px;
+        text-align: right;
+        padding-right: 15px;
+
+        span:nth-child(1){
+            color: #888888;
+            font-size: 13px;
+        }
+
+        span:nth-child(2){
+            color: red;
+        }
     }
 
     .to-clearing {
         flex: 0 0 100px;
         background-color: red;
         text-align: center;
-        line-height: 50px;
+        line-height: 45px;
 
         a {
             display: block;
