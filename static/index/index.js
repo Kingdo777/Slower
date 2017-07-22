@@ -19,14 +19,15 @@ $(document).ready(function () {
 
 function newBook(ISBN)
 {
-    $.ajax({
-        type: 'post',
-        url: "/newBook/"+ISBN,
-        dataType: 'test',
-        success: function (data) {
-            location.assign("/details/"+data);
-        }
-    });
+    alert(ISBN);
+    // $.ajax({
+    //     type: 'post',
+    //     url: "/newBook/"+ISBN,
+    //     dataType: 'test',
+    //     success: function (data) {
+    //         location.assign("/details/"+data);
+    //     }
+    // });
 }
 
 if(typeof SLOWER === "undefined") SLOWER = {};
