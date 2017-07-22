@@ -111,28 +111,58 @@ body {
   .menu-2 > div {
     flex: 1 1 auto;
     height: 175px;
-    border-right: solid 1px #cccccc; }
+    border-right: solid 1px #cccccc;
+    text-align: center;
+    padding: 15px 0; }
+    .menu-2 > div .title {
+      margin: 5px 0; }
+    .menu-2 > div .des {
+      margin: 5px 0;
+      font-size: 13px;
+      color: #666666; }
+    .menu-2 > div .image img {
+      max-width: 100px;
+      max-height: 125px; }
 
 #book-list .book {
   background-color: white;
   margin-top: 1px;
   padding: 10px; }
   #book-list .book a {
+    text-decoration: none;
+    color: #000;
+    font-size: inherit; }
+  #book-list .book a {
     display: flex;
-    flex-flow: row;
-    text-decoration: none; }
+    flex-flow: row; }
     #book-list .book a .cover {
       flex: 0 0 100px;
-      width: 100px; }
+      width: 100px;
+      height: 125px;
+      text-align: center; }
       #book-list .book a .cover img {
-        width: 100px; }
+        max-width: 100px;
+        max-height: 125px; }
     #book-list .book a .details {
-      padding: 10px;
-      flex: 1 1 auto; }
+      padding: 0 10px;
+      flex: 1 1 auto;
+      height: 125px;
+      display: flex;
+      flex-flow: column; }
       #book-list .book a .details .title {
-        font-size: 15px; }
+        flex: 0 0 25px;
+        line-height: 25px;
+        font-size: 16px; }
       #book-list .book a .details .summary {
-        font-size: 14px;
-        color: #888888; }
+        flex: 1 1 auto;
+        padding: 10px 0;
+        overflow: hidden;
+        font-size: 13px;
+        color: #666666; }
+      #book-list .book a .details .author {
+        flex: 0 0 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 12px; }
 
 /*# sourceMappingURL=index.css.map */

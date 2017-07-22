@@ -91,16 +91,28 @@
 
     <%-- 大类推荐 --%>
     <section class="menu-2">
-        <div class="">
-
+        <div class="free">
+            <div class="title">
+                免费好书
+            </div>
+            <div class="des">
+                看书，就要划算!
+            </div>
+            <div class="image">
+                <img src="https://img3.doubanio.com/lpic/s9061102.jpg">
+            </div>
         </div>
 
-        <div class="">
-
-        </div>
-
-        <div class="">
-
+        <div class="new-book">
+            <div class="title">
+                新书专区
+            </div>
+            <div class="des">
+                潜力新书，抢先阅读
+            </div>
+            <div class="image">
+                <img src="https://img1.doubanio.com/lpic/s27284878.jpg">
+            </div>
         </div>
     </section>
 

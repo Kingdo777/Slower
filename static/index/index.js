@@ -44,7 +44,7 @@ SLOWER.index = (function () {
                             id: item.id,
                             cover: item.cover,
                             title: item.title,
-                            summary: item.summary.substr(0, 50),
+                            summary: item.summary.substr(0, 50) + '...',
                             author: item.author
                         };
 

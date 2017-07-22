@@ -4,8 +4,7 @@
 
 footer {
     background-color: white;
-    border-top: solid 1px #aaaaaa;
-    box-shadow: 0 -1px 1px -1px #cccccc;
+    border-top: solid 1px #cccccc;
     padding: 0;
 
     position: fixed;
@@ -18,7 +17,7 @@ footer {
             width: 20%;
             height: 50px;
 
-            @include a('a', #000);
+            @include a('a', #515151);
 
             a {
                 display: flex;
@@ -29,16 +28,17 @@ footer {
                     height: 30px;
 
                     img {
-                        width: 25px;
-                        height: 25px;
-                        margin: 5px;
+                        width: 24px;
+                        height: 24px;
+                        margin: 5px 3px 1px 3px;
                     }
                 }
 
                 .title {
                     flex: 0 0 20px;
                     height: 20px;
-                    font-size: 12px;
+                    line-height: 20px;
+                    font-size: 11px;
                 }
             }
         }

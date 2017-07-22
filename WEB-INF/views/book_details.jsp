@@ -57,11 +57,10 @@
             <div class="images">
                 <img src="${book.cover}">
             </div>
-            <div class="title">${book.title}</div>
-            <div class="author">作者: ${book.author}</div>
-            <div class="publisher">出版社: ${book.publisher}</div>
-            <div class="pubdate">出版时间: ${book.pubdate}</div>
-            <div class="price">${book.price}</div>
+            <div class="info">
+                <div class="title">${book.title}</div>
+                <div class="price">${book.price}</div>
+            </div>
         </div>
 
         <%-- 详情 --%>
@@ -70,6 +69,11 @@
                 ${book.summary}
             </div>
             <div class="more"><img src="<c:url value="/static/image/icons/down.png"/>"></div>
+        </div>
+
+        <div class="details">
+            <div><span>作者</span><span>${book.author}</span><span class="fa fa-angle-right"></span> </div>
+            <div><span>出版</span><span>${book.publisher}, ${book.pubdate}</span><span class="fa fa-angle-right"></span> </div>
         </div>
 
         <%-- 评论 --%>

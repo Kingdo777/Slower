@@ -14,9 +14,9 @@ body {
     display: flex;
     flex-flow: row; }
     .page .nav img {
-      margin: 4px;
-      width: 27px;
-      height: 27px; }
+      margin: 6px;
+      width: 23px;
+      height: 23px; }
     .page .nav .back {
       flex: 0 0 100px;
       line-height: 35px; }
@@ -28,10 +28,11 @@ body {
         padding: 0;
         margin: auto;
         overflow: auto;
-        width: 120px; }
+        width: 150px; }
         .page .nav .menu ul li {
           float: left;
-          width: 40px;
+          width: 50px;
+          font-size: 14px;
           line-height: 35px;
           color: #666666; }
         .page .nav .menu ul .selected {
@@ -57,13 +58,13 @@ body {
             height: 0;
             border-style: solid;
             border-width: 0 10px 10px 10px;
-            border-color: transparent transparent rgba(0, 0, 0, 0.5) transparent; }
+            border-color: transparent transparent rgba(0, 0, 0, 0.65) transparent; }
           .page .nav .others > div .second-menu ul {
             list-style: none;
             padding: 0;
             margin: 0;
             width: 125px;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.65);
             border-radius: 5px; }
             .page .nav .others > div .second-menu ul li {
               padding: 5px; }
@@ -88,41 +89,64 @@ body {
 #book {
   margin-top: 35px; }
   #book .main .images {
+    background-color: #F0F9F9;
     text-align: center;
-    background-color: #dddddd;
     padding: 10px 0; }
     #book .main .images img {
       height: 200px; }
-  #book .main .title {
+  #book .main .info {
     background-color: white;
-    font-size: 19px;
-    padding: 10px; }
-  #book .main .author, #book .main .pubdate, #book .main .publisher {
-    background-color: white;
-    padding: 0 10px;
-    font-size: 13px;
-    color: #888888; }
-  #book .main .price {
-    background-color: white;
-    color: red;
-    font-size: 14px;
-    padding: 0 10px; }
+    padding: 10px 15px; }
+    #book .main .info .title {
+      font-size: 17px; }
+    #book .main .info .price {
+      margin-top: 10px;
+      color: red;
+      font-size: 13px; }
   #book .summary {
-    margin-top: 5px;
+    margin-top: 10px;
     background-color: white; }
     #book .summary .content {
-      padding: 10px;
+      padding: 20px 15px;
       height: 50px;
+      font-size: 14px;
+      line-height: 23px;
       overflow: hidden; }
     #book .summary .more {
       border-bottom: solid 1px #dddddd;
-      text-align: center; }
+      text-align: center;
+      height: 26px; }
       #book .summary .more img {
-        width: 24px;
-        height: 24px; }
+        width: 14px;
+        height: 14px;
+        margin: 6px; }
+  #book .details {
+    background-color: white;
+    margin-top: 10px; }
+    #book .details > div {
+      display: flex;
+      flex-flow: row;
+      height: 40px;
+      line-height: 40px;
+      border-bottom: solid 1px #cccccc;
+      padding: 0 15px; }
+      #book .details > div > span:nth-child(1) {
+        flex: 0 0 60px;
+        color: #888888;
+        font-size: 13px; }
+      #book .details > div > span:nth-child(2) {
+        flex: 1 1 auto;
+        font-size: 13px; }
+      #book .details > div > span:last-child {
+        flex: 0 0 20px;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        margin-top: 10px; }
   #book .review {
     background-color: white;
-    margin-top: 5px; }
+    margin-top: 10px; }
 
 #details {
   margin-top: 35px;
@@ -162,12 +186,13 @@ footer {
       footer .box .collect .icon, footer .box .cart .icon {
         height: 30px; }
         footer .box .collect .icon img, footer .box .cart .icon img {
-          width: 30px;
-          height: 30px; }
+          width: 24px;
+          height: 24px;
+          margin: 5px 3px 1px 3px; }
       footer .box .collect .title, footer .box .cart .title {
         height: 20px;
         line-height: 20px;
-        font-size: 12px; }
+        font-size: 11px; }
     footer .box .add_to_bookrack, footer .box .add_to_cart {
       flex: 1 1 auto; }
       footer .box .add_to_bookrack a, footer .box .add_to_cart a {
@@ -178,8 +203,8 @@ footer {
         line-height: 50px;
         text-align: center; }
     footer .box .add_to_bookrack {
-      background-color: yellow; }
+      background-color: #F5B041; }
     footer .box .add_to_cart {
-      background-color: red; }
+      background-color: #E74C3C; }
 
 /*# sourceMappingURL=book_details.css.map */

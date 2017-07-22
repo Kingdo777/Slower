@@ -17,9 +17,9 @@ body {
         flex-flow: row;
 
         img {
-            margin: 4px;
-            width: 27px;
-            height: 27px;
+            margin: 6px;
+            width: 23px;
+            height: 23px;
         }
 
         .back {
@@ -38,10 +38,11 @@ body {
                 margin: auto;
                 overflow: auto;
 
-                width: 120px;
+                width: 150px;
                 li {
                     float: left;
-                    width: 40px;
+                    width: 50px;
+                    font-size: 14px;
                     line-height: 35px;
                     color: #666666;
                 }
@@ -80,7 +81,7 @@ body {
                         height: 0;
                         border-style: solid;
                         border-width: 0 10px 10px 10px;
-                        border-color: transparent transparent rgba(0, 0, 0, 0.5) transparent;
+                        border-color: transparent transparent rgba(0, 0, 0, 0.65) transparent;
                     }
 
                     ul {
@@ -89,7 +90,7 @@ body {
                         margin: 0;
 
                         width: 125px;
-                        background-color: rgba(0, 0, 0, 0.5);
+                        background-color: rgba(0, 0, 0, 0.65);
                         border-radius: 5px;
 
                         li {
@@ -133,61 +134,94 @@ body {
 
     .main {
         .images {
+            background-color: #F0F9F9;
             text-align: center;
-            background-color: #dddddd;
+            //background-color: #dddddd;
             padding: 10px 0;
             img {
                 height: 200px;
             }
         }
 
-        .title {
+        .info {
             background-color: white;
-            font-size: 19px;
-            padding: 10px;
-        }
+            padding: 10px 15px;
 
-        .author, .pubdate, .publisher {
-            background-color: white;
-            padding: 0 10px;
-            font-size: 13px;
-            color: #888888;
-        }
+            .title {
+                font-size: 17px;
+            }
 
-
-        .price {
-            background-color: white;
-            color: red;
-            font-size: 14px;
-            padding: 0 10px;
+            .price {
+                margin-top: 10px;
+                color: red;
+                font-size: 13px;
+            }
         }
     }
 
 
     .summary {
-        margin-top: 5px;
+        margin-top: 10px;
         background-color: white;
 
         .content {
-            padding: 10px;
+            padding: 20px 15px;
             height: 50px;
+            font-size: 14px;
+            line-height: 23px;
             overflow: hidden;
         }
 
         .more {
             border-bottom: solid 1px #dddddd;
             text-align: center;
+            height: 26px;
+
             img {
-                width: 24px;
-                height: 24px;
+                width: 14px;
+                height: 14px;
+                margin: 6px;
             }
         }
     }
 
+    .details {
+        background-color: white;
+        margin-top: 10px;
+
+        >div {
+            display: flex;
+            flex-flow: row;
+            height: 40px;
+            line-height: 40px;
+            border-bottom: solid 1px #cccccc;
+            padding: 0 15px;
+
+            > span:nth-child(1) {
+                flex: 0 0 60px;
+                color: #888888;
+                font-size: 13px;
+            }
+
+            > span:nth-child(2) {
+                flex: 1 1 auto;
+                font-size: 13px;
+            }
+
+            > span:last-child{
+                flex: 0 0 20px;
+                text-align: center;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                margin-top: 10px;
+            }
+        }
+    }
 
     .review {
         background-color: white;
-        margin-top: 5px;
+        margin-top: 10px;
 
     }
 
@@ -247,14 +281,15 @@ footer {
             .icon {
                 height: 30px;
                 img {
-                    width: 30px;
-                    height: 30px;
+                    width: 24px;
+                    height: 24px;
+                    margin: 5px 3px 1px 3px;
                 }
             }
             .title {
                 height: 20px;
                 line-height: 20px;
-                font-size: 12px;
+                font-size: 11px;
             }
         }
 
@@ -271,11 +306,11 @@ footer {
         }
 
         .add_to_bookrack {
-            background-color: yellow;
+            background-color: #F5B041;
         }
 
         .add_to_cart {
-            background-color: red;
+            background-color: #E74C3C;
         }
     }
 }

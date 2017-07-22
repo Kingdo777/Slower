@@ -12,8 +12,7 @@
 /*///////////////////////// -- scrollbar -- ///////////////////////*/
 footer {
   background-color: white;
-  border-top: solid 1px #aaaaaa;
-  box-shadow: 0 -1px 1px -1px #cccccc;
+  border-top: solid 1px #cccccc;
   padding: 0;
   position: fixed;
   bottom: 0;
@@ -35,7 +34,7 @@ footer {
     height: 50px; }
     footer .nav li a {
       text-decoration: none;
-      color: #000;
+      color: #515151;
       font-size: inherit; }
     footer .nav li a {
       display: flex;
@@ -44,12 +43,13 @@ footer {
         flex: 0 0 30px;
         height: 30px; }
         footer .nav li a .icon img {
-          width: 25px;
-          height: 25px;
-          margin: 5px; }
+          width: 24px;
+          height: 24px;
+          margin: 5px 3px 1px 3px; }
       footer .nav li a .title {
         flex: 0 0 20px;
         height: 20px;
-        font-size: 12px; }
+        line-height: 20px;
+        font-size: 11px; }
 
 /*# sourceMappingURL=footer.css.map */
