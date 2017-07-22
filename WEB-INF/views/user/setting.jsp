@@ -19,8 +19,6 @@
 </head>
 <body class="body">
 <div id="main">
-    <div class="header">设置</div>
-
     <div class="basic">
         <div class="title">基本</div>
         <div class="content">

@@ -80,7 +80,7 @@ body {
     .orders .order .details .title {
       flex: 1 1 auto; }
       .orders .order .details .title a {
-        text-decoration-line: none;
+        text-decoration: none;
         color: black; }
     .orders .order .details .others {
       flex: 0 0 20px; }
@@ -185,7 +185,7 @@ body {
     line-height: 50px; }
     .clearing .to-clearing a {
       display: block;
-      text-decoration-line: none;
+      text-decoration: none;
       color: white; }
 
 /*# sourceMappingURL=shopping_cart.css.map */

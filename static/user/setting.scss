@@ -7,27 +7,10 @@
     height: 100%;
 }
 
-.header {
-    position: fixed;
-    width: 100%;
-    background-color: white;
-    height: 35px;
-    line-height: 35px;
-    font-size: 17px;
-    text-align: center;
-    top: 0;
-
-    border-bottom: solid 1px #cccccc;
-}
-
-.basic {
-    margin-top: 35px;
-}
-
 .basic, .others {
     .title {
-        height: 25px;
-        line-height: 25px;
+        height: 30px;
+        line-height: 30px;
         font-size: 13px;
         padding: 0 15px;
     }
@@ -40,8 +23,8 @@
 
         >div {
             margin: 0;
-            height: 40px;
-            line-height: 40px;
+            height: 45px;
+            line-height: 45px;
             border-bottom: solid 1px #cccccc;
 
             @include a('a', #000);
@@ -56,8 +39,8 @@
 
                 span:last-child {
                     display: block;
-                    height: 40px;
-                    line-height: 40px;
+                    height: 45px;
+                    line-height: 45px;
 
                     float: right;
                 }
@@ -73,9 +56,9 @@
 .logout {
     margin: 100px auto auto;
     width: 90%;
-    height: 35px;
+    height: 40px;
     text-align: center;
-    line-height: 35px;
+    line-height: 40px;
 
     color: white;
     border-radius: 5px;
@@ -107,8 +90,8 @@
         background-color: white;
 
         > div{
-            height: 40px;
-            line-height: 40px;
+            height: 45px;
+            line-height: 45px;
             border-bottom: solid 1px #cccccc;
 
             @include a('a', #000);
@@ -131,7 +114,7 @@
                 .fa {
                     flex: 0 0 20px;
                     display: block;
-                    line-height: 40px;
+                    line-height: 45px;
                 }
             }
 
@@ -163,7 +146,7 @@
 
             .fa {
                 flex: 0 0 20px;
-                line-height: 40px;
+                line-height: 45px;
             }
         }
     }

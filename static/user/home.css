@@ -20,13 +20,12 @@ body {
   .user-info .login-signup {
     display: inline-block;
     height: 30px;
-    padding: 10px;
-    margin: 0 10px; }
+    padding: 10px 20px; }
     .user-info .login-signup a {
       color: #333333; }
   .user-info .operations {
     height: 30px;
-    padding: 10px;
+    padding: 13px;
     float: right;
     display: flex;
     flex-flow: row; }
@@ -34,10 +33,10 @@ body {
       flex: 0 0 30px;
       margin: 0 10px; }
       .user-info .operations div img {
-        width: 30px;
-        height: 30px; }
+        width: 24px;
+        height: 24px; }
   .user-info .details {
-    margin: auto auto 5px; }
+    padding: 15px; }
     .user-info .details .avatar {
       margin: auto;
       height: 70px;
@@ -50,14 +49,16 @@ body {
         height: 60px;
         border-radius: 50%; }
     .user-info .details .username {
-      text-align: center; }
+      text-align: center;
+      margin-top: 5px;
+      font-size: 14px; }
 
 .order {
   background-color: white; }
   .order .title {
     padding: 0 10px;
-    height: 30px;
-    line-height: 30px;
+    height: 35px;
+    line-height: 35px;
     font-size: 14px;
     border-bottom: solid 1px #cccccc; }
     .order .title .all-orders {
@@ -82,18 +83,18 @@ body {
       .order .status ul li a {
         text-decoration: none;
         color: #888888;
-        font-size: 13px; }
+        font-size: 11px; }
       .order .status ul li img {
-        width: 30px;
-        height: 30px; }
+        width: 25px;
+        height: 25px; }
 
 .tools {
   background-color: white;
   margin-top: 10px; }
   .tools .title {
     margin: 0;
-    height: 30px;
-    line-height: 30px;
+    height: 35px;
+    line-height: 35px;
     font-size: 14px;
     padding: 0 10px;
     border-bottom: solid 1px #cccccc; }
@@ -116,10 +117,10 @@ body {
       .tools ul li a {
         text-decoration: none;
         color: #888888;
-        font-size: 13px; }
+        font-size: 11px; }
       .tools ul li img {
-        width: 30px;
-        height: 30px; }
+        width: 25px;
+        height: 25px; }
 
 .recommend hr {
   margin: 25px 0 0; }

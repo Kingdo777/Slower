@@ -30,7 +30,7 @@
         </div>
         <div class="operations">
             <div><a href="#"><img src="<c:url value="/static/image/icons/messages.png"/>" alt=""></a></div>
-            <div><a href="/user/setting"><img src="<c:url value="/static/image/icons/settings.png"/>" alt=""></a></div>
+            <div><a href="<c:url value="/user/setting"/>"><img src="<c:url value="/static/image/icons/settings.png"/>" alt=""></a></div>
         </div>
 
         <div class="details">
@@ -39,7 +39,7 @@
             </div>
             <div class="username">
                 <c:if test="${empty user}">
-                    用户
+                    游客
                 </c:if>
                 <c:if test="${not empty user}">
                     ${user.username}
