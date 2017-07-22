@@ -19,15 +19,9 @@ $(document).ready(function () {
 
 function newBook(ISBN)
 {
-    alert(ISBN);
-    // $.ajax({
-    //     type: 'post',
-    //     url: "/newBook/"+ISBN,
-    //     dataType: 'test',
-    //     success: function (data) {
-    //         location.assign("/details/"+data);
-    //     }
-    // });
+    $.post("/book/newBook/"+ISBN, null, function (data) {
+        location.href = "/book/details/"+data;
+    } );
 }
 
 if(typeof SLOWER === "undefined") SLOWER = {};
