@@ -45,7 +45,7 @@
     border-bottom: solid 1px #cccccc;
     font-size: 14px; }
     .basic .content > div a, .others .content > div a {
-      text-decoration-line: none;
+      text-decoration: none;
       color: #000;
       font-size: inherit; }
     .basic .content > div a, .others .content > div a {
@@ -92,7 +92,7 @@
       line-height: 40px;
       border-bottom: solid 1px #cccccc; }
       #user_details .details > div a {
-        text-decoration-line: none;
+        text-decoration: none;
         color: #000;
         font-size: inherit; }
       #user_details .details > div a {
@@ -117,7 +117,7 @@
     padding: 0 15px;
     background-color: white; }
     #user_details .password a {
-      text-decoration-line: none;
+      text-decoration: none;
       color: #000;
       font-size: inherit; }
     #user_details .password a {

@@ -116,7 +116,7 @@
     height: 50px;
     padding: 5px 0; }
     .menu ul li a {
-      text-decoration-line: none;
+      text-decoration: none;
       color: #666666;
       font-size: 12px; }
     .menu ul li a .icon {

@@ -61,7 +61,7 @@
 /*///////////////////////// -- a -- ///////////////////////*/
 @mixin  a($selector, $color: #00AAAA, $font_size: inherit) {
     #{$selector} {
-        text-decoration-line: none;
+        text-decoration: none;
         color: $color;
         font-size: $font_size;
     }

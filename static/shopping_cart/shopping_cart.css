@@ -130,7 +130,7 @@ body {
     background-color: white;
     margin-top: 5px; }
     .recommend .list .book a {
-      text-decoration-line: none;
+      text-decoration: none;
       color: #000;
       font-size: inherit; }
     .recommend .list .book .cover {

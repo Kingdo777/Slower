@@ -80,7 +80,7 @@ body {
     .order .status ul li {
       width: 25%; }
       .order .status ul li a {
-        text-decoration-line: none;
+        text-decoration: none;
         color: #888888;
         font-size: 13px; }
       .order .status ul li img {
@@ -114,7 +114,7 @@ body {
     .tools ul li {
       width: 25%; }
       .tools ul li a {
-        text-decoration-line: none;
+        text-decoration: none;
         color: #888888;
         font-size: 13px; }
       .tools ul li img {
@@ -140,7 +140,7 @@ body {
     background-color: white;
     margin-top: 5px; }
     .recommend .list .book a {
-      text-decoration-line: none;
+      text-decoration: none;
       color: #000;
       font-size: inherit; }
     .recommend .list .book .cover {

@@ -34,7 +34,7 @@ footer {
     width: 20%;
     height: 50px; }
     footer .nav li a {
-      text-decoration-line: none;
+      text-decoration: none;
       color: #000;
       font-size: inherit; }
     footer .nav li a {
