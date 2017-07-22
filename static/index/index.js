@@ -13,10 +13,21 @@ $(document).ready(function () {
 
     //扫一扫按钮
     $(".scan-icon").on("click",function () {
-        scanQRCode();
+        scanQRCode(newBook);
     });
 });
 
+function newBook(ISBN)
+{
+    $.ajax({
+        type: 'post',
+        url: "/newBook/"+ISBN,
+        dataType: 'test',
+        success: function (data) {
+            location.assign("/details/"+data);
+        }
+    });
+}
 
 if(typeof SLOWER === "undefined") SLOWER = {};
 SLOWER.index = (function () {

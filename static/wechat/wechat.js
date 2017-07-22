@@ -31,12 +31,12 @@ $(function () {
         }
     });
 });
-function scanQRCode() {
+function scanQRCode(callBackFun) {
     wx.scanQRCode({
         needResult: 1,
         scanType: ["qrCode", "barCode"],
         success: function (res) {
-            alert(res.resultStr);
+            callBackFun(res.resultStr.split(",")[1])
         },
         error:function () {
             alert("error");
