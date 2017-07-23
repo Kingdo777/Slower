@@ -109,7 +109,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="<c:url value="/user/agent"/>">
                     <div><img src="<c:url value="/static/image/icons/service_fill.png"/>"></div>
                     <div>客服</div>
                 </a>

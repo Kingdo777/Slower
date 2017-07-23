@@ -44,7 +44,7 @@
                 <div class="details">
                     <div class="title"><a href="/book/details/{{id}}">{{title}}</a></div>
                     <div class="others">
-                        <div class="price">{{price}}</div>
+                        <div class="price">¥ {{price}}</div>
                         <div class="number">
                             <div class="sub">-</div>
                             <div class="amount">{{number}}</div>
@@ -83,11 +83,12 @@
 <div class="clearing" style="display: none">
     <div class="select-all">
         <div class="icon">
-            <img src="<c:url value="/static/image/icons/round.png"/>">
+            <img class="selected-all" src="<c:url value="/static/image/icons/round_check_fill.png"/>">
+            <img class="non-selected-all" style="display: none;" src="<c:url value="/static/image/icons/round.png"/>">
         </div> <div>全选</div>
     </div>
     <div class="price">
-        <span>合计:</span> <span>123元</span>
+        <span>合计:</span> <span id="total_price"></span>
     </div>
     <div class="to-clearing">
         <a href="/shopping_cart/order">去结算</a>

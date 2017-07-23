@@ -25,13 +25,15 @@
             <div class="info"><span class="username">张量奇</span> <span class="tel">15524439489</span></div>
             <div class="address">dafasd激发我微积分文件访问飞机</div>
         </div>
-        <div class="fa fa-angle-right">
-
-        </div>
+        <div class="fa fa-angle-right"></div>
     </section>
 
     <section id="books">
-
+        <div id="book-template" style="display: none">
+            <div class="order">
+                <img src="{{cover}}">
+            </div>
+        </div>
     </section>
 
     <section id="invoice">
@@ -49,7 +51,7 @@
 </body>
 <footer>
     <div>
-        实付款: <span id="price">100</span>
+        实付款: <span id="price"></span>
     </div>
     <div id="pay">
         立即下单

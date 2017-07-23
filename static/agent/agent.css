@@ -1,0 +1,88 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  height: 40px;
+  border-bottom: solid 1px #dddddd;
+  box-shadow: 0 2px 12px -2px #cccccc;
+  display: flex;
+  flex-flow: row;
+  text-align: center; }
+  header .left {
+    flex: 0 0 40px;
+    font-size: 24px;
+    line-height: 40px; }
+  header .middle {
+    flex: 1 1 auto;
+    line-height: 40px; }
+  header .right {
+    flex: 0 0 40px;
+    font-size: 24px;
+    line-height: 40px; }
+
+body {
+  background-color: #eeeeee; }
+
+.page {
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  .page .user-message {
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 10px; }
+    .page .user-message .content {
+      max-width: 65%;
+      float: right;
+      margin-right: 10px;
+      background-color: #00b0e8;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px; }
+  .page .agent-message {
+    overflow: auto;
+    width: 100%;
+    margin-bottom: 10px; }
+    .page .agent-message .content {
+      max-width: 65%;
+      float: left;
+      margin-left: 10px;
+      background-color: #e0620d;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px; }
+  .page .agent-message {
+    float: left; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  width: 100%; }
+  footer .edit-area {
+    display: flex;
+    flex-flow: row;
+    height: 40px; }
+    footer .edit-area .input {
+      flex: 1 1 auto;
+      padding: 5px 10px; }
+      footer .edit-area .input input {
+        height: 30px;
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: solid 1px #00b0e8; }
+    footer .edit-area #send {
+      flex: 0 0 40px; }
+      footer .edit-area #send > div {
+        color: white;
+        height: 30px;
+        width: 30px;
+        margin: 5px;
+        line-height: 30px;
+        background-color: #cccccc;
+        border-radius: 50%;
+        font-size: 24px;
+        text-align: center; }
+
+/*# sourceMappingURL=agent.css.map */

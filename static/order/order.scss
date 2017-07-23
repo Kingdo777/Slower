@@ -27,11 +27,22 @@ body {
 }
 
 #books {
-    height: 150px;
     background-color: white;
     border-bottom: solid 1px #cccccc;
     border-top: solid 1px #cccccc;
     margin-top: 15px;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    .order {
+        padding: 10px;
+        flex: 0 0 auto;
+        img {
+            max-width: 60px;
+            max-height: 100px;
+        }
+    }
 }
 
 #invoice {

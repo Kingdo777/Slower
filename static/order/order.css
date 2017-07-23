@@ -14,11 +14,18 @@ body {
     font-size: 25px; }
 
 #books {
-  height: 150px;
   background-color: white;
   border-bottom: solid 1px #cccccc;
   border-top: solid 1px #cccccc;
-  margin-top: 15px; }
+  margin-top: 15px;
+  display: flex;
+  flex-flow: row wrap; }
+  #books .order {
+    padding: 10px;
+    flex: 0 0 auto; }
+    #books .order img {
+      max-width: 60px;
+      max-height: 100px; }
 
 #invoice {
   height: 100px;

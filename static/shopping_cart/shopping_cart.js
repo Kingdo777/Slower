@@ -14,6 +14,34 @@ if(typeof SLOWER === "undefined") SLOWER = {};
 
 SLOWER.cart = (function () {
 
+
+    let orders = {};
+
+    function __update_total_prices__() {
+
+        let total_price = 0;
+        let selected_all = true;
+
+        orders.forEach(function (item) {
+            if(item.selected === 1){
+                total_price += parseFloat(item.price) * item.number;
+            }
+            else {
+                selected_all = false;
+            }
+        });
+
+        $('#total_price').text('￥' + total_price);
+        if(selected_all){
+            $('.clearing .selected-all').show();
+            $('.clearing .non-selected-all').hide();
+        }
+        else {
+            $('.clearing .selected-all').hide();
+            $('.clearing .non-selected-all').show();
+        }
+    }
+
     return {
         /**
          * 渲染购物车中商品
@@ -23,9 +51,10 @@ SLOWER.cart = (function () {
 
                 console.log(data);
 
-                if(data.status === "success")             {
+                if(data.status === "success") {
+                    orders = data.books;
 
-                    if(data.books.length > 0){
+                    if(orders.length > 0){
                         $('.cart-empty').hide();
                         $('.clearing').show();
                     }
@@ -35,6 +64,9 @@ SLOWER.cart = (function () {
                     }
 
                     data.books.forEach(function (item) {
+
+                        item.price = /(\d+.\d+)/g.exec(item.price)[0];
+
                         let data = {
                             id: item.id,
                             cover: item.cover,
@@ -60,6 +92,7 @@ SLOWER.cart = (function () {
                                         item.selected = 1;
                                         $temp.find('.selected').show();
                                         $temp.find('.non-selected').hide();
+                                        __update_total_prices__();
                                     }
                                 });
                             }
@@ -69,6 +102,7 @@ SLOWER.cart = (function () {
                                         item.selected = 0;
                                         $temp.find('.selected').hide();
                                         $temp.find('.non-selected').show();
+                                        __update_total_prices__();
                                     }
                                 });
                             }
@@ -83,6 +117,7 @@ SLOWER.cart = (function () {
                                     if(data.status === "success") {
                                         item.number -= 1;
                                         $temp.find('.amount').text(item.number);
+                                        __update_total_prices__();
                                     }
                                 });
                             }
@@ -94,11 +129,13 @@ SLOWER.cart = (function () {
                                 if(data.status === "success") {
                                     item.number += 1;
                                     $temp.find('.amount').text(item.number);
+                                    __update_total_prices__();
                                 }
                             });
                         });
 
                         $temp.appendTo('.orders');
+                        __update_total_prices__();
                     })
                 }
             })
