@@ -53,7 +53,7 @@
     <div>
         实付款: <span id="price"></span>
     </div>
-    <div id="pay">
+    <div id="pay" onclick="SLOWER.order.pay(${orderId});">
         立即下单
     </div>
 </footer>

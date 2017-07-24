@@ -10,6 +10,11 @@ $(document).ready(function () {
             scrollTop: $($(this).attr("href")).offset().top-95
         }, 500);
     });
+
+    // 搜索
+    $('#search').focus(function () {
+        location.href = "/search#!/scope=all";
+    });
 });
 
 

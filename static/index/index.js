@@ -15,6 +15,11 @@ $(document).ready(function () {
     $(".scan-icon").on("click",function () {
         scanQRCode(newBook);
     });
+
+    // 查找图书
+    $('#search').focus(function () {
+        window.location.href = "/search#!/scope=all";
+    })
 });
 
 function newBook(ISBN)

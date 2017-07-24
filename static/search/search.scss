@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+@import "../plugins/widget.scss";
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    height: 40px;
+    border-bottom: solid 1px #dddddd;
+    box-shadow: 0 2px 12px -2px #cccccc;
+
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+
+    .left {
+        flex: 0 0 40px;
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    .middle {
+        flex: 1 1 auto;
+        line-height: 40px;
+
+        display: flex;
+        flex-flow: row;
+
+        img {
+            flex: 0 0 16px;
+            margin-top: 12px;
+            width: 16px;
+            height: 16px;
+        }
+
+        input {
+            padding-left: 5px;
+            flex: 1 1 auto;
+            outline: none;
+            border: none;
+        }
+    }
+
+    .right {
+        flex: 0 0 40px;
+        font-size: 24px;
+        line-height: 40px;
+    }
+}
+
+.page {
+    margin-top: 45px;
+}
+
+#list {
+    .book {
+        background-color: white;
+        margin-top: 1px;
+        padding: 10px;
+
+        @include a('a', #000);
+        a {
+            display: flex;
+            flex-flow: row;
+
+            .cover{
+                flex: 0 0 100px;
+                width: 100px;
+                height: 125px;
+                text-align: center;
+
+                img {
+                    max-width: 100px;
+                    max-height: 125px;
+                }
+            }
+
+            .details {
+                padding: 0 10px;
+                flex: 1 1 auto;
+                height: 125px;
+
+                display: flex;
+                flex-flow: column;
+
+                .title {
+                    flex: 0 0 25px;
+                    line-height: 25px;
+                    font-size: 16px;
+                }
+                .summary {
+                    flex: 1 1 auto;
+                    padding: 10px 0;
+                    overflow: hidden;
+                    font-size: 13px;
+                    color: #666666;
+                }
+
+                .author {
+                    flex: 0 0 20px;
+                    height: 20px;
+                    line-height: 20px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

@@ -20,7 +20,7 @@
 </head>
 <header>
     <div class="left fa fa-angle-left" id="back"></div>
-    <div class="middle">客服</div>
+    <div class="middle"><div><span class="title">客服</span> <span class="status"> </span></div></div>
     <div class="right fa fa-ellipsis-h"></div>
 </header>
 <body class="body">

@@ -5,6 +5,11 @@ $(document).ready(function () {
 
     // 渲染书架列表
     SLOWER.bookrack.render();
+
+    // 搜索
+    $('#search').focus(function () {
+        location.href = "/search#!/scope=br";
+    })
 });
 
 

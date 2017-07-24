@@ -44,7 +44,7 @@ function scanQRCode(callBackFun) {
         }
     })
 }
-function wxpay(money,oddNumber,callBackUrl) {
+function wxpay(money,oddNumber,callBackUrl,orderId) {
     let nonceStr=randomWord();
     let timestamp=Math.round(new Date().getTime()/1000);
     $.ajax({
@@ -65,6 +65,10 @@ function wxpay(money,oddNumber,callBackUrl) {
                 signType: 'MD5', // 签名方式，默认为'SHA1'，使用新版支付需传入'MD5'
                 paySign: data['sign'], // 支付签名
                 success: function () {
+                    $.ajax({
+                        type:"post",
+                        url:"/order/payOrder/"+orderId+"/"+oddNumber
+                    });
                     location.assign(callBackUrl);
                 }
             });

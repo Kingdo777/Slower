@@ -1,9 +1,6 @@
 $(document).ready(function () {
     SLOWER.order.render_orders();
 
-    $('#pay').click(function () {
-        SLOWER.order.pay();
-    });
 });
 
 if(typeof SLOWER === "undefined") SLOWER = {};
@@ -45,8 +42,8 @@ SLOWER.order =(function () {
             });
         },
 
-        pay: function () {
-            window.location.href = "/wechat/payPage?price=" + __get_total_prices__();
+        pay: function (orderId) {
+            window.location.href = "/wechat/payPage?price=" + __get_total_prices__()+"&orderId="+orderId;
         }
     }
 })();

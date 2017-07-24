@@ -22,7 +22,7 @@
     <div class="search">
         <div class="box">
             <div class="icon"><img src="<c:url value="/static/image/icons/search.png"/>"></div>
-            <input placeholder="搜索作者、书名">
+            <input id="search" placeholder="搜索作者、书名">
         </div>
     </div>
 

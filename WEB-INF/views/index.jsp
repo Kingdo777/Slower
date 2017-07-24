@@ -36,7 +36,7 @@
                     <img src="<c:url value="/static/image/icons/search.png"/>">
                 </div>
                 <div class="search-input">
-                    <input placeholder="书名/作者">
+                    <input id="search" placeholder="书名/作者">
                 </div>
 
                 <div class="scan-icon">
