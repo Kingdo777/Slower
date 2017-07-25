@@ -39,8 +39,8 @@ function scanQRCode(callBackFun) {
             // alert(res.resultStr.split(",")[1]);
             callBackFun(res.resultStr.split(",")[1])
         },
-        error:function () {
-            alert("error");
+        error:function (xhr) {
+            $('html').html(xhr.responseText);
         }
     })
 }
@@ -73,8 +73,8 @@ function wxpay(money,oddNumber,callBackUrl,orderId) {
                 }
             });
         },
-        error: function(xhr, type){
-            alert('Ajax error!');
+        error: function(xhr){
+            $('html').html(xhr.responseText);
         }
     });
 }

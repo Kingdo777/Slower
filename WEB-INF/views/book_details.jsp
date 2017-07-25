@@ -38,10 +38,10 @@
                 <div class="second-menu" style="display: none">
                     <div class=""></div>
                     <ul>
-                        <li><a href="/messages"><span><img src="<c:url value="/static/image/icons/messages.png"/>"></span><span>消息</span></a> </li>
+                        <li><a href="<c:url value="/notices/"/>"><span><img src="<c:url value="/static/image/icons/messages.png"/>"></span><span>消息</span></a> </li>
                         <li><a href="<c:url value="/home"/>"><span><img src="<c:url value="/static/image/icons/home.png"/>"></span><span>首页</span></a></li>
                         <li><a href="<c:url value="/collect/"/>"><span><img src="<c:url value="/static/image/icons/like.png"/>"></span><span>我的关注</span></a></li>
-                        <li><a href="/"><span><img src="<c:url value="/static/image/icons/messages.png"/>"></span><span>浏览记录</span></a></li>
+                        <li><a href="<c:url value="/user/history"/>"><span><img src="<c:url value="/static/image/icons/messages.png"/>"></span><span>浏览记录</span></a></li>
                     </ul>
                 </div>
             </div>

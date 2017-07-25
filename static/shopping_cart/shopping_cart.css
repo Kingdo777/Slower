@@ -184,10 +184,7 @@ body {
     flex: 0 0 100px;
     background-color: red;
     text-align: center;
-    line-height: 45px; }
-    .clearing .to-clearing a {
-      display: block;
-      text-decoration: none;
-      color: white; }
+    line-height: 45px;
+    color: white; }
 
 /*# sourceMappingURL=shopping_cart.css.map */

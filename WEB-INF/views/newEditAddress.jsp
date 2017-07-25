@@ -21,30 +21,67 @@
 <body>
 
 <div class="page">
-    <div class="info">
-        <div class="receiverName">
-            <span>收货人</span>
-            <input type="text" name="receiverName" title="收货人" id="receiverName">
+    <form method="post" action="${type?"/address/update":"/address/new"}">
+        <div class="info">
+            <div class="receiverName input-info">
+                <div class="input-span">
+                    <span>收货人</span>
+                </div>
+                <div class="input-box">
+                    <input required type="text" name="receiverName" title="收货人" id="receiverName" value="${type?address.receiverName:""}">
+                </div>
+            </div>
+            <div class="tel input-info">
+                <div class="input-span">
+                    <span>联系电话</span>
+                </div>
+                <div class="input-box">
+                    <input required type="telephone" name="tel" title="联系电话" value="${type?address.tel:""}">
+                </div>
+            </div>
+            <div class="province input-info">
+                <div class="input-span">
+                    <span>省份</span>
+                </div>
+                <div class="input-box">
+                    <select required class="province-select" title="省份">
+                        <option class="city-item" disabled selected></option>
+                        <%--此option使用class="city-item"没有任何问题，当省份改变此项就没有价值了--%>
+                        <c:forEach items="${provinces}" var="province">
+                            <option class="province-item" value="${province.get("id")}">${province.get("name")}</option>
+                        </c:forEach>
+                    </select>
+                </div>
+            </div>
+            <div class="city input-info">
+                <div class="input-span">
+                    <span>城市</span>
+                </div>
+                <div class="input-box">
+                    <select required name="city_id" class="city-select" title="城市">
+                        <option class="city-item" disabled selected>
+                            请先选择省份
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="detail">
+                <textarea required placeholder="详细地址" title="详细地址" id="detailText" name="details">${type?address.details:""}</textarea>
+            </div>
+            <div class="if-default">
+                <div class="input-span">
+                    <span>设为默认</span>
+                </div>
+                <div class="input-box">
+                    <input type="checkbox" title="" name="ifDefault" value="true">
+                </div>
+            </div>
         </div>
-        <div class="tel">
-            <span>联系电话</span>
-            <input type="text" name="tel" title="联系电话">
-
-        </div>
-        <div class="province">
-            <span>省份</span>
-            <input type="text" name="province" title="省份">
-
-        </div>
-        <div class="city">
-            <span>城市</span>
-            <input type="text" name="city" title="城市">
-
-        </div>
-        <div class="detail">
-            <textarea placeholder="详细地址" title="详细地址" id="detailText"></textarea>
-        </div>
-    </div>
+        <c:if test="${type}">
+            <input type="text" name="address_id" value="${address.id}" style="display: none" title="">
+        </c:if>
+        <div class="submit-btn">保存</div>
+    </form>
 </div>
 </body>
 </html>

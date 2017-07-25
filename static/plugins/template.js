@@ -5,7 +5,7 @@
 (function($){
     $.fn.tmpl = function(data) {
         this.hide();
-        return $(this.html().replace(/{{ *([a-z_]*) *}}/g, function (match, $1) {
+        return $(this.html().replace(/{{ *(\w*) *}}/g, function (match, $1) {
             return data[$1];
         }));
     }

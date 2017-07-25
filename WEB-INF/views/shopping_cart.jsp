@@ -91,7 +91,7 @@
         <span>合计:</span> <span id="total_price"></span>
     </div>
     <div class="to-clearing">
-        <a href="/shopping_cart/order">去结算</a>
+        去结算
     </div>
 </div>
 </body>

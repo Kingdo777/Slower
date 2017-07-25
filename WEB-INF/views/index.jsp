@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="messages"><img src="<c:url value="/static/image/icons/messages.png"/>"></div>
+        <div class="messages"><a href="<c:url value="/notices/"/>"><img src="<c:url value="/static/image/icons/messages.png"/>"></a></div>
 
     </section>
 

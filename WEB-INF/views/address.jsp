@@ -68,7 +68,7 @@
                         </a>
                     </div>
                     <div class="update">
-                        <a href="/address/editAddress/${address.id}">
+                        <a href="<c:url value="/address/newOrEditPage/${address.id}"/>">
                             <div class="edit">
                                 <img src="<c:url value="/static/image/icons/edit.png" />">
                                 <span>编辑</span>
@@ -87,7 +87,7 @@
         </c:forEach>
     </section>
 </div>
-<a href="/address/newOrEditPage/-1">
+<a href="<c:url value="/address/newOrEditPage/-1"/>">
     <div class="new-address">
         <span>增加新地址</span>
     </div>

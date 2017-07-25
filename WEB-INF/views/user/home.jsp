@@ -29,7 +29,7 @@
             </c:if>
         </div>
         <div class="operations">
-            <div><a href="#"><img src="<c:url value="/static/image/icons/messages.png"/>" alt=""></a></div>
+            <div><a href="<c:url value="/notices/"/>"><img src="<c:url value="/static/image/icons/messages.png"/>" alt=""></a></div>
             <div><a href="<c:url value="/user/setting"/>"><img src="<c:url value="/static/image/icons/settings.png"/>" alt=""></a></div>
         </div>
 
@@ -52,19 +52,19 @@
     <div class="order">
         <div class="title">
             <span>我的订单</span>
-            <span class="all-orders"><a class="a" href="#">查看全部订单 <i class="fa fa-angle-right"></i></a> </span>
+            <span class="all-orders"><a class="a" href="<c:url value="/order/list#!/all"/>">查看全部订单 <i class="fa fa-angle-right"></i></a> </span>
         </div>
 
         <div class="status">
             <ul>
                 <li>
-                    <a class="a" href="#">
+                    <a class="a" href="<c:url value="/order/list#!/unpay"/>">
                         <div><img src="<c:url value="/static/image/icons/pay_fill.png"/>"></div>
                         <div>待付款</div>
                     </a>
                 </li>
                 <li>
-                    <a class="a" href="#">
+                    <a class="a" href="<c:url value="/order/list#!/receiving"/>">
                         <div><img src="<c:url value="/static/image/icons/deliver_fill.png"/>"></div>
                         <div>待收货</div>
                     </a>
@@ -103,7 +103,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="<c:url value="/user/history"/>">
                     <div><img src="<c:url value="/static/image/icons/attention_favor_fill.png"/>"></div>
                     <div>浏览历史</div>
                 </a>

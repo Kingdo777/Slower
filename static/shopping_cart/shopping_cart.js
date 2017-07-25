@@ -7,20 +7,24 @@ $(document).ready(function () {
     //
     SLOWER.cart.render_cart();
     SLOWER.cart.render_recommend();
+
+    // 下订单
+    $('.to-clearing').click(function () {
+        SLOWER.cart.order();
+    })
 });
 
 
 if(typeof SLOWER === "undefined") SLOWER = {};
 
 SLOWER.cart = (function () {
-
-
     let orders = {};
+    let total_price = 0;
 
     function __update_total_prices__() {
 
-        let total_price = 0;
         let selected_all = true;
+        total_price = 0;
 
         orders.forEach(function (item) {
             if(item.selected === 1){
@@ -161,6 +165,10 @@ SLOWER.cart = (function () {
                     })
                 }
             })
+        },
+
+        order: function () {
+            location.href = "/shopping_cart/order?price=" + total_price.toString();
         }
     }
 })();

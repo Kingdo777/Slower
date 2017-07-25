@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+body {
+    background-color: #eeeeee;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    height: 39px;
+    border-bottom: solid 1px #dddddd;
+
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+
+    .left {
+        flex: 0 0 39px;
+        font-size: 24px;
+        line-height: 39px;
+    }
+
+    .middle {
+        flex: 1 1 auto;
+        line-height: 39px;
+    }
+
+    .right {
+        flex: 0 0 39px;
+        font-size: 24px;
+        line-height: 39px;
+    }
+}
+
+.menu {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    top: 40px;
+    border-bottom: solid 1px #dddddd;
+    background-color: white;
+
+    > div{
+        text-align: center;
+        line-height: 37px;
+        height: 37px;
+        flex: 1 1 25%;
+        font-size: 13px;
+        border-bottom: 3px solid white;
+    }
+}
+
+.page {
+    margin-top: 90px;
+}
+
+#list {
+    .order {
+        margin-bottom: 10px;
+
+        .title {
+            border-top: solid 1px #dddddd;
+            overflow: auto;
+            background-color: white;
+            div{
+                float: right;
+                color: red;
+                font-size: 13px;
+                height: 30px;
+                line-height: 30px;
+                padding-right: 15px;
+            }
+        }
+
+        .covers {
+            height: 100px;
+        }
+
+        .details {
+            background-color: white;
+            height: 30px;
+            line-height: 30px;
+            text-align: right;
+            font-size: 13px;
+            padding-right: 15px;
+        }
+
+        .operations {
+            background-color: white;
+            border-bottom: solid 1px #dddddd;
+            border-top: solid 1px #dddddd;
+            padding-right: 15px;
+            overflow: auto;
+
+            a {
+                text-decoration: none;
+                color: red;
+                border: solid 1px red;
+                display: inline-block;
+                font-size: 13px;
+                height: 22px;
+                line-height: 20px;
+                margin: 4px 0;
+                padding: 0 10px;
+                border-radius: 5px;
+
+                float: right;
+            }
+        }
+    }
+ }
