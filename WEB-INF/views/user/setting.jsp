@@ -23,7 +23,7 @@
         <div class="title">基本</div>
         <div class="content">
             <div class="user-details"><a href="<c:url value="/user/setting/user_details"/>"><span>个人资料设置</span><span class="fa fa-angle-right"></span></a></div>
-            <div class="address"><a href="<c:url value="/user/setting/address"/>"><span>收货地址设置</span><span class="fa fa-angle-right"></span></a></div>
+            <div class="address"><a href="<c:url value="/address/show"/>"><span>收货地址设置</span><span class="fa fa-angle-right"></span></a></div>
         </div>
     </div>
 
