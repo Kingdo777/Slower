@@ -102,7 +102,7 @@ function getAvatar() {
                                 serverId:serverId
                             },
                             success:function () {
-                                location.assign("/user?time="+new Date().valueOf());
+                                location.reload(true);
                             },
                             error(xhr){
                                 $('html').html(xhr.responseText);
