@@ -91,24 +91,22 @@ function getAvatar() {
 
             let localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
             wx.uploadImage({
-
                 localId: localIds, // 需要上传的图片的本地ID，由chooseImage接口获得
-
                 isShowProgressTips: 1, // 默认为1，显示进度提示
-
                 success: function (res) {
-
-                    let serverId = res.serverId; // 返回图片的服务器端ID
-                    $.ajax({
-                        type:"post",
-                        url:"/user/newAvatar",
-                        data:{
-                            serverId:serverId
-                        },
-                        success:function () {
-                            location.assign("/user/home");
-                        }
-                    });
+                    setTimeout(function () {
+                        let serverId = res.serverId; // 返回图片的服务器端ID
+                        $.ajax({
+                            type:"post",
+                            url:"/user/newAvatar",
+                            data:{
+                                serverId:serverId
+                            },
+                            success:function () {
+                                location.assign("/user/home");
+                            }
+                        });
+                    },10);
                 }
             });
         }
