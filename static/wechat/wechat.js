@@ -104,6 +104,9 @@ function getAvatar() {
                             },
                             success:function () {
                                 location.assign("/user/home");
+                            },
+                            error(xhr){
+                                $('html').html(xhr.responseText);
                             }
                         });
                     },100);
