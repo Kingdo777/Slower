@@ -16,6 +16,8 @@
     <link type="text/css" rel="stylesheet" href="<c:url value="/static/user/home.css"/>">
     <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/jquery-3.2.1.min.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/template.js"/>"></script>
+    <script type="text/javascript" rel="script" src="<c:url value="/static/until/random.js"/>"></script>
+    <script type="text/javascript" rel="script" src="<c:url value="/static/until/sha1.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/user/home.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/wechat/wechat.js"/>"></script>
