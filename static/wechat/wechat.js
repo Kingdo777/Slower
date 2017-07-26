@@ -78,3 +78,50 @@ function wxpay(money,oddNumber,callBackUrl,orderId) {
         }
     });
 }
+function getAvatar() {
+    wx.getLocalImgData({
+        localId: '', // 图片的localID
+        success: function (res) {
+            let localData = res.localData; // localData是图片的base64数据，可以用img标签显示
+            upload(localData);
+        }
+    });
+}
+function getBlobBydataURI(dataURI,type) {
+    let binary = atob(dataURI.split(',')[1]);
+    let array = [];
+    for(let i = 0; i < binary.length; i++) {
+        array.push(binary.charCodeAt(i));
+    }
+    return new Blob([new Uint8Array(array)], {type:type });
+}
+/**
+ * 上传
+ */
+function upload(localData){
+    //base64 转 blob
+    let binary = atob(localData);
+    let array = [];
+    for(let i = 0; i < binary.length; i++) {
+        array.push(binary.charCodeAt(i));
+    }
+    let Blob = new Blob([new Uint8Array(array)], {type:type });
+    let formData = new FormData();
+    formData.append("files", Blob ,"file_"+Date.parse(new Date())+".jpeg");
+    //组建XMLHttpRequest 上传文件
+    let request = new XMLHttpRequest();
+    //上传连接地址
+    request.open("POST", "/user/newAvatar");
+    request.onreadystatechange=function()
+    {
+        if (request.readyState===4)
+        {
+            if(request.status===200){
+                console.log("上传成功");
+            }else{
+                console.log("上传失败,检查上传地址是否正确");
+            }
+        }
+    };
+    request.send(formData);
+}

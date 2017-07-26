@@ -5,6 +5,10 @@ $(document).ready(function () {
 
     //
     SLOWER.user_home.render_recommend();
+
+    $(".avatar").on("click",function () {
+       getAvatar();
+    });
 });
 
 

@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eeeeee;
+}
+
+input {
+    display: block;
+
+    margin: 15px auto;
+    font-size: 16px;
+    background-color: #eeeeee;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+}
+
+.page {
+    background-color: white;
+    padding: 50px 0;
+    width: 400px;
+    display: block;
+    margin: 10% auto auto;
+
+    box-shadow: 0 0 15px 5px #aaaaaa;
+}
+
+.login-form {
+    width: 350px;
+    margin: auto;
+    background-color: white;
+
+    /*padding: 50px 0;*/
+}
+
+.login-title {
+    margin: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#login-password,
+#login-username {
+    width: inherit;
+}
+
+#login-button {
+    margin-top: 20px;
+    width: inherit;
+    height: 40px;
+    border: none;
+    outline: none;
+
+    background-color: #00AAAA;
+
+    color: white;
+}
+
+#login-button:hover {
+    background-color: #00b0e8;
+    cursor: pointer;
+}
