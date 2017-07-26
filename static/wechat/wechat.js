@@ -103,7 +103,7 @@ function getAvatar() {
                                 serverId:serverId
                             },
                             success:function () {
-                                location.assign("/user/home");
+                                location.assign("/user");
                             },
                             error(xhr){
                                 $('html').html(xhr.responseText);
