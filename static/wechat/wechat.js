@@ -95,7 +95,7 @@ function getAvatar() {
                 isShowProgressTips: 1, // 默认为1，显示进度提示
                 success: function (res) {
                     setTimeout(function () {
-                        let serverId = res.serverId; // 返回图片的服务器端ID
+                        let serverId = res.serverId.toString(); // 返回图片的服务器端ID
                         $.ajax({
                             type:"post",
                             url:"/user/newAvatar",
@@ -106,7 +106,7 @@ function getAvatar() {
                                 location.assign("/user/home");
                             }
                         });
-                    },10);
+                    },100);
                 }
             });
         }
