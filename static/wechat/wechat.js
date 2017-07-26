@@ -104,6 +104,7 @@ function getAvatar() {
                                 serverId:serverId
                             },
                             success:function () {
+                                alert("图片修改成功，若干小时候生效");
                                 location.assign("/user?noCache="+randomWord(false,3));
                             },
                             error(xhr){
