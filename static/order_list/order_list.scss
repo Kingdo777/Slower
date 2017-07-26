@@ -77,6 +77,19 @@ header {
 
         .covers {
             height: 100px;
+
+            .cover {
+                border: solid 1px #dddddd;
+                display: inline-block;
+                padding: 5px 10px;
+                margin: 5px;
+                border-radius: 5px;
+                background-color: white;
+
+                img {
+                    max-height: 80px;
+                }
+            }
         }
 
         .details {

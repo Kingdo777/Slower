@@ -1,0 +1,39 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  height: 40px;
+  border-bottom: solid 1px #dddddd;
+  box-shadow: 0 2px 12px -2px #cccccc;
+  display: flex;
+  flex-flow: row;
+  text-align: center; }
+  header .left {
+    flex: 0 0 40px;
+    font-size: 24px;
+    line-height: 40px; }
+  header .middle {
+    flex: 1 1 auto;
+    line-height: 40px; }
+  header .right {
+    flex: 0 0 40px;
+    line-height: 40px;
+    font-size: 13px;
+    color: #00b0e8; }
+
+.page {
+  margin-top: 45px;
+  padding: 15px; }
+
+#input {
+  background-color: #dddddd;
+  height: 200px;
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 10px; }
+
+/*# sourceMappingURL=update_setting.css.map */

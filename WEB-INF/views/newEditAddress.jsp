@@ -19,7 +19,11 @@
     <script type="text/javascript" rel="script" src="<c:url value="/static/address/address.js"/>"></script>
 </head>
 <body>
-
+<header>
+    <div class="left fa fa-angle-left" id="new-address-back"></div>
+    <div class="middle">收货地址设置</div>
+    <div class="right fa fa-ellipsis-h"></div>
+</header>
 <div class="page">
     <form method="post" action="${type?"/address/update":"/address/new"}">
         <div class="info">

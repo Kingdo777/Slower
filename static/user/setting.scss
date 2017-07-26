@@ -2,9 +2,43 @@
 
 @import "../plugins/widget.scss";
 
-#main {
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    height: 40px;
+    border-bottom: solid 1px #dddddd;
+    box-shadow: 0 2px 12px -2px #cccccc;
+
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+
+    .left {
+        flex: 0 0 40px;
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    .middle {
+        flex: 1 1 auto;
+        line-height: 40px;
+    }
+
+    .right {
+        flex: 0 0 40px;
+        font-size: 24px;
+        line-height: 40px;
+    }
+}
+
+body {
     background-color: #eeeeee;
-    height: 100%;
+}
+
+#main {
+    margin-top: 50px;
 }
 
 .basic, .others {
@@ -67,6 +101,8 @@
 
 // 用户设置界面
 #user_details {
+    margin-top: 40px;
+
     background-color: #eeeeee;
     height: 100%;
     .avatar {

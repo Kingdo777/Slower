@@ -1,151 +1,190 @@
 body{
-  padding: 0;
-  margin: 0;
-  background-color: #dddddd;
-}
-.address-info{
-  a{
-    text-decoration:none;
-    color: inherit;
-  }
-  background-color: white;
-  img{
-    margin: 0 5px 0 0 ;
-  }
-  span{
+    padding: 0;
     margin: 0;
-  }
-  .address{
-    padding: 15px 15px 15px 15px;
-    border-bottom: 1px solid #cccccc;
+    background-color: #eeeeee;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    height: 40px;
+    border-bottom: solid 1px #dddddd;
+    box-shadow: 0 2px 12px -2px #cccccc;
+
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+
+    .left {
+        flex: 0 0 40px;
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    .middle {
+        flex: 1 1 auto;
+        line-height: 40px;
+    }
+
+    .right {
+        flex: 0 0 40px;
+        font-size: 24px;
+        line-height: 40px;
+    }
+}
+
+.page {
+    margin-top: 45px;
+}
+
+.address-info{
+    a{
+        text-decoration:none;
+        color: inherit;
+    }
+    background-color: white;
     img{
-      width: 15px;
+        margin: 0 5px 0 0 ;
     }
-    .up{
-      margin: auto auto 10px auto;
-      .user{
-        float: left;
-      }
-      .tel{
-        float: right;
-      }
+    span{
+        margin: 0;
     }
-  }
-  .operate{
-    padding: 10px 20px 10px 20px;
-    margin-bottom: 10px;
-    img{
-      width: 20px;
-    }
-    .default{
-      float: left;
-      vertical-align: middle;
-      .default-icon,.default-text{
-        margin: 0 3px;
-        vertical-align: middle;
-        display: inline-block;
-      }
-      .select{
-        color: #ff6f0d;
-      }
-    }
-    .update{
-      float: right;
-      vertical-align: middle;
-      .edit,.delete{
-        margin: 0  5px;
-        display: inline-block;
+    .address{
+        padding: 15px 15px 15px 15px;
+        border-bottom: 1px solid #cccccc;
         img{
-          vertical-align: middle;
+            width: 15px;
         }
-        span{
-          vertical-align: middle;
+        .up{
+            margin: auto auto 10px auto;
+            .user{
+                float: left;
+            }
+            .tel{
+                float: right;
+            }
         }
-      }
     }
-  }
+    .operate{
+        padding: 10px 20px 10px 20px;
+        margin-bottom: 10px;
+        img{
+            width: 20px;
+        }
+
+        .default{
+            float: left;
+            vertical-align: middle;
+            .default-icon,.default-text{
+                margin: 0 3px;
+                vertical-align: middle;
+                display: inline-block;
+            }
+            .select{
+                color: #ff6f0d;
+            }
+        }
+        .update{
+            float: right;
+            vertical-align: middle;
+            .edit,.delete{
+                margin: 0  5px;
+                display: inline-block;
+                img{
+                    vertical-align: middle;
+                }
+                span{
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
 }
 .new-address{
-  position: fixed;
-  bottom: 50px;
-  background-color: #ff6f0d;
-  color: white;
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  vertical-align: middle;
-  span{
-    font-size: 18px;
-    vertical-align: middle;
-  }
-}
-.page{
-  margin-bottom: 100px;
-}
-.info{
-  padding: 0;
-  margin: 0;
-  background-color: white;
-  input,textarea,select,option{
-    border: none;
-    outline: none;
-    width: 80%;
-    font-size: 18px;
-    height: 30px;
-  }
-  textarea{
-    padding: 2.5%;
+    position: fixed;
+    bottom: 0;
+    background-color: #ff6f0d;
+    color: white;
     width: 100%;
     height: 50px;
-    resize: none;
-    overflow:hidden;
-    border-bottom: 1px #dddddd solid;
-  }
-  select{
-    background-color: white;
-  }
-  .receiverName,.tel,.province,.city{
-    border-bottom: 1px #dddddd solid;
-  }
-  .input-info {
-    padding: 10px 5%;
-    .input-span{
-      display: inline-block;
-      width: 20%;
-    }
-    .input-box{
-      display: inline-block;
-      width: 70%;
-    }
-  }
-  .if-default{
-    padding: 10px 5%;
+    line-height: 50px;
+    text-align: center;
     vertical-align: middle;
-    .input-span{
-      display: inline-block;
-      width: 20%;
+
+    span{
+        font-size: 15px;
+        vertical-align: middle;
     }
-    .input-box{
-      vertical-align: middle;
-      display: inline-block;
-      margin-left: 30px;
-      input{
-        width: 20px;
-        height: 20px;
-      }
-    }
-  }
 }
-.submit-btn{
-  float: right;
-  width: 150px;
-  line-height: 50px;
-  background-color: #ff6f0d;
-  text-align: center;
-  font-size: 20px;
-  color: white;
-  margin-top: 50px;
-  border: 1px solid #ff6f0d;
-  border-radius: 5px;
+.page{
+    margin-bottom: 100px;
+}
+.info{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    input,textarea,select,option{
+        border: none;
+        outline: none;
+        width: 80%;
+        font-size: 18px;
+        height: 30px;
+    }
+    textarea{
+        padding: 2.5%;
+        width: 100%;
+        height: 50px;
+        resize: none;
+        overflow:hidden;
+        border-bottom: 1px #dddddd solid;
+    }
+    select{
+        background-color: white;
+    }
+    .receiverName,.tel,.province,.city{
+        border-bottom: 1px #dddddd solid;
+    }
+    .input-info {
+        padding: 10px 5%;
+        .input-span{
+            display: inline-block;
+            width: 20%;
+        }
+        .input-box{
+            display: inline-block;
+            width: 70%;
+        }
+    }
+    .if-default{
+        padding: 10px 5%;
+        vertical-align: middle;
+        .input-span{
+            display: inline-block;
+            width: 20%;
+        }
+        .input-box{
+            vertical-align: middle;
+            display: inline-block;
+            margin-left: 30px;
+            input{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+.submit-btn {
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    margin: 50px auto auto;
+
+    background-color: #ff6f0d;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    border-radius: 5px;
 }

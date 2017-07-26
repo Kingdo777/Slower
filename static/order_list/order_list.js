@@ -29,7 +29,7 @@ SLOWER.orderList = (function () {
         __hash__(page);
 
         $('.menu > div').css({'border-bottom':'solid 3px #ffffff'});
-        $('#'+page).css({'border-bottom':'solid 3px rgb(224, 98, 13)'})
+        $('#'+page).css({'border-bottom':'solid 3px rgb(224, 98, 13)'});
 
         $.post("/order/" + page, null, function (data) {
             console.log(data);
@@ -43,8 +43,22 @@ SLOWER.orderList = (function () {
                         orderId: item.id
                     };
 
-                    $('#order-template').tmpl(data).appendTo('#list');
-                })
+                    let $order = $('#order-template').tmpl(data);
+                    $order.appendTo('#list');
+
+                    $.post("/order/" + item.id, null, function (data) {
+                        console.log(data);
+
+                        if(data.status === "success"){
+                            data.books.forEach(function (item) {
+                                $order.find('.covers').append($(
+                                    '<div class="cover"><img src="' + item.cover + '"> </div>'
+                                ));
+                            })
+                        }
+                    });
+
+                });
             }
         })
     }

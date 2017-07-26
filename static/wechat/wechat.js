@@ -102,7 +102,7 @@ function getAvatar() {
                                 serverId:serverId
                             },
                             success:function () {
-                                location.assign("/user?cache=on");
+                                location.assign("/user/"+randomWord(false,3));
                             },
                             error(xhr){
                                 $('html').html(xhr.responseText);

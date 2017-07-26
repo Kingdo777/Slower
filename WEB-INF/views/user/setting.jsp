@@ -17,6 +17,11 @@
     <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/jquery-3.2.1.min.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/user/setting.js"/>"></script>
 </head>
+<header>
+    <div class="left fa fa-angle-left" id="back"></div>
+    <div class="middle">设置</div>
+    <div class="right fa fa-ellipsis-h"></div>
+</header>
 <body class="body">
 <div id="main">
     <div class="basic">

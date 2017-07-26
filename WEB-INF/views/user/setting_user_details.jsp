@@ -17,6 +17,11 @@
     <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/jquery-3.2.1.min.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/user/setting.js"/>"></script>
 </head>
+<header>
+    <div class="left fa fa-angle-left" id="user_details_back"></div>
+    <div class="middle">个人资料设置</div>
+    <div class="right fa fa-ellipsis-h"></div>
+</header>
 <body class="body">
 <div id="user_details">
     <div class="avatar">
@@ -24,13 +29,13 @@
     </div>
 
     <div class="details">
-        <div><a href="/user/setting/username"><span class="title">昵称</span><span class="content">${host.username}</span><span class="fa fa-angle-right"></span></a> </div>
-        <div><a href="/user/setting/sex"><span class="title">性别</span><span class="content"><c:if test="${host.sex == true}">男</c:if><c:if test="${host.sex == false}">女</c:if> </span><span class="fa fa-angle-right"></span></a> </div>
-        <div><a href="/user/setting/email"><span class="title">邮箱</span><span class="content">${host.email}</span><span class="fa fa-angle-right"></span></a> </div>
-        <div><a href="/user/setting/tel"><span class="title">手机</span><span class="content">${host.tel}</span><span class="fa fa-angle-right"></span></a> </div>
+        <div><a href="<c:url value="/user/update_setting/username"/>"><span class="title">昵称</span><span class="content">${host.username}</span><span class="fa fa-angle-right"></span></a> </div>
+        <div><a href="/user/update_setting/sex"><span class="title">性别</span><span class="content"><c:if test="${host.sex == true}">男</c:if><c:if test="${host.sex == false}">女</c:if> </span><span class="fa fa-angle-right"></span></a> </div>
+        <div><a href="<c:url value="/user/update_setting/email"/>"><span class="title">邮箱</span><span class="content">${host.email}</span><span class="fa fa-angle-right"></span></a> </div>
+        <div><a href="<c:url value="/user/update_setting/tel"/>"><span class="title">手机</span><span class="content">${host.tel}</span><span class="fa fa-angle-right"></span></a> </div>
     </div>
 
-    <div class="password"><a href="/user/setting/password"><span class="title">修改密码</span><span class="fa fa-angle-right"></span></a> </div>
+    <div class="password"><a href="<c:url value="/user/update_setting/password"/>"><span class="title">修改密码</span><span class="fa fa-angle-right"></span></a> </div>
 </div>
 </body>
 </html>

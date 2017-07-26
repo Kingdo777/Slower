@@ -19,7 +19,11 @@
     <script type="text/javascript" rel="script" src="<c:url value="/static/address/address.js"/>"></script>
 </head>
 <body>
-
+<header>
+    <div class="left fa fa-angle-left" id="back"></div>
+    <div class="middle">收货地址设置</div>
+    <div class="right fa fa-ellipsis-h"></div>
+</header>
 <div class="page">
     <section id="address-list">
         <c:forEach items="${addresses}" var="address">
@@ -93,5 +97,4 @@
     </div>
 </a>
 </body>
-<%@include file="component/footer.jsp"%>
 </html>

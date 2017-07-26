@@ -10,9 +10,34 @@
 /*///////////////////////// -- input -- ///////////////////////*/
 /*///////////////////////// -- textarea -- ///////////////////////*/
 /*///////////////////////// -- scrollbar -- ///////////////////////*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  height: 40px;
+  border-bottom: solid 1px #dddddd;
+  box-shadow: 0 2px 12px -2px #cccccc;
+  display: flex;
+  flex-flow: row;
+  text-align: center; }
+  header .left {
+    flex: 0 0 40px;
+    font-size: 24px;
+    line-height: 40px; }
+  header .middle {
+    flex: 1 1 auto;
+    line-height: 40px; }
+  header .right {
+    flex: 0 0 40px;
+    font-size: 24px;
+    line-height: 40px; }
+
+body {
+  background-color: #eeeeee; }
+
 #main {
-  background-color: #eeeeee;
-  height: 100%; }
+  margin-top: 50px; }
 
 .basic .title, .others .title {
   height: 30px;
@@ -58,6 +83,7 @@
   background-color: red; }
 
 #user_details {
+  margin-top: 40px;
   background-color: #eeeeee;
   height: 100%; }
   #user_details .avatar {

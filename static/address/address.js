@@ -3,6 +3,15 @@
  *
  */
 $(function () {
+
+    $('#back').click(function () {
+        location.href = "/user/setting";
+    });
+
+    $('#new-address-back').click(function () {
+        location.href = "/address/show";
+    });
+
     $("#receiverName").focus();
     $("#detailText").on("propertychange",function () {
         if(this.scrollHeight>this.style.height.replace(/px/,'')){
@@ -32,6 +41,9 @@ $(function () {
             }
         });
     });
+
+
+
     $(".submit-btn").on("click",function () {
         let ifSubmit=true;
         $("input").each(function(){  //遍历input标签，判断是否有内容未填写

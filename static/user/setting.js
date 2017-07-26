@@ -4,6 +4,14 @@
  */
 $(document).ready(function () {
 
+    $('#back').click(function () {
+        location.href = "/user";
+    });
+
+    $('#user_details_back').click(function () {
+        location.href = "/user/setting";
+    });
+
     /**
      * 退出登录，成功后跳转到首页
      */
