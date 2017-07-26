@@ -21,6 +21,9 @@
     <script type="text/javascript" rel="script" src="<c:url value="/static/user/home.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/wechat/wechat.js"/>"></script>
+    <script>
+        alert('${user.avatar}');
+    </script>
 </head>
 <body>
 <div class="page">
