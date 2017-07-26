@@ -22,7 +22,7 @@ $(function () {
 
                 signature: signature,// 必填，签名，见附录1
 
-                jsApiList: ['scanQRCode','chooseWXPay'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                jsApiList: ['scanQRCode','chooseWXPay','chooseImage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
 
             });
         },
@@ -90,52 +90,27 @@ function getAvatar() {
         success: function (res) {
 
             let localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
-            wx.getLocalImgData({
-                localId: localIds, // 图片的localID
+            wx.uploadImage({
+
+                localId: localIds, // 需要上传的图片的本地ID，由chooseImage接口获得
+
+                isShowProgressTips: 1, // 默认为1，显示进度提示
+
                 success: function (res) {
-                    let localData = res.localData; // localData是图片的base64数据，可以用img标签显示
-                    upload(localData);
+
+                    let serverId = res.serverId; // 返回图片的服务器端ID
+                    $.ajax({
+                        type:"post",
+                        url:"/user/newAvatar",
+                        data:{
+                            serverId:serverId
+                        },
+                        success:function () {
+                            location.assign("/user/home");
+                        }
+                    });
                 }
             });
         }
-
     });
-}
-function getBlobBydataURI(dataURI,type) {
-    let binary = atob(dataURI.split(',')[1]);
-    let array = [];
-    for(let i = 0; i < binary.length; i++) {
-        array.push(binary.charCodeAt(i));
-    }
-    return new Blob([new Uint8Array(array)], {type:type });
-}
-/**
- * 上传
- */
-function upload(localData){
-    //base64 转 blob
-    let binary = atob(localData);
-    let array = [];
-    for(let i = 0; i < binary.length; i++) {
-        array.push(binary.charCodeAt(i));
-    }
-    let Blob = new Blob([new Uint8Array(array)], {type:type });
-    let formData = new FormData();
-    formData.append("files", Blob ,"file_"+Date.parse(new Date())+".jpeg");
-    //组建XMLHttpRequest 上传文件
-    let request = new XMLHttpRequest();
-    //上传连接地址
-    request.open("POST", "/user/newAvatar");
-    request.onreadystatechange=function()
-    {
-        if (request.readyState===4)
-        {
-            if(request.status===200){
-                console.log("上传成功");
-            }else{
-                console.log("上传失败,检查上传地址是否正确");
-            }
-        }
-    };
-    request.send(formData);
 }
