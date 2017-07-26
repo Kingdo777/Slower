@@ -44,6 +44,8 @@ function scanQRCode(callBackFun) {
     })
 }
 function wxpay(money,oddNumber,callBackUrl,orderId) {
+    // location.assign(callBackUrl);
+    // return false;
     let nonceStr=randomWord();
     let timestamp=Math.round(new Date().getTime()/1000);
     $.ajax({
@@ -102,7 +104,7 @@ function getAvatar() {
                                 serverId:serverId
                             },
                             success:function () {
-                                location.assign("/user/"+randomWord(false,3));
+                                location.assign("/user?noCache="+randomWord(false,3));
                             },
                             error(xhr){
                                 $('html').html(xhr.responseText);
