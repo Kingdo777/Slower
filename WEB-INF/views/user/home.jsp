@@ -42,7 +42,7 @@
 
         <div class="details">
             <div class="avatar">
-                <img src="<c:url value="/static/image/avatar/${user.avatar}"/>">
+                <img src="<c:url value="${user.avatar}"/>">
             </div>
             <div class="username">
                 <c:if test="${empty user}">
