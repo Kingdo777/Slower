@@ -1,0 +1,58 @@
+/*///////////////////////// -- body -- ///////////////////////*/
+/*///////////////////////// -- button -- ///////////////////////*/
+/*///////////////////////// -- ul -- ///////////////////////*/
+/*///////////////////////// -- hr -- ///////////////////////*/
+.hr {
+  border: none;
+  border-top: #cccccc 1px solid; }
+
+/*///////////////////////// -- a -- ///////////////////////*/
+/*///////////////////////// -- input -- ///////////////////////*/
+/*///////////////////////// -- textarea -- ///////////////////////*/
+/*///////////////////////// -- scrollbar -- ///////////////////////*/
+body {
+  padding: 0;
+  margin: 0; }
+
+#book-list .book {
+  background-color: white;
+  margin-top: 1px;
+  padding: 10px; }
+  #book-list .book a {
+    text-decoration: none;
+    color: #000;
+    font-size: inherit; }
+  #book-list .book a {
+    display: flex;
+    flex-flow: row; }
+    #book-list .book a .cover {
+      flex: 0 0 100px;
+      width: 100px;
+      height: 125px;
+      text-align: center; }
+      #book-list .book a .cover img {
+        max-width: 100px;
+        max-height: 125px; }
+    #book-list .book a .details {
+      padding: 0 10px;
+      flex: 1 1 auto;
+      height: 125px;
+      display: flex;
+      flex-flow: column; }
+      #book-list .book a .details .title {
+        flex: 0 0 25px;
+        line-height: 25px;
+        font-size: 16px; }
+      #book-list .book a .details .summary {
+        flex: 1 1 auto;
+        padding: 10px 0;
+        overflow: hidden;
+        font-size: 13px;
+        color: #666666; }
+      #book-list .book a .details .author {
+        flex: 0 0 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 12px; }
+
+/*# sourceMappingURL=history.css.map */

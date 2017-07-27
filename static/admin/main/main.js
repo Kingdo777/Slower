@@ -60,6 +60,12 @@ $(function () {
             $(".UnFilledOrderInfo-bookInfo").hide();
         }
     });
+    $(".bill-record-link").on("click",function () {
+        showBillInfo();
+    });
+    $("#users-messages").on("click",function () {
+        alert("myId:users-messages");
+    });
 });
 function nextBookInfoPage(MyPage) {
     let ISBN_=$(".ISBN-input").val();
@@ -144,6 +150,7 @@ function showUnFilledOrderInfo() {
                         "author-->" +data.books[i][j].author+
                         "price-->" +data.books[i][j].price+
                         "stockNum-->" +data.books[i][j].stockNum+
+                        "purchase Count-->" +data.books[i][j].count+
                         "</td>>" +
                         "</tr>" +
                         "");
@@ -190,6 +197,7 @@ function showAllOrderInfo() {
                         "author-->" +data.books[i][j].author+
                         "price-->" +data.books[i][j].price+
                         "stockNum-->" +data.books[i][j].stockNum+
+                        "purchase count-->" +data.books[i][j].count+
                         "</td>>" +
                         "</tr>" +
                         "");
@@ -213,3 +221,33 @@ function DeliverGoods(orderId) {
         }
     });
 }
+
+function showBillInfo() {
+    $.ajax({
+        type:"post",
+        dataType:"json",
+        url:"/admin/getBill",
+        success:function (data) {
+            $(".bill-record-tr").remove();
+            for (let i=0;i<data.length;i++){
+                let date = new Date(data[i].createTime); //获取一个时间对象
+                let time=date.getFullYear()+"/"+date.getMonth()+"/"+date.getDate()+"   "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+                $(".bill-record-table").append("" +
+                    "<tr class='bill-record-tr'>" +
+                    "<td>"+data[i].userId+"</td>"+
+                    "<td>"+data[i].userName+"</td>"+
+                    "<td>"+data[i].	price+"元</td>"+
+                    "<td>"+data[i].oddNumber+"</td>"+
+                    "<td>"+time+"</td>"+
+                    "</tr>" +
+                    "");
+            }
+            $(".left_menu").css("height",$(".bottom-content").css("height"));
+        },
+        error:function (xhr) {
+            $('html').html(xhr.responseText);
+        }
+    })
+}
+
+

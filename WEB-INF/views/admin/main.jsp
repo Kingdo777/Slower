@@ -71,11 +71,14 @@
             <a style="text-decoration: none" href="<c:url value="/admin/main"/>"><h3 style="color: #FFFFff;">书捞后台管理系统</h3></a>
         </div>
         <div class="panel-heading col-xs-offset-9">
-            <a href="#">
-                <h5 style="color: #FFFFff;padding-top: 3%;">
-                    <span class="glyphicon glyphicon-share-alt"> 退出登录</span>
-                </h5>
-            </a>
+            <div>
+                <a href="#">
+                    <h5 style="color: #FFFFff;padding-top: 3%;display: inline-block;margin-right: 5px">
+                        <span class="glyphicon glyphicon-share-alt"> 退出登录</span>
+                    </h5>
+                </a>
+                <img id="users-messages" src="/static/image/icons/messages.png" style="width:23px">
+            </div>
         </div>
     </div>
     <div class="row bottom-content">
@@ -235,7 +238,19 @@
                         </table>
                     </div>
                 </div>
-                <div class="body-content bill-record" style="display: none">bill-record</div>
+                <div class="body-content bill-record" style="display: none">
+                    <div>
+                        <table class="bill-record-table">
+                            <tr>
+                                <th>用户ID</th>
+                                <th>用户名称</th>
+                                <th>交易收益</th>
+                                <th>交易订单</th>
+                                <th>交易时间</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
                 <div class="body-content book-purchase-order" style="display: none">
                     <div>
                         <button class="toggle-display-purchase-bookInfo" content="0">显示/隐藏图书信息</button>
