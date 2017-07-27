@@ -1,6 +1,44 @@
+@charset "utf-8";
+
+@import "../plugins/widget.scss";
 
 body {
     background-color: #eeeeee;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    height: 40px;
+    border-bottom: solid 1px #dddddd;
+
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+
+    .left {
+        flex: 0 0 40px;
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    .middle {
+        flex: 1 1 auto;
+        line-height: 40px;
+    }
+
+    .right {
+        flex: 0 0 40px;
+        font-size: 24px;
+        line-height: 40px;
+    }
+}
+
+.page {
+    margin-top: 40px;
 }
 
 
@@ -8,21 +46,28 @@ body {
     border-bottom: solid 3px #e0620d;
     background-color: white;
 
-    display: flex;
-    flex-flow: row;
+    a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #666666;
 
-    .details {
-        flex: 1 1 auto;
-        padding: 5px 15px;
+        display: flex;
+        flex-flow: row;
 
-        .info {
+        .details {
+            flex: 1 1 auto;
+            padding: 10px 15px;
 
+            .info {
+
+            }
         }
-    }
 
-    .fa {
-        flex: 0 0 20px;
-        font-size: 25px;
+        .fa {
+            flex: 0 0 20px;
+            font-size: 25px;
+            margin-top: 15px;
+        }
     }
 }
 
@@ -45,28 +90,92 @@ body {
     }
 }
 
-#invoice {
-    height: 100px;
+#invoice,#event {
     background-color: white;
     border-bottom: solid 1px #cccccc;
     border-top: solid 1px #cccccc;
     margin-top: 15px;
+    padding: 0 15px;
+
+    >div {
+        margin: 0;
+        height: 45px;
+        line-height: 45px;
+        border-bottom: solid 1px #dddddd;
+
+        @include a('a', #000);
+        font-size: 14px;
+
+        a {
+            overflow: auto;
+            display: block;
+            span:first-child {
+                float: left;
+            }
+
+            span:last-child {
+                display: block;
+                height: 45px;
+                line-height: 45px;
+
+                float: right;
+            }
+        }
+    }
+    > div:last-child{
+        border-bottom: none;
+    }
 }
 
-#event {
-    height: 50px;
-    background-color: white;
+#notice {
+    margin-top: 15px;
     border-bottom: solid 1px #cccccc;
     border-top: solid 1px #cccccc;
-    margin-top: 15px;
+
+    textarea {
+        outline: none;
+        border: none;
+        display: block;
+        width: 100%;
+        resize: none;
+        height: 50px;
+        padding: 5px 15px;
+    }
 }
 
 #money {
-    height: 50px;
     background-color: white;
     border-bottom: solid 1px #cccccc;
     border-top: solid 1px #cccccc;
     margin-top: 15px;
+    padding: 0 15px;
+
+    >div {
+        margin: 0;
+        height: 45px;
+        line-height: 45px;
+        border-bottom: solid 1px #dddddd;
+
+        font-size: 14px;
+
+        span:first-child {
+            float: left;
+        }
+
+        span:last-child {
+            display: block;
+            height: 45px;
+            line-height: 45px;
+
+            float: right;
+            color: red;
+            font-size: 13px;
+        }
+
+    }
+    > div:last-child{
+        border-bottom: none;
+    }
 }
 
 footer {

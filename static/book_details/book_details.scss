@@ -294,14 +294,10 @@ footer {
 
         .add_to_bookrack, .add_to_cart {
             flex: 1 1 auto;
-            a {
-                display: block;
-                text-decoration: none;
-                color: white;
-                height: 50px;
-                line-height: 50px;
-                text-align: center;
-            }
+            color: white;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
         }
 
         .add_to_bookrack {
@@ -312,4 +308,11 @@ footer {
             background-color: #E74C3C;
         }
     }
+}
+
+#cart-cart {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
 }

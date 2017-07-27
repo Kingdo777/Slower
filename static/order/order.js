@@ -1,6 +1,13 @@
 $(document).ready(function () {
     SLOWER.order.render_orders();
 
+    $('#back').click(function () {
+        location.href = "/shopping_cart";
+    });
+
+    $('#pay').click(function () {
+        SLOWER.order.pay();
+    });
 });
 
 if(typeof SLOWER === "undefined") SLOWER = {};
@@ -38,12 +45,13 @@ SLOWER.order =(function () {
                     });
 
                     $('#price').text('￥' + __get_total_prices__());
+                    $('#all-price').text('￥' + __get_total_prices__());
                 }
             });
         },
 
-        pay: function (orderId) {
-            window.location.href = "/wechat/payPage?price=" + __get_total_prices__()+"&orderId="+orderId;
+        pay: function () {
+            location.href = "/shopping_cart/order/ensure?price=" + __get_total_prices__().toString();
         }
     }
 })();

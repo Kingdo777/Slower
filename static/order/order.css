@@ -1,17 +1,59 @@
+/*///////////////////////// -- body -- ///////////////////////*/
+/*///////////////////////// -- button -- ///////////////////////*/
+/*///////////////////////// -- ul -- ///////////////////////*/
+/*///////////////////////// -- hr -- ///////////////////////*/
+.hr {
+  border: none;
+  border-top: #cccccc 1px solid; }
+
+/*///////////////////////// -- a -- ///////////////////////*/
+/*///////////////////////// -- input -- ///////////////////////*/
+/*///////////////////////// -- textarea -- ///////////////////////*/
+/*///////////////////////// -- scrollbar -- ///////////////////////*/
 body {
   background-color: #eeeeee; }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  height: 40px;
+  border-bottom: solid 1px #dddddd;
+  display: flex;
+  flex-flow: row;
+  text-align: center; }
+  header .left {
+    flex: 0 0 40px;
+    font-size: 24px;
+    line-height: 40px; }
+  header .middle {
+    flex: 1 1 auto;
+    line-height: 40px; }
+  header .right {
+    flex: 0 0 40px;
+    font-size: 24px;
+    line-height: 40px; }
+
+.page {
+  margin-top: 40px; }
+
 #address {
   border-bottom: solid 3px #e0620d;
-  background-color: white;
-  display: flex;
-  flex-flow: row; }
-  #address .details {
-    flex: 1 1 auto;
-    padding: 5px 15px; }
-  #address .fa {
-    flex: 0 0 20px;
-    font-size: 25px; }
+  background-color: white; }
+  #address a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #666666;
+    display: flex;
+    flex-flow: row; }
+    #address a .details {
+      flex: 1 1 auto;
+      padding: 10px 15px; }
+    #address a .fa {
+      flex: 0 0 20px;
+      font-size: 25px;
+      margin-top: 15px; }
 
 #books {
   background-color: white;
@@ -27,26 +69,71 @@ body {
       max-width: 60px;
       max-height: 100px; }
 
-#invoice {
-  height: 100px;
+#invoice, #event {
   background-color: white;
   border-bottom: solid 1px #cccccc;
   border-top: solid 1px #cccccc;
-  margin-top: 15px; }
+  margin-top: 15px;
+  padding: 0 15px; }
+  #invoice > div, #event > div {
+    margin: 0;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: solid 1px #dddddd;
+    font-size: 14px; }
+    #invoice > div a, #event > div a {
+      text-decoration: none;
+      color: #000;
+      font-size: inherit; }
+    #invoice > div a, #event > div a {
+      overflow: auto;
+      display: block; }
+      #invoice > div a span:first-child, #event > div a span:first-child {
+        float: left; }
+      #invoice > div a span:last-child, #event > div a span:last-child {
+        display: block;
+        height: 45px;
+        line-height: 45px;
+        float: right; }
+  #invoice > div:last-child, #event > div:last-child {
+    border-bottom: none; }
 
-#event {
-  height: 50px;
-  background-color: white;
+#notice {
+  margin-top: 15px;
   border-bottom: solid 1px #cccccc;
-  border-top: solid 1px #cccccc;
-  margin-top: 15px; }
+  border-top: solid 1px #cccccc; }
+  #notice textarea {
+    outline: none;
+    border: none;
+    display: block;
+    width: 100%;
+    resize: none;
+    height: 50px;
+    padding: 5px 15px; }
 
 #money {
-  height: 50px;
   background-color: white;
   border-bottom: solid 1px #cccccc;
   border-top: solid 1px #cccccc;
-  margin-top: 15px; }
+  margin-top: 15px;
+  padding: 0 15px; }
+  #money > div {
+    margin: 0;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: solid 1px #dddddd;
+    font-size: 14px; }
+    #money > div span:first-child {
+      float: left; }
+    #money > div span:last-child {
+      display: block;
+      height: 45px;
+      line-height: 45px;
+      float: right;
+      color: red;
+      font-size: 13px; }
+  #money > div:last-child {
+    border-bottom: none; }
 
 footer {
   background-color: white;

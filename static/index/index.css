@@ -12,12 +12,13 @@
 /*///////////////////////// -- scrollbar -- ///////////////////////*/
 body {
   padding: 0;
-  background-color: #dddddd;
+  background-color: #eeeeee;
   margin: 0 0 50px; }
 
 .search-section {
   width: 100%;
   position: fixed;
+  z-index: 999999;
   display: flex;
   margin: 0;
   padding: 10px 0;
@@ -66,10 +67,6 @@ body {
         .search-section .search .body .scan-icon img {
           width: 20px;
           height: 20px; }
-
-.roll-section {
-  height: 200px;
-  background-color: black; }
 
 .menu {
   background-color: white;
@@ -164,5 +161,40 @@ body {
         height: 20px;
         line-height: 20px;
         font-size: 12px; }
+
+#banner {
+  min-height: 200px;
+  overflow: hidden;
+  position: relative; }
+  #banner ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; }
+    #banner ul li {
+      float: left;
+      overflow: hidden; }
+  #banner #main {
+    z-index: 0;
+    width: 400%;
+    position: relative; }
+    #banner #main li {
+      width: 25%; }
+  #banner #slider-nav {
+    z-index: 999;
+    position: absolute;
+    bottom: 10px;
+    right: 15px; }
+    #banner #slider-nav li {
+      width: 20px;
+      height: 4px;
+      border-radius: 2px;
+      background-color: white;
+      margin: 5px; }
+      #banner #slider-nav li div {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0); }
 
 /*# sourceMappingURL=index.css.map */

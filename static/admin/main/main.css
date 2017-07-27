@@ -5,4 +5,16 @@ body {
 .content-body {
   margin: 80px 50px; }
 
+table tr td, table tr th {
+  text-align: center; }
+
+.book-info-table th, .book-info-table td {
+  max-width: 250px;
+  vertical-align: middle;
+  height: 20px; }
+
+.allOrderInfo-bookInfo td {
+  border: none;
+  display: table-cell; }
+
 /*# sourceMappingURL=main.css.map */

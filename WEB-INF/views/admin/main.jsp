@@ -24,7 +24,8 @@
     <script type="text/javascript" rel="script" src="<c:url value="/static/admin/main/pikaday.js"/>"></script>
     <style>
         html,body,.container-fluid,.bottom-content,.left_menu,.content{
-            height: 100%;
+            /*height: 100%;*/
+            min-height: 100%;
         }
         .top-title{
             padding: 0;
@@ -107,9 +108,9 @@
                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                         <div class="panel-body">
                             <ul>
-                                <li><a class="link-btn book_info-link" content="book_info">图书信息查询</a></li>
-                                <li><a class="link-btn user_info-link" content="user_info">用户信息查询</a></li>
-                                <li><a class="link-btn order_info-link" content="order_info">订单信息查询</a></li>
+                                <li><a class="link-btn book-info-link" content="book_info">图书信息查询</a></li>
+                                <li><a class="link-btn user-info-link" content="user_info">用户信息查询</a></li>
+                                <li><a class="link-btn order-info-link" content="order_info">订单信息查询</a></li>
                             </ul>
                         </div>
                     </div>
@@ -186,27 +187,20 @@
                     <div class="info-operate">
                         <div class="row">
                             <div class="col-xs-3">
-                                <a class="btn btn-success" id="export_file" href="#" disabled="disabled">导出文件</a>
+                                <a class="btn btn-success" id="export_file" href="">导出文件</a>
                             </div>
                             <div class="col-xs-3">
-                                <button class="btn btn-warning book-info-next-page" >下一页</button>
+                                <button class="btn btn-info book-info-previous-page" content="all">上一页</button>
+                                <button class="btn btn-warning book-info-next-page" content="all">下一页</button>
                             </div>
                             <div class="col-xs-6 sou">
-                                <div class="input-group" >
-                                    <input name="sou_content" id="sou_content" type="text" class="form-control" placeholder="输入ISBN、bookID、书名、作者可进行查询">
-                                    <div class="dropdown input-group-addon" style="padding: 0;border: 0">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                                            <span class="caret"></span>
-                                            选择搜索类型
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" class="sou_action" content="ISBN">ISBN</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" class="sou_action" content="bookID">bookID</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" class="sou_action" content="author">作者</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" class="sou_action" content="title">书名</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <form action="" method="post">
+                                    <input class="ISBN-input" type="text" title="ISBN" name="ISBN" placeholder="ISBN">
+                                    <input class="author-input" type="text" title="author" name="author" placeholder="author">
+                                    <input class="title-input" type="text" title="title" name="title" placeholder="title">
+                                    <input class="size-input" type="text" title="title" name="size" placeholder="显示条数" width="10">
+                                    <button type="button" class="comprehensive-query-button">图书信息综合查询</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -224,9 +218,41 @@
                     </table>
                 </div>
                 <div class="body-content user_info" style="display: none">user_info</div>
-                <div class="body-content order_info" style="display: none">order_info</div>
+                <div class="body-content order_info" style="display: none">
+                    <div>
+                        <button class="toggle-display-bookInfo" content="0">显示/隐藏图书信息</button>
+                        <table class="book-order-table">
+                            <tr>
+                                <th>订单号</th>
+                                <th>用户ID</th>
+                                <th>收货昵称</th>
+                                <th>联系电话</th>
+                                <th>送货地址</th>
+                                <th>订单收益</th>
+                                <th>下单时间</th>
+                                <th>订单状态</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
                 <div class="body-content bill-record" style="display: none">bill-record</div>
-                <div class="body-content book-purchase-order" style="display: none">book-purchase-order</div>
+                <div class="body-content book-purchase-order" style="display: none">
+                    <div>
+                        <button class="toggle-display-purchase-bookInfo" content="0">显示/隐藏图书信息</button>
+                        <table class="book-purchase-order-table">
+                            <tr>
+                                <th>订单号</th>
+                                <th>用户ID</th>
+                                <th>收货昵称</th>
+                                <th>联系电话</th>
+                                <th>送货地址</th>
+                                <th>订单收益</th>
+                                <th>下单时间</th>
+                                <th>发货确认</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
                 <div class="body-content customer-service" style="display: none">customer-service</div>
                 <div class="body-content membership" style="display: none">membership</div>
                 <div class="body-content homepage" style="display: none">homepage</div>

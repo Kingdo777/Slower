@@ -193,17 +193,20 @@ footer {
         line-height: 20px;
         font-size: 11px; }
     footer .box .add_to_bookrack, footer .box .add_to_cart {
-      flex: 1 1 auto; }
-      footer .box .add_to_bookrack a, footer .box .add_to_cart a {
-        display: block;
-        text-decoration: none;
-        color: white;
-        height: 50px;
-        line-height: 50px;
-        text-align: center; }
+      flex: 1 1 auto;
+      color: white;
+      height: 50px;
+      line-height: 50px;
+      text-align: center; }
     footer .box .add_to_bookrack {
       background-color: #F5B041; }
     footer .box .add_to_cart {
       background-color: #E74C3C; }
+
+#cart-cart {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red; }
 
 /*# sourceMappingURL=book_details.css.map */

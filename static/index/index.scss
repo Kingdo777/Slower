@@ -3,7 +3,7 @@
 
 body {
     padding: 0;
-    background-color: #dddddd;
+    background-color: #eeeeee;
     margin: 0 0 50px;
 }
 
@@ -11,6 +11,7 @@ body {
 .search-section {
     width: 100%;
     position: fixed;
+    z-index: 999999;
     display: flex;
 
     margin: 0;
@@ -84,12 +85,6 @@ body {
         }
     }
 }
-
-.roll-section {
-    height: 200px;
-    background-color: black;
-}
-
 
 .menu {
     background-color: white;
@@ -206,5 +201,55 @@ body {
                }
            }
        }
+    }
+}
+
+
+#banner {
+    min-height: 200px;
+    overflow: hidden;
+    position: relative;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+
+        li {
+            float: left;
+            overflow: hidden;
+        }
+    }
+
+    #main {
+        z-index: 0;
+        width: 400%;
+        position: relative;
+
+        li {
+            width: 25%;
+        }
+    }
+
+    #slider-nav {
+        z-index: 999;
+        position: absolute;
+        bottom: 10px;
+        right: 15px;
+
+        li {
+            width: 20px;
+            height: 4px;
+            border-radius: 2px;
+            background-color: white;
+            margin: 5px;
+
+            div {
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0);
+            }
+        }
     }
 }

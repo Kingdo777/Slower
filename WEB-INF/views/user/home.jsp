@@ -68,6 +68,12 @@
                     </a>
                 </li>
                 <li>
+                    <a class="a" href="<c:url value="/order/list#!/unfilled"/>">
+                        <div><img src="<c:url value="/static/image/icons/present_fill.png"/>"></div>
+                        <div>未发货</div>
+                    </a>
+                </li>
+                <li>
                     <a class="a" href="<c:url value="/order/list#!/receiving"/>">
                         <div><img src="<c:url value="/static/image/icons/deliver_fill.png"/>"></div>
                         <div>待收货</div>
@@ -77,12 +83,6 @@
                     <a class="a" href="#">
                         <div><img src="<c:url value="/static/image/icons/mark_fill.png"/>"></div>
                         <div>待评论</div>
-                    </a>
-                </li>
-                <li>
-                    <a class="a" href="#">
-                        <div><img src="<c:url value="/static/image/icons/repair_fill.png"/>"></div>
-                        <div>退款/售后</div>
                     </a>
                 </li>
             </ul>
@@ -101,15 +101,16 @@
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <div><img src="<c:url value="/static/image/icons/shop_fill.png"/>"></div>
-                    <div>店铺</div>
-                </a>
-            </li>
-            <li>
                 <a href="<c:url value="/user/history"/>">
                     <div><img src="<c:url value="/static/image/icons/attention_favor_fill.png"/>"></div>
                     <div>浏览历史</div>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <div><img src="<c:url value="/static/image/icons/repair_fill.png"/>"></div>
+                    <div>退款/售后</div>
                 </a>
             </li>
             <li>

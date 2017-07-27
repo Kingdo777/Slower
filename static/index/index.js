@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    $('#banner').slider();
+
     // 搜索框背景渐变
     $(window).scroll(function () {
         $('.search-section').css({"background-color":"rgba(224, 98, 13, " + $(this).scrollTop()/50 + ")"});

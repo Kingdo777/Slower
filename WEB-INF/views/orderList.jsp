@@ -28,12 +28,13 @@
     <div class="menu">
         <div id="all">全部</div>
         <div id="unpay">待付款</div>
+        <div id="unfilled">未发货</div>
         <div id="receiving">待收货</div>
         <div id="done">已完成</div>
     </div>
 
 
-    <div id="order-template" style="display: none;">
+    <div id="unpay-template" style="display: none;">
         <div class="order">
             <div class="title">
                 <div>等待付款</div>
@@ -48,6 +49,25 @@
             <div class="operations">
                 <a href="<c:url value="/wechat/payPage?price={{price}}&orderId={{orderId}}"/>">去支付</a>
             </div>
+        </div>
+    </div>
+
+
+    <div id="unfilled-template" style="display: none;">
+        <div class="order">
+            <div class="title">
+                <div>等待出货</div>
+            </div>
+            <div class="covers">
+
+            </div>
+
+            <div class="details">
+                实付款：¥ {{price}}
+            </div>
+            <%--<div class="operations">--%>
+                <%--<a href="<c:url value="/wechat/payPage?price={{price}}&orderId={{orderId}}"/>">去支付</a>--%>
+            <%--</div>--%>
         </div>
     </div>
     <div id="list">

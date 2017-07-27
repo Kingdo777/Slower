@@ -14,9 +14,14 @@
     <link type="text/css" rel="stylesheet" href="<c:url value="/static/plugins/font-awesome/css/font-awesome.css"/>">
     <link type="text/css" rel="stylesheet" href="<c:url value="/static/book_details/book_details.css"/>">
     <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/jquery-3.2.1.min.js"/>"></script>
+    <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/jquery.fly.min.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/template.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/book_details/book_details.js"/>"></script>
 </head>
+<script>
+    let isInBR=${isInBR};
+    let isCollected = ${isCollected};
+</script>
 <body>
 <div class="page">
 
@@ -103,7 +108,10 @@
 <footer>
     <div class="box">
         <div class="collect">
-            <div class="icon"><img src="<c:url value="/static/image/icons/like.png"/>"></div>
+            <div class="icon">
+                <img id="like" src="<c:url value="/static/image/icons/like.png"/>">
+                <img id="like-fill" src="<c:url value="/static/image/icons/like_fill.png"/>" style="display: none;">
+            </div>
             <div class="title">关注</div>
         </div>
         <div class="cart">
@@ -114,14 +122,9 @@
         </div>
 
         <div class="add_to_bookrack">
-            <a href="#">加入书架</a>
+            加入书架
         </div>
-
-        <div class="add_to_cart">
-            <a href="#">
-                加入购物车
-            </a>
-        </div>
+        <div class="add_to_cart">加入购物车</div>
     </div>
 </footer>
 </html>

@@ -19,13 +19,20 @@
     <script type="text/javascript" rel="script" src="<c:url value="/static/order/order.js"/>"></script>
 </head>
 <body class="body">
+<header>
+    <div class="left fa fa-angle-left" id="back"></div>
+    <div class="middle">确认订单</div>
+    <div class="right fa fa-ellipsis-h"></div>
+</header>
 <div class="page">
     <section id="address">
-        <div class="details">
-            <div class="info"><span class="username">张量奇</span> <span class="tel">15524439489</span></div>
-            <div class="address">dafasd激发我微积分文件访问飞机</div>
-        </div>
-        <div class="fa fa-angle-right"></div>
+        <a href="<c:url value="/address/show"/>">
+            <div class="details">
+                <div class="info"><span class="username">张量奇</span> <span class="tel">15524439489</span></div>
+                <div class="address">dafasd激发我微积分文件访问飞机</div>
+            </div>
+            <div class="fa fa-angle-right"></div>
+        </a>
     </section>
 
     <section id="books">
@@ -37,23 +44,28 @@
     </section>
 
     <section id="invoice">
-
+        <div class="user-details"><a href="#"><span>发票</span><span class="fa fa-angle-right"></span></a></div>
     </section>
 
     <section id="event">
+            <div class="user-details"><a href="#"><span>优惠券</span><span class="fa fa-angle-right"></span></a></div>
+    </section>
 
+    <section id="notice">
+        <textarea title="" placeholder="给商家留言"></textarea>
     </section>
 
     <section id="money">
-
+            <div class="user-details"><span>商品金额</span><span id="price"></span></div>
+            <div class="address"><span>运费</span><span class="freight">¥ 0.00</span></div>
     </section>
 </div>
 </body>
 <footer>
     <div>
-        实付款: <span id="price"></span>
+        实付款: <span id="all-price"></span>
     </div>
-    <div id="pay" onclick="SLOWER.order.pay(${orderId});">
+    <div id="pay">
         立即下单
     </div>
 </footer>

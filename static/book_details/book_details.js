@@ -22,10 +22,12 @@ $(document).ready(function () {
         }
     });
 
+    $('.nav .back').click(function () {
+        location.href = document.referrer;
+    });
+
     // 初始化 菜单
     SLOWER.book_details.init({
-        back: $('.nav .back'),
-        back_url: document.referrer,
         main: $('.menu .main'),
         details:$('.menu .details'),
         review:$('.menu .review'),
@@ -50,6 +52,70 @@ $(document).ready(function () {
 if(typeof SLOWER==="undefined") SLOWER={};
 SLOWER.book_details = (function () {
     let menu = {};
+    let conf = {};
+    Object.defineProperty(conf, 'collected',{
+        set:function (val) {
+
+            if(this.isCollected !== !!val) {
+                let bookId = $('#bookId').text();
+
+                if(!!val){
+                    $.post('/collect/add', { bookId: bookId }, function (data) {
+                        if(data.status !== "success"){
+                            alert("关注失败");
+                        }
+                    });
+                }
+                else {
+                    $.post('/collect/del', { bookId: bookId }, function (data) {
+                        if(data.status !== "success"){
+                            alert("取消关注失败");
+                        }
+                    });
+                }
+            }
+
+            this.isCollected = !!val;
+
+            if(this.isCollected){
+                $('#like').hide();
+                $('#like-fill').show();
+            }
+            else {
+                $('#like').show();
+                $('#like-fill').hide();
+            }
+        },
+        get:function () {
+            return this.isCollected;
+        }
+    });
+
+
+    Object.defineProperty(conf, 'inBR',{
+        set:function (val) {
+
+            if(this.isInBR !== !!val && !!val) {
+                let bookId = $('#bookId').text();
+
+                $.post('/bookrack/add', {bookId: bookId}, function (data) {
+                    console.log(data);
+                })
+            }
+
+            this.isInBR = !!val;
+
+            if(this.isInBR){
+                $('.add_to_bookrack').text('已加入');
+            }
+            else {
+                $('.add_to_bookrack').text('加入书架');
+            }
+        },
+        get:function () {
+            return this.isInBR;
+        }
+    });
 
     /**
      * 显示当前界面
@@ -82,19 +148,21 @@ SLOWER.book_details = (function () {
          * @param config
          */
         init: function (config) {
-            menu.back = config.back;
-            menu.back_url = config.back_url;
             menu.book = config.main;
             menu.details = config.details;
             menu.review = config.review;
 
-            menu.back.click(() => window.location.href=menu.back_url);
             menu.book.click(() => __hash__("book"));
             menu.details.click(() => __hash__("details"));
             menu.review.click(() => __hash__("review"));
 
             // 刷新或者初始化
             __page__(__hash__());
+
+            conf.isCollected = !!isCollected;
+            conf.isInBR = !!isInBR;
+            conf.collected = !!isCollected;
+            conf.inBR = !!isInBR;
 
             // hash 变化事件
             window.onhashchange = () =>__page__(__hash__());
@@ -104,13 +172,7 @@ SLOWER.book_details = (function () {
          * 添加到书架
          */
         addBookrack: function () {
-            let bookId = $('#bookId').text();
-
-            if(bookId !== ""){
-                $.post('/bookrack/add', {bookId: bookId}, function (data) {
-                    console.log(data);
-                })
-            }
+            conf.inBR = true;
         },
 
         /**
@@ -125,14 +187,31 @@ SLOWER.book_details = (function () {
                     console.log(data);
                 })
             }
+
+            let $c2c = $('<div id="cart-cart"></div>');
+            $('body').append($c2c);
+
+            $c2c.fly({
+                start:{
+                    left: $(window).width() - 75,
+                    top: $(window).height() - 50
+                },
+
+                end:{
+                    left:75,
+                    top: $(window).height()  - 50,
+                },
+                onEnd: function () {
+                    this.destroy();
+                }
+            })
         },
 
+        /**
+         * 关注
+         */
         addCollection: function () {
-            let bookId = $('#bookId').text();
-
-            $.post('/collect/add', {bookId: bookId}, function (data) {
-                console.log(data);
-            });
+            conf.collected = !conf.collected;
         }
     }
 })();

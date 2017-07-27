@@ -11,23 +11,28 @@ $(document).ready(function () {
     // 下订单
     $('.to-clearing').click(function () {
         SLOWER.cart.order();
-    })
+    });
+
+    // 全选
+    $('.select-all').click(function () {
+        SLOWER.cart.selected_all();
+    });
 });
 
 
 if(typeof SLOWER === "undefined") SLOWER = {};
-
 SLOWER.cart = (function () {
     let orders = {};
     let total_price = 0;
+    let selected_all = true;
 
     function __update_total_prices__() {
 
-        let selected_all = true;
+        selected_all = true;
         total_price = 0;
 
         orders.forEach(function (item) {
-            if(item.selected === 1){
+            if(item.selected) {
                 total_price += parseFloat(item.price) * item.number;
             }
             else {
@@ -47,13 +52,28 @@ SLOWER.cart = (function () {
     }
 
     return {
+        selected_all:function () {
+            selected_all = !selected_all;
+
+            if(selected_all){
+                orders.forEach(function (item) {
+                    item.select = true;
+                });
+            }
+            else {
+                orders.forEach(function (item) {
+                    item.select = false;
+                });
+            }
+        },
+
         /**
          * 渲染购物车中商品
          */
         render_cart:function () {
             $.post('/shopping_cart/all', null, function (data) {
 
-                console.log(data);
+                // console.log(data);
 
                 if(data.status === "success") {
                     orders = data.books;
@@ -67,7 +87,7 @@ SLOWER.cart = (function () {
                         $('.clearing').hide();
                     }
 
-                    data.books.forEach(function (item) {
+                    orders.forEach(function (item) {
 
                         item.price = /(\d+.\d+)/g.exec(item.price)[0];
 
@@ -76,46 +96,63 @@ SLOWER.cart = (function () {
                             cover: item.cover,
                             title: item.title,
                             price: item.price,
-                            number: item.number
+                            number: item.number,
                         };
 
                         let $temp = $('#order-template').tmpl(data);
+                        $temp.appendTo('.orders');
 
-                        if(item.selected === 0){
-                            $temp.find('.selected').hide();
-                            $temp.find('.non-selected').show();
-                        }
+                        // VM
+                        Object.defineProperty(item, 'select', {
+                            set: function (val) {
+
+                                if(this.selected !== !!val) {
+                                    if(val) {
+                                        $.post('/shopping_cart/selected', {bookId: this.id}, function (data) {
+                                            if(data.status !== "success")
+                                                console.log('failed');
+                                        });
+                                    }
+                                    else {
+                                        $.post('/shopping_cart/non_selected', {bookId: this.id}, function (data) {
+                                            if(data.status !== "success")
+                                                console.log('failed');
+                                        });
+                                    }
+                                }
+
+                                this.selected = !!val;
+
+                                // 选中按钮状态
+                                if(!this.selected) {
+                                    $temp.find('.selected').hide();
+                                    $temp.find('.non-selected').show();
+                                }
+                                else {
+                                    $temp.find('.selected').show();
+                                    $temp.find('.non-selected').hide();
+                                }
+
+                                __update_total_prices__();
+                            },
+                            get:function () {
+                                return this.selected;
+                            }
+                        });
+
+
+                        item.select = !!item.selected;
+
 
                         // 注册选择取消按钮
                         $temp.find('.select').click(function () {
-
-                            if(item.selected === 0){
-
-                                $.post('/shopping_cart/selected', {bookId: item.id}, function (data) {
-                                    if(data.status === "success"){
-                                        item.selected = 1;
-                                        $temp.find('.selected').show();
-                                        $temp.find('.non-selected').hide();
-                                        __update_total_prices__();
-                                    }
-                                });
-                            }
-                            else {
-                                $.post('/shopping_cart/non_selected', {bookId: item.id}, function (data) {
-                                    if(data.status === "success"){
-                                        item.selected = 0;
-                                        $temp.find('.selected').hide();
-                                        $temp.find('.non-selected').show();
-                                        __update_total_prices__();
-                                    }
-                                });
-                            }
+                            item.select = !item.selected;
                         });
 
                         // 注册 增加减少
                         $temp.find('.sub').click(function () {
 
-                            if(item.number > 1){
+                            if(item.number > 1) {
 
                                 $.post('/shopping_cart/decrease', {bookId: item.id}, function (data) {
                                     if(data.status === "success") {
@@ -137,12 +174,9 @@ SLOWER.cart = (function () {
                                 }
                             });
                         });
-
-                        $temp.appendTo('.orders');
-                        __update_total_prices__();
                     })
                 }
-            })
+            });
         },
 
         /**
@@ -168,7 +202,7 @@ SLOWER.cart = (function () {
         },
 
         order: function () {
-            location.href = "/shopping_cart/order?price=" + total_price.toString();
+            location.href = "/shopping_cart/order";
         }
     }
 })();

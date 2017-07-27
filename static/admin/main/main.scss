@@ -8,3 +8,23 @@ body{
 
   }
 }
+table{
+  tr{
+    td,th{
+      text-align: center;
+    }
+  }
+}
+.book-info-table{
+  th,td{
+    max-width: 250px;
+    vertical-align: middle;
+    height: 20px;
+  }
+}
+.allOrderInfo-bookInfo{
+  td{
+    border: none;
+    display: table-cell;
+  }
+}

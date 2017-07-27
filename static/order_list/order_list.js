@@ -5,6 +5,7 @@ $(document).ready(function () {
 
     SLOWER.orderList.config({
         all: $('#all'),
+        unfilled: $('#unfilled'),
         unpay: $('#unpay'),
         receiving: $("#receiving"),
         done: $('#done')
@@ -32,7 +33,7 @@ SLOWER.orderList = (function () {
         $('#'+page).css({'border-bottom':'solid 3px rgb(224, 98, 13)'});
 
         $.post("/order/" + page, null, function (data) {
-            console.log(data);
+            // console.log(data);
 
             $('#list').html('');
 
@@ -43,11 +44,11 @@ SLOWER.orderList = (function () {
                         orderId: item.id
                     };
 
-                    let $order = $('#order-template').tmpl(data);
+                    let $order = $('#'+ page +'-template').tmpl(data);
                     $order.appendTo('#list');
 
                     $.post("/order/" + item.id, null, function (data) {
-                        console.log(data);
+                        // console.log(data);
 
                         if(data.status === "success"){
                             data.books.forEach(function (item) {
@@ -68,12 +69,14 @@ SLOWER.orderList = (function () {
 
         config: function (conf) {
             menu.all = conf.all;
+            menu.unfilled = conf.unfilled;
             menu.unpay = conf.unpay;
             menu.receiving = conf.receiving;
             menu.done = conf.done;
 
             // 注册点击事件
             menu.all.click(()=>__page__('all'));
+            menu.unfilled.click(()=>__page__('unfilled'));
             menu.unpay.click(()=>__page__('unpay'));
             menu.receiving.click(()=>__page__('receiving'));
             menu.done.click(()=>__page__('done'));
