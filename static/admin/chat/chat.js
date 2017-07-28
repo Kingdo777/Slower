@@ -22,7 +22,7 @@ SLOWER.chat = (function () {
     let friends = {};
     let chatWindows = {};
 
-    let socket = new WebSocket("ws://localhost:8080/ws");
+    let socket = new WebSocket("ws://firstsnow.me/ws");
 
     socket.onopen = function(event){
         console.log("connect:success");
