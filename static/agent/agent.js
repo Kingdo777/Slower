@@ -29,7 +29,7 @@ $(document).ready(function () {
 if(typeof SLOWER === "undefined") SLOWER = {};
 SLOWER.agent = (function () {
 
-    let socket = new WebSocket("ws://localhost:8080/ws");
+    let socket = new WebSocket("ws://firstsnow.me/ws");
 
     socket.onopen = function(event){
         $('.status').css({'background-color':'green'});
