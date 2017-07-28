@@ -42,7 +42,7 @@
                     </a>
                 </div>
                 <div class="details">
-                    <div class="title"><a href="/book/details/{{id}}">{{title}}</a></div>
+                    <div class="title"><a href="/book/details/{{id}}">{{title}}</a><div class="delete-order"><i class="fa fa-trash-o"></i> </div> </div>
                     <div class="others">
                         <div class="price">¥ {{price}}</div>
                         <div class="number">

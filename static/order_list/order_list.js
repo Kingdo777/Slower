@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('#back').click(function () {
-        location.href = document.referrer
+        location.href = '/user';
     });
 
     SLOWER.orderList.config({

@@ -72,10 +72,24 @@ body {
       display: flex;
       flex-flow: column; }
       .orders .order .details .title {
-        flex: 1 1 auto; }
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: row; }
         .orders .order .details .title a {
+          flex: 1 1 auto;
           text-decoration: none;
           color: black; }
+        .orders .order .details .title div {
+          flex: 0 0 20px;
+          width: 20px; }
+          .orders .order .details .title div i {
+            border: solid 1px red;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            color: red;
+            border-radius: 3px; }
       .orders .order .details .others {
         flex: 0 0 20px; }
         .orders .order .details .others .price {

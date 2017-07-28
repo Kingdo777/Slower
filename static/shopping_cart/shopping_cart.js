@@ -101,6 +101,13 @@ SLOWER.cart = (function () {
 
                         let $temp = $('#order-template').tmpl(data);
                         $temp.appendTo('.orders');
+                        $temp.find('.delete-order').click(function () {
+                            $.post('/shopping_cart/delete/', { id:item.id }, function (data) {
+                                if(data.status === "success"){
+                                    location.reload(true);
+                                }
+                            })
+                        });
 
                         // VM
                         Object.defineProperty(item, 'select', {
