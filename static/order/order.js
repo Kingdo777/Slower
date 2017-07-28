@@ -6,7 +6,14 @@ $(document).ready(function () {
     });
 
     $('#pay').click(function () {
-        SLOWER.order.pay();
+        if(parseInt($(this).attr("content"))!==-1){
+            SLOWER.order.pay(parseInt($(this).attr("content")));
+        }else {
+            alert("地址获取失败")
+        }
+    });
+    $("#setAddress").on("click",function () {
+        alert("请先设置收获地址")
     });
 });
 
@@ -50,8 +57,8 @@ SLOWER.order =(function () {
             });
         },
 
-        pay: function () {
-            location.href = "/shopping_cart/order/ensure?price=" + __get_total_prices__().toString();
+        pay: function (addressId) {
+            location.href = "/shopping_cart/order/ensure?price=" + __get_total_prices__().toString()+"&addressId="+addressId.toString();
         }
     }
 })();

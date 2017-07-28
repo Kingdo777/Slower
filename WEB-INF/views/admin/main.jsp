@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>classic</title>
+    <title>admin</title>
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maxinum-scale=1,width=device-width">
     <link type="text/css" rel="stylesheet" href="<c:url value="/static/plugins/font-awesome/css/font-awesome.css"/>">
     <link type="text/css" rel="stylesheet" href="<c:url value="/static/admin/main/main.css"/>">
@@ -77,7 +77,7 @@
                         <span class="glyphicon glyphicon-share-alt"> 退出登录</span>
                     </h5>
                 </a>
-                <img id="users-messages" src="/static/image/icons/messages.png" style="width:23px">
+                <img id="users-messages" src="<c:url value="/static/image/icons/messages.png"/>" style="width:23px">
             </div>
         </div>
     </div>

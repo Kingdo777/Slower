@@ -28,8 +28,13 @@
     <section id="address">
         <a href="<c:url value="/address/show"/>">
             <div class="details">
-                <div class="info"><span class="username">张量奇</span> <span class="tel">15524439489</span></div>
-                <div class="address">dafasd激发我微积分文件访问飞机</div>
+                <c:if test="${hasDefault}">
+                    <div class="info"><span class="username">${address.receiverName}</span> <span class="tel">15524439489</span></div>
+                    <div class="address">${address.details}</div>
+                </c:if>
+                <c:if test="${!hasDefault}">
+                    <h5 style="margin: 5px">未设置地址</h5>
+                </c:if>
             </div>
             <div class="fa fa-angle-right"></div>
         </a>
@@ -65,7 +70,7 @@
     <div>
         实付款: <span id="all-price"></span>
     </div>
-    <div id="pay">
+    <div id="${hasDefault?"pay":"setAddress"}" content="${hasDefault?address.id:-1}">
         立即下单
     </div>
 </footer>

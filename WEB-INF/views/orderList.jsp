@@ -33,6 +33,59 @@
         <div id="done">已完成</div>
     </div>
 
+    <div id="done-template" style="display: none;">
+        <div class="order">
+            <div class="title">
+                <div>已完成</div>
+            </div>
+            <div class="covers">
+
+            </div>
+
+            <div class="details">
+                实付款：¥ {{price}}
+            </div>
+            <div class="operations">
+                <a href="<c:url value="#"/>">再次购买</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="all-template" style="display: none;">
+        <div class="order">
+            <div class="title">
+                <div>订单</div>
+            </div>
+            <div class="covers">
+
+            </div>
+
+            <div class="details">
+                实付款：¥ {{price}}
+            </div>
+            <%--<div class="operations">--%>
+                <%--<a href="<c:url value="/wechat/payPage?price={{price}}&orderId={{orderId}}"/>">去支付</a>--%>
+            <%--</div>--%>
+        </div>
+    </div>
+
+    <div id="receiving-template" style="display: none;">
+        <div class="order">
+            <div class="title">
+                <div>等待收货</div>
+            </div>
+            <div class="covers">
+
+            </div>
+
+            <div class="details">
+                实付款：¥ {{price}}
+            </div>
+            <div class="operations">
+                <a href="<c:url value="#"/>">查看物流信息</a>
+            </div>
+        </div>
+    </div>
 
     <div id="unpay-template" style="display: none;">
         <div class="order">
