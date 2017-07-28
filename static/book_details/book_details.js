@@ -195,12 +195,12 @@ SLOWER.book_details = (function () {
             $c2c.fly({
                 start:{
                     left: $(window).width() - 75,
-                    top: window.screen.height  - 50
+                    top: document.body.clientHeight  - 50
                 },
 
                 end:{
                     left:75,
-                    top: window.screen.height   - 50,
+                    top: document.body.clientHeight    - 50,
                 },
                 onEnd: function () {
                     this.destroy();
