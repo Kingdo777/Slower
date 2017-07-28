@@ -21,7 +21,7 @@ SLOWER.order =(function () {
         let total_price = 0;
 
         orders.forEach(function (item) {
-            if(item.selected === 1){
+            if(item.selected === true){
                 total_price += parseFloat(item.price) * item.number;
             }
         });
