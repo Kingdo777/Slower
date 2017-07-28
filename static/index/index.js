@@ -31,8 +31,11 @@ function newBook(ISBN)
         url:"/book/newBook/"+ISBN,
         dataType:"text",
         success:function (data) {
-            alert("ID:"+data);
-            location.href = "/book/details/"+data;
+            if (parseInt(data)===-1){
+                alert("书籍太过陈旧或刚刚出版，数据总库中未收录");
+            }else {
+                location.href = "/book/details/"+data;
+            }
         },
         error:function(xhr){
             $('html').html(xhr.responseText);
