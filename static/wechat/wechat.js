@@ -11,7 +11,7 @@ $(function () {
         dataType: 'text',
         success: function (signature) {
             wx.config({
-                debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
 
                 appId: 'wx7495c0e23819716a', // 必填，公众号的唯一标识
 
@@ -35,7 +35,7 @@ function scanQRCode(callBackFun) {
         needResult: 1,
         scanType: ["qrCode", "barCode"],
         success: function (res) {
-            // alert(res.resultStr.split(",")[1]);
+            alert(res.resultStr.split(",")[1]);
             callBackFun(res.resultStr.split(",")[1])
         },
         error:function (xhr) {
