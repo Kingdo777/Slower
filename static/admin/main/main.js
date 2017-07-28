@@ -43,13 +43,13 @@ $(function () {
         showAllOrderInfo();
     });
     $(".toggle-display-bookInfo").on("click",function () {
-       if($(this).attr("content")==='0'){
-           $(this).attr("content",'1');
-           $(".allOrderInfo-bookInfo").show();
-       } else{
-           $(this).attr("content",'0');
-           $(".allOrderInfo-bookInfo").hide();
-       }
+        if($(this).attr("content")==='0'){
+            $(this).attr("content",'1');
+            $(".allOrderInfo-bookInfo").show();
+        } else{
+            $(this).attr("content",'0');
+            $(".allOrderInfo-bookInfo").hide();
+        }
     });
     $(".toggle-display-purchase-bookInfo").on("click",function () {
         if($(this).attr("content")==='0'){
@@ -65,6 +65,12 @@ $(function () {
     });
     $("#users-messages").on("click",function () {
         alert("myId:users-messages");
+    });
+    $(".user-info-link").on("click",function () {
+        showUserInfo();
+    });
+    $(".sort-link").on("click",function () {
+       classManager();
     });
 });
 function nextBookInfoPage(MyPage) {
@@ -151,7 +157,7 @@ function showUnFilledOrderInfo() {
                         "price-->" +data.books[i][j].price+
                         "stockNum-->" +data.books[i][j].stockNum+
                         "purchase Count-->" +data.books[i][j].count+
-                        "</td>>" +
+                        "</td>" +
                         "</tr>" +
                         "");
                 }
@@ -198,7 +204,7 @@ function showAllOrderInfo() {
                         "price-->" +data.books[i][j].price+
                         "stockNum-->" +data.books[i][j].stockNum+
                         "purchase count-->" +data.books[i][j].count+
-                        "</td>>" +
+                        "</td>" +
                         "</tr>" +
                         "");
                 }
@@ -221,7 +227,6 @@ function DeliverGoods(orderId) {
         }
     });
 }
-
 function showBillInfo() {
     $.ajax({
         type:"post",
@@ -249,5 +254,121 @@ function showBillInfo() {
         }
     })
 }
+function showUserInfo() {
+    $.ajax({
+        type:"post",
+        dataType:"json",
+        url:"/admin/getAllUserAndOrderInfo/",
+        success:function (data) {
+            $(".user-info-tr").remove();
+            for (let i=0;i<data.length;i++){
+                let date = new Date(data[i].time); //获取一个时间对象
+                let time=date.getFullYear()+"/"+date.getMonth()+"/"+date.getDate()+"   "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+                let tel=(typeof (data[i].tel)!=="undefined")?data[i].tel:"用户未填写";
+                let email=(typeof (data[i].email)!=="undefined")?data[i].email:"用户未填写";
+                $(".user-info-table").append("" +
+                    "<tr class='user-info-tr'>"+
+                    "<td>"+data[i].userId+"</td>"+
+                    "<td>"+data[i].userName+"</td>"+
+                    "<td>"+tel+"</td>"+
+                    "<td>"+email+"</td>"+
+                    "<td>"+time+"</td>"+
+                    "<td>"+data[i].count+"</td>"+
+                    "<td>"+data[i].price+"</td>"+
+                    "</tr>" +
+                    "");
+            }
+            $(".left_menu").css("height",$(".bottom-content").css("height"));
+        },
+        error:function (xhr) {
+            $('html').html(xhr.responseText);
+        }
+    });
+}
 
+function classManager() {
+    $.ajax({
+        type:"post",
+        dataType:"json",
+        url:"/admin/getClassInfo/",
+        success:function (data) {
+            $(".class-info-li").remove();
+            let first_class_ul=$(".first-class-ul");
+            let second_class_ul;
+            for (let i=0;i<data.first.length;i++){
+                first_class_ul.append("" +
+                    "<li class='class-info-li' style='float: left'><b>" +data.first[i].name+"</b>"+
+                    "<ul class='second-class-ul-"+data.first[i].name.toString()+"'></ul>" +
+                    "</li>");
+                second_class_ul=$(".second-class-ul-"+data.first[i].name.toString());
+                for (let j=0;j<data.second[i].length;j++){
+                    second_class_ul.append("" +
+                        "<li>"+data.second[i][j].name+"</li>" +
+                        "");
+                }
+                second_class_ul.append("" +
+                    "<li class='new-second-class-"+data.first[i].id+"' style='list-style-type: none;cursor: hand;border: none;padding: 0'>" +
+                    "<span onclick='newSecondClass("+data.first[i].id+")'>+新增分类</span>" +
+                    "</li>" +
+                    "");
+            }
+            first_class_ul.append("" +
+                "<li class='new-first-class class-info-li' style='list-style-type: none;cursor: hand;border: none'>" +
+                "<span class='newClass' onclick='newFirstClass()'><b>+新增一级分类</b></span>" +
+                "</li>" +
+                "");
+        },
+        error:function (xhr) {
+            $('html').html(xhr.responseText);
+        }
+    });
+}
+function newFirstClass() {
+    if($(".new-first-class-form").length===0){
+        $(".new-first-class").append("<form class='new-first-class-form'>" +
+            "<input title='name' placeholder='new class name' class='new-first-class-input'>" +
+            "<button onclick='saveFirstClass()'>save</button>"+
+            "</form>")
+    }
+}
+function saveFirstClass() {
+    let name=$('.new-first-class-input').val();
+    if (name.trim()===""){
+        $(".new-first-class-form").remove();
+    }else {
+        $(".new-first-class-form").remove();
+        $.ajax({
+            type:"post",
+            url:"/admin/newFirstClass/"+name,
+            dataType:"text",
+            success:function () {
+                $(".sort-link").trigger("click");
+            }
+        });
+    }
+}
+function newSecondClass(firstClassId) {
+    if($(".new-first-class-form-"+firstClassId).length===0){
+        $(".new-second-class-"+firstClassId).append("<form class='new-second-class-form-"+firstClassId+"'>" +
+            "<input title='name' placeholder='new class name' class='new-second-class-input-"+firstClassId+"' style='width: 150px'>" +
+            "<br/><button onclick='saveSecondClass("+firstClassId+")'>save</button>"+
+            "</form>")
+    }
+}
+function saveSecondClass(firstClassId) {
+    let name=$('.new-second-class-input-'+firstClassId).val();
+    if (name.trim()===""){
+        $(".new-second-class-form-"+firstClassId).remove();
+    }else {
+        $(".new-second-class-form-"+firstClassId).remove();
+        $.ajax({
+            type:"post",
+            url:"/admin/newSecondClass/"+firstClassId+"/"+name,
+            dataType:"text",
+            success:function () {
+                $(".sort-link").trigger("click");
+            }
+        });
+    }
+}
 

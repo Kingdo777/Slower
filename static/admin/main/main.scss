@@ -31,3 +31,12 @@ table{
     display: table-cell;
   }
 }
+ul,li{
+  border: none;
+}
+.first-class-ul{
+  li{
+    float: left;
+    width: 33%;
+  }
+}

@@ -111,9 +111,9 @@
                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                         <div class="panel-body">
                             <ul>
-                                <li><a class="link-btn book-info-link" content="book_info">图书信息查询</a></li>
-                                <li><a class="link-btn user-info-link" content="user_info">用户信息查询</a></li>
-                                <li><a class="link-btn order-info-link" content="order_info">订单信息查询</a></li>
+                                <li><a class="link-btn book-info-link" content="book-info">图书信息查询</a></li>
+                                <li><a class="link-btn user-info-link" content="user-info">用户信息查询</a></li>
+                                <li><a class="link-btn order-info-link" content="order-info">订单信息查询</a></li>
                             </ul>
                         </div>
                     </div>
@@ -131,7 +131,6 @@
                             <ul>
                                 <li><a class="link-btn bill-record-link" content="bill-record">账单汇总</a></li>
                                 <li><a class="link-btn book-purchase-order-link" content="book-purchase-order">购书订单</a></li>
-                                <li><a class="link-btn customer-service-link" content="customer-service">客服消息</a></li>
                             </ul>
                         </div>
                     </div>
@@ -147,8 +146,8 @@
                     <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                         <div class="panel-body">
                             <ul>
-                                <li><a class="link-btn membership-link" content="membership">会员管理</a></li>
-                                <li><a class="link-btn homepage-link" content="homepage">主页管理</a></li>
+                                <%--<li><a class="link-btn membership-link" content="membership">会员管理</a></li>--%>
+                                <%--<li><a class="link-btn homepage-link" content="homepage">主页管理</a></li>--%>
                                 <li><a class="link-btn sort-link" content="sort">分类管理</a></li>
                             </ul>
                         </div>
@@ -186,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="body-content book_info" style="display: none">
+                <div class="body-content book-info" style="display: none">
                     <div class="info-operate">
                         <div class="row">
                             <div class="col-xs-3">
@@ -220,8 +219,22 @@
                         </tr>
                     </table>
                 </div>
-                <div class="body-content user_info" style="display: none">user_info</div>
-                <div class="body-content order_info" style="display: none">
+                <div class="body-content user-info" style="display: none">
+                    <div>
+                        <table class="user-info-table">
+                            <tr>
+                                <th>用户ID</th>
+                                <th>收货昵称</th>
+                                <th>联系电话</th>
+                                <th>Email</th>
+                                <th>关注时间</th>
+                                <th>下单次数</th>
+                                <th>消费总额</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="body-content order-info" style="display: none">
                     <div>
                         <button class="toggle-display-bookInfo" content="0">显示/隐藏图书信息</button>
                         <table class="book-order-table">
@@ -269,9 +282,12 @@
                     </div>
                 </div>
                 <div class="body-content customer-service" style="display: none">customer-service</div>
-                <div class="body-content membership" style="display: none">membership</div>
-                <div class="body-content homepage" style="display: none">homepage</div>
-                <div class="body-content sort" style="display: none">sort</div>
+                <%--<div class="body-content membership" style="display: none">membership</div>--%>
+                <%--<div class="body-content homepage" style="display: none">homepage</div>--%>
+                <div class="body-content sort" style="display: none">
+                    <ul class="first-class-ul" style="border: 0">
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

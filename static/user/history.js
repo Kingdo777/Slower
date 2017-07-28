@@ -9,7 +9,7 @@ SLOWER.history = (function () {
     return {
         render:function () {
             $.post('/book/histories', {page: page}, function (data) {
-                if(data.status === "success"){
+                if(data.status === "success") {
                     data.books.forEach(function (item) {
                         let data = {
                             id: item.id,
@@ -22,7 +22,6 @@ SLOWER.history = (function () {
                         $('#book-template').tmpl(data).appendTo("#book-list");
                     })
                 }
-
             });
         }
     }
