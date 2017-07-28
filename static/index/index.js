@@ -26,6 +26,7 @@ $(document).ready(function () {
 
 function newBook(ISBN)
 {
+    alert(ISBN);
     $.ajax({
         type:"post",
         url:"/book/newBook/"+ISBN,
