@@ -191,15 +191,16 @@ SLOWER.book_details = (function () {
             let $c2c = $('<div id="cart-cart"></div>');
             $('body').append($c2c);
 
+            console.log( $(window).height());
             $c2c.fly({
                 start:{
                     left: $(window).width() - 75,
-                    top: $(window).height() - 50
+                    top: window.screen.height  - 50
                 },
 
                 end:{
                     left:75,
-                    top: $(window).height()  - 50,
+                    top: window.screen.height   - 50,
                 },
                 onEnd: function () {
                     this.destroy();

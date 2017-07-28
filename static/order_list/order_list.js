@@ -47,6 +47,18 @@ SLOWER.orderList = (function () {
                     let $order = $('#'+ page +'-template').tmpl(data);
                     $order.appendTo('#list');
 
+                    if(page === "receiving"){
+                        $order.find('.received').click(function () {
+
+                            $.post("/order/received", {orderId: item.id}, function (data) {
+                                // console.log(data);
+                                if(data.status !== "success"){
+                                    console.log(data);
+                                }
+                            })
+                        })
+                    }
+
                     $.post("/order/" + item.id, null, function (data) {
                         // console.log(data);
 

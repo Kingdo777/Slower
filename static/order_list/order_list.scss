@@ -77,6 +77,9 @@ header {
 
         .covers {
             height: 100px;
+            overflow-x: auto;
+            display: flex;
+            flex-flow: row;
 
             .cover {
                 border: solid 1px #dddddd;
@@ -108,7 +111,7 @@ header {
             padding-right: 15px;
             overflow: auto;
 
-            a {
+            a, div {
                 text-decoration: none;
                 color: red;
                 border: solid 1px red;
@@ -116,9 +119,9 @@ header {
                 font-size: 13px;
                 height: 22px;
                 line-height: 20px;
-                margin: 4px 0;
                 padding: 0 10px;
                 border-radius: 5px;
+                margin: 4px 0 4px 10px;
 
                 float: right;
             }

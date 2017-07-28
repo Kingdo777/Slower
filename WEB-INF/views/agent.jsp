@@ -18,6 +18,10 @@
     <script type="text/javascript" rel="script" src="<c:url value="/static/plugins/template.js"/>"></script>
     <script type="text/javascript" rel="script" src="<c:url value="/static/agent/agent.js"/>"></script>
 </head>
+<script>
+    let hostId = ${host.id};
+    let agentId= ${agent.id};
+</script>
 <header>
     <div class="left fa fa-angle-left" id="back"></div>
     <div class="middle"><div><span class="title">客服</span> <span class="status"> </span></div></div>

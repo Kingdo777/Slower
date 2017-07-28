@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    SLOWER.agent.render();
+
     // 返回上一个界面
     $('#back').click(function () {
         window.location.href =  document.referrer;
@@ -33,6 +35,7 @@ SLOWER.agent = (function () {
         $('.status').css({'background-color':'green'});
     };
     socket.onmessage = function(event) {
+        console.log("收到一条信息: " + event.data);
         add_agent_message(JSON.parse(event.data).content);
     };
     socket.onclose = function(event){
@@ -52,6 +55,26 @@ SLOWER.agent = (function () {
         $('#agent-template').tmpl({message:message}).appendTo('.page');
     }
     return {
+        render: function () {
+            let data = {
+                toId: 6,
+                fromId: 0,
+                page: 0
+            };
+            $.post('/admin/chat/messages' , data, function (data) {
+                console.log(data);
+
+                data.messages.forEach(function (item) {
+                    if(item.fromId === hostId) {
+                        add_user_message(item.content)
+                    }
+                    else if(item.toId === hostId) {
+                        add_agent_message(item.content);
+                    }
+                })
+            });
+        },
+
         send: function () {
             let $input = $('#input');
             let message = $input.val();
@@ -62,7 +85,7 @@ SLOWER.agent = (function () {
 
             $('#send > div').css({'background-color':'#cccccc'});
 
-            let data = { content: message, toId: 0 };
+            let data = { content: message, toId: agentId, fromId: hostId };
 
             socket.send(JSON.stringify(data));
             add_user_message(message);

@@ -38,7 +38,8 @@ body {
 
 .page {
   margin-top: 50px;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  overflow: auto; }
   .page .user-message {
     width: 100%;
     overflow: auto;

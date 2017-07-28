@@ -298,12 +298,15 @@ function classManager() {
             for (let i=0;i<data.first.length;i++){
                 first_class_ul.append("" +
                     "<li class='class-info-li' style='float: left'><b>" +data.first[i].name+"</b>"+
+                    "<img src='/static/image/icons/delete.png' style='width: 20px;margin-left: 5px;cursor: hand' onclick='deleteFirstClass("+data.first[i].id+")'>" +
                     "<ul class='second-class-ul-"+data.first[i].name.toString()+"'></ul>" +
                     "</li>");
                 second_class_ul=$(".second-class-ul-"+data.first[i].name.toString());
                 for (let j=0;j<data.second[i].length;j++){
                     second_class_ul.append("" +
-                        "<li>"+data.second[i][j].name+"</li>" +
+                        "<li>"+data.second[i][j].name+"" +
+                        "<img src='/static/image/icons/delete.png' style='width: 20px;margin-left: 5px;cursor: hand' onclick='deleteSecondClass("+data.second[i][j].id+")'>" +
+                        "</li>" +
                         "");
                 }
                 second_class_ul.append("" +
@@ -372,3 +375,32 @@ function saveSecondClass(firstClassId) {
     }
 }
 
+function deleteFirstClass(firstClassId) {
+    $.ajax({
+        type:"post",
+        url:"/admin/deleteFirstClass/"+firstClassId,
+        dataType:"text",
+        success:function (ok) {
+            if(ok==='success'){
+                $(".sort-link").trigger("click");
+            }else{
+                alert("请先删除该分类下的所有二级分类");
+            }
+        }
+    });
+}
+
+function deleteSecondClass(secondClassId) {
+    $.ajax({
+        type:"post",
+        url:"/admin/deleteSecondClass/"+secondClassId,
+        dataType:"text",
+        success:function (ok) {
+            if(ok==='success'){
+                $(".sort-link").trigger("click");
+            }else{
+                alert("请先删除或更改该该分类下的所有书籍")
+            }
+        }
+    });
+}

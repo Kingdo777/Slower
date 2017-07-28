@@ -64,7 +64,7 @@
                 实付款：¥ {{price}}
             </div>
             <%--<div class="operations">--%>
-                <%--<a href="<c:url value="/wechat/payPage?price={{price}}&orderId={{orderId}}"/>">去支付</a>--%>
+            <%--<a href="<c:url value="/wechat/payPage?price={{price}}&orderId={{orderId}}"/>">去支付</a>--%>
             <%--</div>--%>
         </div>
     </div>
@@ -82,6 +82,7 @@
                 实付款：¥ {{price}}
             </div>
             <div class="operations">
+                <div class="received">确认收货</div>
                 <a href="<c:url value="#"/>">查看物流信息</a>
             </div>
         </div>
@@ -119,7 +120,7 @@
                 实付款：¥ {{price}}
             </div>
             <%--<div class="operations">--%>
-                <%--<a href="<c:url value="/wechat/payPage?price={{price}}&orderId={{orderId}}"/>">去支付</a>--%>
+            <%--<a href="<c:url value="/wechat/payPage?price={{price}}&orderId={{orderId}}"/>">去支付</a>--%>
             <%--</div>--%>
         </div>
     </div>
