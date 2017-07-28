@@ -111,8 +111,11 @@ body {
     border-right: solid 1px #cccccc;
     text-align: center;
     padding: 15px 0; }
+    .menu-2 > div a {
+      text-decoration: none; }
     .menu-2 > div .title {
-      margin: 5px 0; }
+      margin: 5px 0;
+      color: black; }
     .menu-2 > div .des {
       margin: 5px 0;
       font-size: 13px;

@@ -71,31 +71,31 @@
     <section class="menu">
         <ul>
             <li>
-                <a href="#">
+                <a href="<c:url value="/list/showInfo?secondCategoryID=1" />">
                     <div class="icon"><img src="<c:url value="/static/image/icons/hot.png"/>"> </div>
                     <div class="title">榜单</div>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="<c:url value="/list/showInfo?secondCategoryID=2" />">
                     <div class="icon"><img src="<c:url value="/static/image/icons/special.png"/>"> </div>
                     <div class="title">专题</div>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="<c:url value="/list/showInfo?secondCategoryID=3" />">
                     <div class="icon"><img src="<c:url value="/static/image/icons/boy_avatar.png"/>"> </div>
                     <div class="title">男生</div>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="<c:url value="/list/showInfo?secondCategoryID=4" />">
                     <div class="icon"><img src="<c:url value="/static/image/icons/girl_avatar.png"/>"> </div>
                     <div class="title">女生</div>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="<c:url value="/list/showInfo?secondCategoryID=5" />">
                     <div class="icon"><img src="<c:url value="/static/image/icons/book_list.png"/>"> </div>
                     <div class="title">书单</div>
                 </a>
@@ -106,27 +106,31 @@
     <%-- 大类推荐 --%>
     <section class="menu-2">
         <div class="free">
-            <div class="title">
-                免费好书
-            </div>
-            <div class="des">
-                看书，就要划算!
-            </div>
-            <div class="image">
-                <img src="https://img3.doubanio.com/lpic/s9061102.jpg">
-            </div>
+            <a href="<c:url value="/list/showInfo?secondCategoryID=6" />">
+                <div class="title">
+                    免费好书
+                </div>
+                <div class="des">
+                    看书，就要划算!
+                </div>
+                <div class="image">
+                    <img src="https://img3.doubanio.com/lpic/s9061102.jpg">
+                </div>
+            </a>
         </div>
 
         <div class="new-book">
-            <div class="title">
-                新书专区
-            </div>
-            <div class="des">
-                潜力新书，抢先阅读
-            </div>
-            <div class="image">
-                <img src="https://img1.doubanio.com/lpic/s27284878.jpg">
-            </div>
+            <a href="<c:url value="/list/showInfo?secondCategoryID=7" />">
+                <div class="title">
+                    新书专区
+                </div>
+                <div class="des">
+                    潜力新书，抢先阅读
+                </div>
+                <div class="image">
+                    <img src="https://img1.doubanio.com/lpic/s27284878.jpg">
+                </div>
+            </a>
         </div>
     </section>
 

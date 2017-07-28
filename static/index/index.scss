@@ -129,8 +129,13 @@ body {
         text-align: center;
         padding: 15px 0;
 
+        a {
+            text-decoration: none;
+        }
+
         .title {
             margin: 5px 0;
+            color: black;
         }
 
         .des{
