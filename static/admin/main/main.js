@@ -64,7 +64,7 @@ $(function () {
         showBillInfo();
     });
     $("#users-messages").on("click",function () {
-        alert("myId:users-messages");
+        location.assign("/admin/chat")
     });
     $(".user-info-link").on("click",function () {
         showUserInfo();
