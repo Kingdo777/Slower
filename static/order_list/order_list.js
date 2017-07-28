@@ -53,7 +53,7 @@ SLOWER.orderList = (function () {
                             $.post("/order/received", {orderId: item.id}, function (data) {
                                 // console.log(data);
                                 if(data.status !== "success"){
-                                    console.log(data);
+                                    location.reload(true);
                                 }
                             })
                         })
