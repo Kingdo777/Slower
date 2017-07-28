@@ -26,9 +26,18 @@ $(document).ready(function () {
 
 function newBook(ISBN)
 {
-    $.post("/book/newBook/"+ISBN, null, function (data) {
-        location.href = "/book/details/"+data;
-    } );
+    $.ajax({
+        type:"post",
+        url:"/book/newBook/"+ISBN,
+        dataType:"text",
+        success:function (data) {
+            alert(data);
+            location.href = "/book/details/"+data;
+        },
+        error:function(xhr){
+            $('html').html(xhr.responseText);
+        }
+    });
 }
 
 if(typeof SLOWER === "undefined") SLOWER = {};
